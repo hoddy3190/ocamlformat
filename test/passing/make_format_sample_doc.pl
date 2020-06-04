@@ -71,7 +71,6 @@ my $opt_src_list = [
     [qw/ --if-then-else keyword-first --indicate-multiline-delimiters=closing-on-separate-line ite.ml /],
     [qw/ --if-then-else=keyword-first --indicate-multiline-delimiters=no ite.ml /],
     [qw/ --if-then-else=compact --indicate-multiline-delimiters=no ite.ml /],
-    [qw/ --if-then-else=compact ite.ml /],
     [qw/ --profile=janestreet js_sig.mli /],
     [qw/ --max-iters=3 --profile=janestreet js_source.ml /],
     [qw/ --max-iters=4 label_option_default_args.ml /],
