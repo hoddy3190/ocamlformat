@@ -132,7 +132,7 @@ for my $opt (sort keys $opt_src_hash) {
     system ("echo \'\<details\>\<summary\>$opt $src\<\/summary\>\' >> ../../formatSample.md");
     system ("echo '' >> ../../formatSample.md");
     system ("echo \'\`\`\`\' >> ../../formatSample.md");
-    system ("ocamlformat $opt $src > fuga.txt; diff -u $src fuga.txt >> ../../formatSample.md");
+    system ("ocamlformat $opt $src > fuga.txt; diff -u -L origin -L formatted $src fuga.txt >> ../../formatSample.md");
     system ("echo \'\`\`\`\' >> ../../formatSample.md");
     system ("echo \"\n\<\/details\>\" >> ../../formatSample.md");
 }
