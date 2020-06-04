@@ -34,7 +34,6 @@ my $opt_src_list = [
     [qw/ --break-separators=before --break-collection-expressions=wrap break_separators.ml /],
     [qw/ --break-separators=before --max-iter=3 break_separators.ml /],
     [qw/ --break-string-literals=never break_string_literals.ml /],
-    [qw/ --break-string-literals=wrap break_string_literals.ml /],
     [qw/ --break-string-literals=auto break_string_literals.ml /],
     [qw/ --config=module-item-spacing=compact --module-item-spacing=sparse cmdline_override.ml /],
     [qw/ --module-item-spacing=sparse --config=module-item-spacing=compact cmdline_override2.ml /],
