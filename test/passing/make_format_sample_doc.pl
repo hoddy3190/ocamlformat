@@ -113,7 +113,8 @@ my $opt_src_list = [
     [qw/ --type-decl=sparse --space-around-arrays --space-around-lists --space-around-records --space-around-variants types.ml /],
     [qw/ --type-decl=sparse types.ml /],
     [qw/ --margin=80 --wrap-comments unicode.ml /],
-    [qw/ --no-wrap-fun-args --margin=67 wrap_comments_break.ml /]
+    [qw/ --no-wrap-fun-args --margin=67 wrap_comments_break.ml /],
+    [qw/ --disambiguate-non-breaking-match align_cases.ml/ ]
 ];
 
 my $opt_src_hash = {};
