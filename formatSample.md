@@ -2,8 +2,8 @@
 <details><summary>--align-cases align_cases.ml</summary>
 
 ```
---- align_cases.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:19.000000000 +0900
+--- origin
++++ formatted
 @@ -3,19 +3,19 @@
    | Fooooooooooooo
    | Fooooooooooooooo
@@ -70,8 +70,8 @@
 <details><summary>--align-constructors-decl align_cases.ml</summary>
 
 ```
---- align_cases.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:20.000000000 +0900
+--- origin
++++ formatted
 @@ -26,15 +26,15 @@
    | `Foooooo (* fooooo *) of padding * int array
    | `Fooooooooo (* fooooooooooooooooo *) of padding * int array * int array
@@ -139,8 +139,8 @@
 <details><summary>--align-variants-decl align_cases.ml</summary>
 
 ```
---- align_cases.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:20.000000000 +0900
+--- origin
++++ formatted
 @@ -3,19 +3,19 @@
    | Fooooooooooooo
    | Fooooooooooooooo
@@ -235,8 +235,8 @@
 <details><summary>--assignment-operator=begin-line field.ml</summary>
 
 ```
---- field.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:21.000000000 +0900
+--- origin
++++ formatted
 @@ -1,26 +1,26 @@
  let foo =
 -  entry.logdata.value_end <-
@@ -288,8 +288,8 @@
 <details><summary>--break-before-in=auto break_before_in.ml</summary>
 
 ```
---- break_before_in.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:21.000000000 +0900
+--- origin
++++ formatted
 @@ -1,26 +1,21 @@
  let flat : unit =
    let short = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 in
@@ -380,8 +380,8 @@
 <details><summary>--break-cases=all break_cases.ml</summary>
 
 ```
---- break_cases.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:23.000000000 +0900
+--- origin
++++ formatted
 @@ -1,6 +1,8 @@
  let f x = function
 -  | C | P (this, test, [is; wide; enough; _to; break], [the; line]) | A | K
@@ -681,8 +681,8 @@
 <details><summary>--break-cases=fit break_cases.ml</summary>
 
 ```
---- break_cases.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:23.000000000 +0900
+--- origin
++++ formatted
 @@ -1,239 +0,0 @@
 -let f x = function
 -  | C | P (this, test, [is; wide; enough; _to; break], [the; line]) | A | K
@@ -929,8 +929,8 @@
 <details><summary>--break-cases=fit-or-vertical break_cases.ml</summary>
 
 ```
---- break_cases.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:24.000000000 +0900
+--- origin
++++ formatted
 @@ -1,19 +1,25 @@
  let f x = function
    | C | P (this, test, [is; wide; enough; _to; break], [the; line]) | A | K
@@ -1233,8 +1233,8 @@
 <details><summary>--break-cases=nested break_cases.ml</summary>
 
 ```
---- break_cases.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:24.000000000 +0900
+--- origin
++++ formatted
 @@ -11,7 +11,8 @@
    let g = function H when x y <> k -> 2 | T | P | U -> 3 in
    fun x g t h y u ->
@@ -1540,8 +1540,8 @@
 <details><summary>--break-cases=toplevel break_cases.ml</summary>
 
 ```
---- break_cases.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:25.000000000 +0900
+--- origin
++++ formatted
 @@ -1,239 +0,0 @@
 -let f x = function
 -  | C | P (this, test, [is; wide; enough; _to; break], [the; line]) | A | K
@@ -1788,8 +1788,8 @@
 <details><summary>--break-collection-expressions=wrap break_separators.ml</summary>
 
 ```
---- break_separators.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:26.000000000 +0900
+--- origin
++++ formatted
 @@ -76,16 +76,14 @@
  let _ =
    match something with
@@ -2139,8 +2139,8 @@
 <details><summary>--break-fun-decl=fit-or-vertical break_fun_decl.ml</summary>
 
 ```
---- break_fun_decl.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:26.000000000 +0900
+--- origin
++++ formatted
 @@ -1,35 +1,57 @@
  class t =
    object
@@ -2227,8 +2227,8 @@
 <details><summary>--break-fun-decl=smart break_fun_decl.ml</summary>
 
 ```
---- break_fun_decl.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:27.000000000 +0900
+--- origin
++++ formatted
 @@ -1,35 +1,53 @@
  class t =
    object
@@ -2337,8 +2337,8 @@
 <details><summary>--break-infix-before-func infix_bind.ml</summary>
 
 ```
---- infix_bind.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:30.000000000 +0900
+--- origin
++++ formatted
 @@ -1,20 +1,19 @@
  ;;
 -f x >>= fun y ->
@@ -2534,8 +2534,8 @@
 <details><summary>--break-infix=fit-or-vertical infix_bind.ml</summary>
 
 ```
---- infix_bind.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:31.000000000 +0900
+--- origin
++++ formatted
 @@ -1,20 +1,19 @@
  ;;
 -f x >>= fun y ->
@@ -2755,8 +2755,8 @@
 <details><summary>--break-infix=wrap infix_bind.ml</summary>
 
 ```
---- infix_bind.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:31.000000000 +0900
+--- origin
++++ formatted
 @@ -1,20 +1,19 @@
  ;;
 -f x >>= fun y ->
@@ -2952,8 +2952,8 @@
 <details><summary>--break-separators=after types.ml</summary>
 
 ```
---- types.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:32.000000000 +0900
+--- origin
++++ formatted
 @@ -122,47 +122,47 @@
    | Proposal
    | Testing_vote  (** fooooooooooo *)
@@ -3072,12 +3072,6 @@
 ```
 
 </details>
-<details><summary>--break-separators=after-and-docked break_separators.ml)</summary>
-
-```
-```
-
-</details>
 <details><summary>--break-separators=before break_separators.ml</summary>
 
 ```
@@ -3087,8 +3081,8 @@
 <details><summary>--break-string-literals=auto break_string_literals.ml</summary>
 
 ```
---- break_string_literals.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:33.000000000 +0900
+--- origin
++++ formatted
 @@ -1,31 +1,36 @@
  let () =
 -  if true then (* Shrinking the margin a bit *)
@@ -3181,8 +3175,8 @@
 <details><summary>--break-string-literals=never break_string_literals.ml</summary>
 
 ```
---- break_string_literals.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:34.000000000 +0900
+--- origin
++++ formatted
 @@ -1,27 +1,11 @@
  let () =
 -  if true then (* Shrinking the margin a bit *)
@@ -3246,8 +3240,8 @@
 <details><summary>--cases-matching-exp-indent=normal break_cases.ml</summary>
 
 ```
---- break_cases.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:34.000000000 +0900
+--- origin
++++ formatted
 @@ -1,239 +0,0 @@
 -let f x = function
 -  | C | P (this, test, [is; wide; enough; _to; break], [the; line]) | A | K
@@ -3491,17 +3485,11 @@
 ```
 
 </details>
-<details><summary>--config=doc-comments=before verbose2.ml</summary>
-
-```
-```
-
-</details>
 <details><summary>--config=margin=20 profiles.ml</summary>
 
 ```
---- profiles.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:36.000000000 +0900
+--- origin
++++ formatted
 @@ -1,3 +1,7 @@
 -let a = aaaaaaaaaa aaaaaaaaa
 +let a =
@@ -3518,8 +3506,8 @@
 <details><summary>--config=module-item-spacing=compact cmdline_override2.ml</summary>
 
 ```
---- cmdline_override2.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:36.000000000 +0900
+--- origin
++++ formatted
 @@ -1,3 +1,2 @@
  let x = 1
 -
@@ -3533,11 +3521,132 @@
 ```
 
 </details>
+<details><summary>--disambiguate-non-breaking-match align_cases.ml</summary>
+
+```
+--- origin
++++ formatted
+@@ -3,19 +3,19 @@
+   | Fooooooooooooo
+   | Fooooooooooooooo
+   | Foooooooooooooooooo
+-  | Foo                 of padding * int array
+-  | Foooooooo           of padding * int array
+-  | Fooooooooo          of padding * int array
+-  | Fooooooooooo        of padding * int array * int array
++  | Foo of padding * int array
++  | Foooooooo of padding * int array
++  | Fooooooooo of padding * int array
++  | Fooooooooooo of padding * int array * int array
+   (* fooooooooooooooooo *)
+   | Fooooooooooo
+       (* fooooooooooooooooooo *) of
+       padding * int array * int array
+   (* fooooooooooooooooo *)
+-  | Foooooooooo         of padding * int array * int array
+-  | Foooo               of padding * int array * int array
+-  | Fooooooo            of padding * int array * int array
+-  | Foooooo             of int array
++  | Foooooooooo of padding * int array * int array
++  | Foooo of padding * int array * int array
++  | Fooooooo of padding * int array * int array
++  | Foooooo of int array
+ 
+ type x =
+   [ `Foooooooooooooo
+@@ -26,15 +26,15 @@
+   | `Foooooo (* fooooo *) of padding * int array
+   | `Fooooooooo (* fooooooooooooooooo *) of padding * int array * int array
+   | (* fooooooooooooooooo *)
+-    `Fooooooooo          of int array
+-  | `Foooooooooooo       of int array ]
++    `Fooooooooo of int array
++  | `Foooooooooooo of int array ]
+ 
+ (* alignment disabled due to unpredictible patterns *)
+ let fooooooooooo =
+   match foooooooooooooooooooooooo with
+   | Bfooooooooooooooooo -> foooooooooooo
+-  | C (a, b, c, d)      -> fooooooooooooooooooo
+-  | _                   -> fooooooooooooooooooo
++  | C (a, b, c, d) -> fooooooooooooooooooo
++  | _ -> fooooooooooooooooooo
+ 
+ let fooooooooooo =
+   match foooooooooooooooooooooooo with
+@@ -62,38 +62,38 @@
+ 
+ let _ =
+   match f with
+-  | 'a'     -> 1
+-  | '\n'    -> 2
+-  | '\t'    -> 2
+-  | '\x12'  -> 2
++  | 'a' -> 1
++  | '\n' -> 2
++  | '\t' -> 2
++  | '\x12' -> 2
+   | pattern -> 3
+ 
+ type t =
+   | ( :: ) of a * b
+-  | []     of looooooooooooooooooooooooooooooooooooooong_break
++  | [] of looooooooooooooooooooooooooooooooooooooong_break
+ 
+-let _ = match (a, b) with A, B -> a | AA, BB -> b | p -> c
++let _ = (match (a, b) with A, B -> a | AA, BB -> b | p -> c)
+ 
+-let _ = match (a, b) with A, B -> a | AA, BB -> b | longer_pattern -> c
++let _ = (match (a, b) with A, B -> a | AA, BB -> b | longer_pattern -> c)
+ 
+ let _ =
+-  match (a, b) with (A, B), B -> a | pat, BB -> b | longer_pattern -> c
++  (match (a, b) with (A, B), B -> a | pat, BB -> b | longer_pattern -> c)
+ 
+-let _ = match f with Foo -> toto | Bar ijx -> bar ijx
++let _ = (match f with Foo -> toto | Bar ijx -> bar ijx)
+ 
+-let _ = match f with `Foo -> toto | `Bar ijx -> bar ijx
++let _ = (match f with `Foo -> toto | `Bar ijx -> bar ijx)
+ 
+ let _ =
+   match (foooooooooooooo, foooooooooooooo) with
+   | Some a, Some b -> a + b
+-  | None, _        -> 1
+-  | Some _, None   -> 2
++  | None, _ -> 1
++  | Some _, None -> 2
+ 
+ let _ =
+   match (foooooooooooooo, foooooooooooooo) with
+-  | [x]    -> x
++  | [x] -> x
+   | [_; x] -> x
+-  | _      -> 0
++  | _ -> 0
+ 
+ type x = Foooooooo of int | Fooooooooooooo of int
+ 
+@@ -102,9 +102,9 @@
+ [@@@ocamlformat "type-decl=sparse"]
+ 
+ type x =
+-  | Foooooooo      of int
++  | Foooooooo of int
+   | Fooooooooooooo of int
+ 
+ type x =
+-  [ `Foooooooo      of int
++  [ `Foooooooo of int
+   | `Fooooooooooooo of int ]
+```
+
+</details>
 <details><summary>--doc-comments=after-when-possible doc_comments.ml</summary>
 
 ```
---- doc_comments.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:38.000000000 +0900
+--- origin
++++ formatted
 @@ -102,7 +102,8 @@
    (* [@@@some attribute] *)
    (* (** Attribute *) *)
@@ -3639,17 +3748,315 @@
 ```
 
 </details>
-<details><summary>--doc-comments=before verbose2.ml</summary>
+<details><summary>--doc-comments=before doc_comments.ml</summary>
 
 ```
+--- origin
++++ formatted
+@@ -1,11 +1,11 @@
+-module A = B
+ (** test *)
++module A = B
+ 
+-include A
+ (** @open *)
++include A
+ 
+-include B
+ (** @open *)
++include B
+ 
+ include A
+ 
+@@ -13,8 +13,8 @@
+ 
+ type t = C of int [@ocaml.doc " docstring attribute "]
+ 
+-include Mod
+ (** comment *)
++include Mod
+ 
+ (** before *)
+ let x = 2
+@@ -32,8 +32,8 @@
+ (** A' *)
+ 
+ module Comment_placement : sig
+-  type t
+   (** Type *)
++  type t
+ 
+   (** Variant declaration *)
+   type t = T
+@@ -41,8 +41,8 @@
+   (** Type extension *)
+   type t += T
+ 
+-  module A : B
+   (** Module *)
++  module A : B
+ 
+   (** Module *)
+   module A : sig
+@@ -51,14 +51,14 @@
+     type b
+   end
+ 
+-  val a : b
+   (** Val *)
++  val a : b
+ 
+-  exception E
+   (** Exception *)
++  exception E
+ 
+-  include M
+   (** Include *)
++  include M
+ 
+   (** Include *)
+   include sig
+@@ -67,14 +67,14 @@
+     type b
+   end
+ 
+-  open M
+   (** Open *)
++  open M
+ 
+-  external a : b = "c"
+   (** External *)
++  external a : b = "c"
+ 
+-  module rec A : B
+   (** Rec module *)
++  module rec A : B
+ 
+   (** Rec module *)
+   module rec A : sig
+@@ -83,8 +83,8 @@
+     type b
+   end
+ 
+-  module type A
+   (** Module type *)
++  module type A
+ 
+   (** Module type *)
+   module type A = sig
+@@ -93,16 +93,17 @@
+     type b
+   end
+ 
+-  class a : b
+   (** Class *)
++  class a : b
+ 
+-  class type a = b
+   (** Class type *)
++  class type a = b
+ 
+   (* [@@@some attribute] *)
+   (* (** Attribute *) *)
+ 
+-  [%%some extension]  (** Extension *)
++  (** Extension *)
++  [%%some extension]
+ 
+   (** A *)
+   external a : b = "double_comment"
+@@ -113,9 +114,10 @@
+     type t
+   end
+ 
+-  module Index : Index.S
+   (** This one goes after *)
++  module Index : Index.S
+ 
++  (** This one _still_ goes after *)
+   module Index2
+       (Paramater_module : BAR_LONG_MODULE_TYPE_NAME)
+       (Foo : BAR)
+@@ -123,21 +125,19 @@
+       (Foo : BAR)
+       (Foo : BAR)
+       (Foo : BAR) : sig end
+-  (** This one _still_ goes after *)
+ 
++  (** Doc comment still goes after *)
+   module Make (Config : sig
+     val blah : string
+ 
+     (* this could be a really long signature *)
+   end) : S
+-  (** Doc comment still goes after *)
+ 
+-  module Gen () : S
+   (** Generative functor *)
+-
++  module Gen () : S
+ end = struct
+-  type t = {a: int}
+   (** Type *)
++  type t = {a: int}
+ 
+   (** Variant declaration *)
+   type t = T
+@@ -145,8 +145,8 @@
+   (** Type extension *)
+   type t += T
+ 
+-  module A = B
+   (** Module *)
++  module A = B
+ 
+   (** Module *)
+   module A = struct
+@@ -166,11 +166,11 @@
+   (** Let *)
+   let a = b
+ 
+-  exception E
+   (** Exception *)
++  exception E
+ 
+-  include M
+   (** Include *)
++  include M
+ 
+   (** Include *)
+   include struct
+@@ -179,14 +179,14 @@
+     type b = B
+   end
+ 
+-  open M
+   (** Open *)
++  open M
+ 
+-  external a : b = "c"
+   (** External *)
++  external a : b = "c"
+ 
+-  module rec A : B = C
+   (** Rec module *)
++  module rec A : B = C
+ 
+   (** Rec module *)
+   module rec A : B = struct
+@@ -195,8 +195,8 @@
+     type b = B
+   end
+ 
+-  module type A = B
+   (** Module type *)
++  module type A = B
+ 
+   (** Module type *)
+   module type A = sig
+@@ -205,36 +205,36 @@
+     type b
+   end
+ 
+-  class a = b
+   (** Class *)
++  class a = b
+ 
+   (** Class *)
+   class b =
+     object
+-      method f = 0
+       (** Method *)
++      method f = 0
+ 
+-      inherit a
+       (** Inherit *)
++      inherit a
+ 
+-      val x = 1
+       (** Val *)
++      val x = 1
+ 
+-      constraint 'a = [> ]
+       (** Constraint *)
++      constraint 'a = [> ]
+ 
+-      initializer do_init ()
+       (** Initialiser *)
++      initializer do_init ()
+     end
+ 
+-  class type a = b
+   (** Class type *)
++  class type a = b
+ 
+   (* [@@@some attribute] *)
+   (* (** Attribute *) *)
+ 
+-  (** Extension *)[%%some
+-  extension]
++  (** Extension *)
++  [%%some extension]
+ 
+   (* ;; *)
+   (* (** Eval *) *)
+@@ -256,30 +256,37 @@
+ 
+ module A = struct
+   module B = struct
+-    (** It does not try to saturate
+-        (1a) A = B + C  /\  B = D + E  =>  A = C + D + E
+-        Nor combine more than 2 equations
+-        (1b) A = B + C  /\  B = D + E  /\  F = C + D + E  =>  A = F
+-
+-        xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+-        (2) A = B + C  /\  B = D + E  =>  A = C + D - E
+-    *)
++    (** It does not try to saturate (1a) A = B + C /\ B = D + E => A = C + D
++        \+ E Nor combine more than 2 equations (1b) A = B + C /\ B = D + E /\
++        F = C + D + E => A = F
++
++        xxxxxxxxxxxxxxxxxxxxxxxxxxxx (2) A = B + C /\ B = D + E => A = C + D
++        \- E *)
+     let a b = ()
+   end
+ end
+ 
+-(* Same with get_pure, except that when we have both "x = t" and "y = t" where t is a primed ident,
+-* we add "x = y" to the result. This is crucial for the normalizer, as it tend to drop "x = t" before
+-* processing "y = t". If we don't explicitly preserve "x = y", the normalizer cannot pick it up *)
++(* Same with get_pure, except that when we have both "x = t" and "y = t"
++   where t is a primed ident, * we add "x = y" to the result. This is crucial
++   for the normalizer, as it tend to drop "x = t" before * processing "y =
++   t". If we don't explicitly preserve "x = y", the normalizer cannot pick it
++   up *)
+ let _ = ()
+ 
+ (** Tags without text *)
++
+ (** @see <Abc> *)
++
+ (** @before a *)
++
+ (** @deprecated *)
++
+ (** @param b *)
++
+ (** @raise c *)
++
+ (** @return *)
+ 
+ (** @see 'file' *)
++
+ (** @see "title" *)
 ```
 
 </details>
 <details><summary>--doc-comments=before-except-val doc_comments.ml</summary>
 
 ```
---- doc_comments.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:39.000000000 +0900
+--- origin
++++ formatted
 @@ -1,11 +1,11 @@
 -module A = B
  (** test *)
@@ -3946,8 +4353,8 @@
 <details><summary>--dock-collection-brackets types.ml</summary>
 
 ```
---- types.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:39.000000000 +0900
+--- origin
++++ formatted
 @@ -16,8 +16,10 @@
  
  type t = [`A | `B]
@@ -3999,8 +4406,8 @@
 <details><summary>--exp-grouping=parens exp_grouping.ml</summary>
 
 ```
---- exp_grouping.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:40.000000000 +0900
+--- origin
++++ formatted
 @@ -1,27 +1,26 @@
  let () =
    Lwt_main.run
@@ -4367,8 +4774,8 @@
 <details><summary>--exp-grouping=preserve exp_grouping.ml</summary>
 
 ```
---- exp_grouping.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:41.000000000 +0900
+--- origin
++++ formatted
 @@ -9,19 +9,22 @@
  
  let () =
@@ -4700,8 +5107,8 @@
 <details><summary>--extension-indent=5 extensions.mli</summary>
 
 ```
---- extensions.mli	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:41.000000000 +0900
+--- origin
++++ formatted
 @@ -2,13 +2,13 @@
  
  type t =
@@ -4728,8 +5135,8 @@
 <details><summary>--extension-sugar=always extensions.ml</summary>
 
 ```
---- extensions.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:41.000000000 +0900
+--- origin
++++ formatted
 @@ -1,209 +0,0 @@
 -let () = [%ext expr] ; ()
 -
@@ -4946,8 +5353,8 @@
 <details><summary>--field-space=loose record.ml</summary>
 
 ```
---- record.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:43.000000000 +0900
+--- origin
++++ formatted
 @@ -1,22 +1,22 @@
 -type t = {x: int; y: int}
 +type t = {x : int; y : int}
@@ -5084,8 +5491,8 @@
 <details><summary>--field-space=tight record.ml</summary>
 
 ```
---- record.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:43.000000000 +0900
+--- origin
++++ formatted
 @@ -107,17 +107,12 @@
  
  let x = function {a: string = _; _} -> ()
@@ -5115,8 +5522,8 @@
 <details><summary>--field-space=tight-decl record.ml</summary>
 
 ```
---- record.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:44.000000000 +0900
+--- origin
++++ formatted
 @@ -1,22 +1,22 @@
  type t = {x: int; y: int}
  
@@ -5250,8 +5657,8 @@
 <details><summary>--format-invalid-files=auto format_invalid_files.ml</summary>
 
 ```
---- format_invalid_files.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:44.000000000 +0900
+--- origin
++++ formatted
 @@ -1,8 +1,6 @@
 -let foooooo
 -= fooooooooo
@@ -5280,8 +5687,8 @@
 <details><summary>--function-indent-nested=always function_indent.ml</summary>
 
 ```
---- function_indent.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:45.000000000 +0900
+--- origin
++++ formatted
 @@ -1,21 +1,19 @@
  let foooooooo = function
 -    | fooooooooooooooooooooooo -> foooooooooooooooooooooooooo
@@ -5321,8 +5728,8 @@
 <details><summary>--function-indent-nested=never function_indent.ml</summary>
 
 ```
---- function_indent.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:46.000000000 +0900
+--- origin
++++ formatted
 @@ -1,21 +1,19 @@
  let foooooooo = function
 -    | fooooooooooooooooooooooo -> foooooooooooooooooooooooooo
@@ -5358,8 +5765,8 @@
 <details><summary>--function-indent=4 function_indent.ml</summary>
 
 ```
---- function_indent.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:46.000000000 +0900
+--- origin
++++ formatted
 @@ -7,15 +7,13 @@
  
  let foo =
@@ -5386,8 +5793,8 @@
 <details><summary>--if-then-else ite.ml</summary>
 
 ```
---- ite.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:46.000000000 +0900
+--- origin
++++ formatted
 @@ -1,121 +0,0 @@
 -let _ = if b then e else ( e1 ; e2 )
 -
@@ -5516,8 +5923,8 @@
 <details><summary>--if-then-else=compact ite.ml</summary>
 
 ```
---- ite.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:47.000000000 +0900
+--- origin
++++ formatted
 @@ -1,4 +1,4 @@
 -let _ = if b then e else ( e1 ; e2 )
 +let _ = if b then e else (e1 ; e2)
@@ -5582,8 +5989,8 @@
 <details><summary>--if-then-else=fit-or-vertical ite.ml</summary>
 
 ```
---- ite.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:48.000000000 +0900
+--- origin
++++ formatted
 @@ -1,13 +1,15 @@
 -let _ = if b then e else ( e1 ; e2 )
 +let _ = if b then e else (e1 ; e2)
@@ -5755,8 +6162,8 @@
 <details><summary>--if-then-else=k-r ite.ml</summary>
 
 ```
---- ite.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:48.000000000 +0900
+--- origin
++++ formatted
 @@ -1,121 +0,0 @@
 -let _ = if b then e else ( e1 ; e2 )
 -
@@ -5885,8 +6292,8 @@
 <details><summary>--if-then-else=keyword-first ite.ml</summary>
 
 ```
---- ite.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:49.000000000 +0900
+--- origin
++++ formatted
 @@ -1,35 +1,40 @@
 -let _ = if b then e else ( e1 ; e2 )
 +let _ = if b then e else (e1 ; e2)
@@ -6057,8 +6464,8 @@
 <details><summary>--indent-after-in=4 let_binding.ml</summary>
 
 ```
---- let_binding.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:50.000000000 +0900
+--- origin
++++ formatted
 @@ -13,8 +13,8 @@
    let (x : int) = x in
    let x : int = x in
@@ -6234,8 +6641,8 @@
 <details><summary>--indicate-multiline-delimiters=closing-on-separate-line ite.ml</summary>
 
 ```
---- ite.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:50.000000000 +0900
+--- origin
++++ formatted
 @@ -1,50 +1,56 @@
 -let _ = if b then e else ( e1 ; e2 )
 +let _ = if b then e else (e1 ; e2)
@@ -6339,8 +6746,8 @@
 <details><summary>--indicate-multiline-delimiters=no ite.ml</summary>
 
 ```
---- ite.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:51.000000000 +0900
+--- origin
++++ formatted
 @@ -1,50 +1,48 @@
 -let _ = if b then e else ( e1 ; e2 )
 +let _ = if b then e else (e1 ; e2)
@@ -6450,8 +6857,8 @@
 <details><summary>--let-binding-indent=6 let_binding.ml</summary>
 
 ```
---- let_binding.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:53.000000000 +0900
+--- origin
++++ formatted
 @@ -10,11 +10,11 @@
  let x : int = x4
  
@@ -6693,8 +7100,8 @@
 <details><summary>--let-module=compact let_module.ml</summary>
 
 ```
---- let_module.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:53.000000000 +0900
+--- origin
++++ formatted
 @@ -1,48 +1,45 @@
  let () =
 -  let module X =
@@ -6769,8 +7176,8 @@
 <details><summary>--let-module=sparse let_module.ml</summary>
 
 ```
---- let_module.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:54.000000000 +0900
+--- origin
++++ formatted
 @@ -31,18 +31,23 @@
  
  let () =
@@ -6802,8 +7209,8 @@
 <details><summary>--let-open=auto open.ml</summary>
 
 ```
---- open.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:54.000000000 +0900
+--- origin
++++ formatted
 @@ -47,24 +47,21 @@
    value & flag & info ["commit"; "c"] ~doc
  
@@ -6973,8 +7380,8 @@
 <details><summary>--let-open=long open.ml</summary>
 
 ```
---- open.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:55.000000000 +0900
+--- origin
++++ formatted
 @@ -1,10 +1,15 @@
 -let _ = Some_module.Submodule.(a + b)
 +let _ =
@@ -7172,8 +7579,8 @@
 <details><summary>--let-open=preserve open.ml</summary>
 
 ```
---- open.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:56.000000000 +0900
+--- origin
++++ formatted
 @@ -178,44 +178,111 @@
    b
  
@@ -7312,8 +7719,8 @@
 <details><summary>--let-open=short open.ml</summary>
 
 ```
---- open.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:56.000000000 +0900
+--- origin
++++ formatted
 @@ -2,49 +2,44 @@
  
  let _ = A.(a, b)
@@ -7546,8 +7953,8 @@
 <details><summary>--margin=58 break_record.ml</summary>
 
 ```
---- break_record.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:57.000000000 +0900
+--- origin
++++ formatted
 @@ -1,6 +1,2 @@
  let xxxxxxxxxxxxxxxxxxxxxx x =
 -  { xxxxxxxxxxxxxx
@@ -7562,8 +7969,8 @@
 <details><summary>--margin=67 wrap_comments_break.ml</summary>
 
 ```
---- wrap_comments_break.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:57.000000000 +0900
+--- origin
++++ formatted
 @@ -1,8 +0,0 @@
 -let _ =
 -  let _ =
@@ -7579,8 +7986,8 @@
 <details><summary>--margin=80 unicode.ml</summary>
 
 ```
---- unicode.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:58.000000000 +0900
+--- origin
++++ formatted
 @@ -1,9 +1,13 @@
  (* Don't edit this file with an editor that perform unicode normalization *)
  
@@ -7605,8 +8012,8 @@
 <details><summary>--match-indent-nested=always match_indent.ml</summary>
 
 ```
---- match_indent.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:59.000000000 +0900
+--- origin
++++ formatted
 @@ -4,12 +4,12 @@
  
  let foooooooo =
@@ -7629,8 +8036,8 @@
 <details><summary>--match-indent-nested=never match_indent.ml</summary>
 
 ```
---- match_indent.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:34:59.000000000 +0900
+--- origin
++++ formatted
 @@ -4,12 +4,12 @@
  
  let foooooooo =
@@ -7653,8 +8060,8 @@
 <details><summary>--match-indent=4 match_indent.ml</summary>
 
 ```
---- match_indent.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:00.000000000 +0900
+--- origin
++++ formatted
 @@ -1,6 +1,6 @@
  ;;
  match fooooooooooooooooooooooo with
@@ -7675,8 +8082,8 @@
 <details><summary>--max-iter=2 reformat_string.ml</summary>
 
 ```
---- reformat_string.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:01.000000000 +0900
+--- origin
++++ formatted
 @@ -1,21 +1,19 @@
 -let _ = ('a')
 +let _ = 'a'
@@ -7715,8 +8122,8 @@
 <details><summary>--max-iter=3 sequence.ml</summary>
 
 ```
---- sequence.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:02.000000000 +0900
+--- origin
++++ formatted
 @@ -1,26 +1,20 @@
  let foo x y =
 -  do_some_setup y ; do_some_setup y ;
@@ -7855,8 +8262,8 @@
 <details><summary>--max-iter=4 comments_args.ml</summary>
 
 ```
---- comments_args.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:02.000000000 +0900
+--- origin
++++ formatted
 @@ -3,25 +3,27 @@
  let emit_wrapper_function =
    Hhas_function.make function_attributes name body
@@ -7909,8 +8316,8 @@
 <details><summary>--max-iters=3 source.ml</summary>
 
 ```
---- source.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:04.000000000 +0900
+--- origin
++++ formatted
 @@ -1,163 +1,198 @@
  [@@@foo]
  
@@ -21314,8 +21721,8 @@
 <details><summary>--max-iters=4 label_option_default_args.ml</summary>
 
 ```
---- label_option_default_args.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:05.000000000 +0900
+--- origin
++++ formatted
 @@ -4,51 +4,99 @@
  
  let f ~x = e
@@ -21504,8 +21911,8 @@
 <details><summary>--module-item-spacing=compact module_item_spacing.ml</summary>
 
 ```
---- module_item_spacing.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:05.000000000 +0900
+--- origin
++++ formatted
 @@ -1,120 +0,0 @@
 -let z = this one is pretty looooooooooooooooooooooooooooooooooong
 -and z = so is this oooooooooooooooooooooooooooooooooooooooooooone
@@ -21633,8 +22040,8 @@
 <details><summary>--module-item-spacing=preserve module_item_spacing.ml</summary>
 
 ```
---- module_item_spacing.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:06.000000000 +0900
+--- origin
++++ formatted
 @@ -1,4 +1,5 @@
  let z = this one is pretty looooooooooooooooooooooooooooooooooong
 +
@@ -21742,8 +22149,8 @@
 <details><summary>--nested-match=align break_cases.ml</summary>
 
 ```
---- break_cases.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:06.000000000 +0900
+--- origin
++++ formatted
 @@ -1,239 +0,0 @@
 -let f x = function
 -  | C | P (this, test, [is; wide; enough; _to; break], [the; line]) | A | K
@@ -21996,8 +22403,8 @@
 <details><summary>--no-comment-check error4.ml</summary>
 
 ```
---- error4.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:08.000000000 +0900
+--- origin
++++ formatted
 @@ -1,3 +1,5 @@
 +(** a or b *)
  let a = ()
@@ -22017,8 +22424,8 @@
 <details><summary>--ocp-indent-config ocp_indent_options.ml</summary>
 
 ```
---- ocp_indent_options.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:09.000000000 +0900
+--- origin
++++ formatted
 @@ -2,7 +2,7 @@
    let f x y =
      match x with
@@ -22044,267 +22451,17 @@
 ```
 
 </details>
-<details><summary>--print-config verbose2.ml</summary>
-
-```
-```
-
-</details>
 <details><summary>--profile=janestreet profiles2.ml</summary>
 
 ```
 ```
 
 </details>
-<details><summary>--profile=ocamlformat wrap_comments.ml</summary>
-
-```
---- wrap_comments.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:12.000000000 +0900
-@@ -1,58 +1,34 @@
- [@@@ocamlformat "wrap-comments=true"]
- 
- type t =
--  | Aaaaaaaaaa (* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. *)
-+  | Aaaaaaaaaa
-+  (* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-+     tempor incididunt ut labore et dolore magna aliqua. *)
-   | Bbbbbbbbbb
- 
- let _ =
-   [ "a"
--  ; "b"
--  (* first line
--     second line *)
--  ; "c"
--  (* first line
--
--     second line
--  *)
--  ; "d"
--  (* first line
--
--
--     second line *)
--  ; "e"
--  (* first line
--
--     second line
--         *)
--  ; "f"
--  (* first line
--
--     second line
--
--
--         *)
--  ; "g"
--  ]
-+  ; "b" (* first line second line *)
-+  ; "c" (* first line second line *)
-+  ; "d" (* first line second line *)
-+  ; "e" (* first line second line *)
-+  ; "f" (* first line second line *)
-+  ; "g" ]
- 
- let _ =
-   let _ =
--    (* This is indented 7
--This 0 *)
-+    (* This is indented 7 This 0 *)
-     0
-   in
-   0
- 
- let _ =
--  (*no space before
--    no space after*)
-+  (*no space before no space after*)
-   0
- 
- let _ =
--  (* 
--    blah blah
--  *)
-+  (* blah blah *)
-   ()
--;;
- 
- [@@@ocamlformat "wrap-comments=false"]
- 
-@@ -62,85 +38,81 @@
- 
- let rex =
-   Pcre.regexp
--    ("^[0-9]{2}"
--     (* xxxxxxxxxxx               *)
--     ^ "(.{12})"
--     (* xxxxxxxxxxxxxxxxxx        *)
--     ^ "(.{4})"
--     (* xxxxxxxxxxxx              *)
--     ^ "([0-9]{3})"
--     (* xxxxxxxx                  *)
--     ^ "(.{60})"
--     (* xxxxxxxxxxxxxxxxxxxx      *)
--     ^ "(.{12})"
--     (* xxxxxxxxxxxxxxx           *)
--     ^ "(.{12})"
--     (* xxxxxxxxxxxxxxxxxxx       *)
--     ^ "([0-9]{3})"
--     (* xxxxxxxxxxxxxxxxxxxxxxxxx *)
--     ^ "([0-9]{3})"
--     (* xxxxxxxxxxx               *)
--     ^ "(.{15})"
--     (* xxxxxxxxxxxxxxxxxx        *)
--     ^ "([0-9]{7})"
--     (* xxxxxxxxxxxxx             *)
--     ^ "(.{10})"
--     (* xxxxxxxxxxxxx             *)
--     ^ date_fmt
--     (* xxxxxxxxxxxxx             *)
--     ^ "([0-9]{18})"
--     (* xxxxx                     *)
--     ^ "(.)"
--     (* xxxxxxxxxxx               *)
--     ^ "([0-9]{3})"
--     (* xxxxxxxxxxxxxx            *)
--     ^ "(.{15})"
--     (* xxxxxxxxxxxxxxxxxxxx      *)
--     ^ "(.{3})"
--     (* xxxxxxxxxx                *)
--     ^ "(.{27})$")
--;;
-+    ( "^[0-9]{2}"
-+    (* xxxxxxxxxxx               *)
-+    ^ "(.{12})"
-+    (* xxxxxxxxxxxxxxxxxx        *)
-+    ^ "(.{4})"
-+    (* xxxxxxxxxxxx              *)
-+    ^ "([0-9]{3})"
-+    (* xxxxxxxx                  *)
-+    ^ "(.{60})"
-+    (* xxxxxxxxxxxxxxxxxxxx      *)
-+    ^ "(.{12})"
-+    (* xxxxxxxxxxxxxxx           *)
-+    ^ "(.{12})"
-+    (* xxxxxxxxxxxxxxxxxxx       *)
-+    ^ "([0-9]{3})"
-+    (* xxxxxxxxxxxxxxxxxxxxxxxxx *)
-+    ^ "([0-9]{3})"
-+    (* xxxxxxxxxxx               *)
-+    ^ "(.{15})"
-+    (* xxxxxxxxxxxxxxxxxx        *)
-+    ^ "([0-9]{7})"
-+    (* xxxxxxxxxxxxx             *)
-+    ^ "(.{10})"
-+    (* xxxxxxxxxxxxx             *)
-+    ^ date_fmt
-+    (* xxxxxxxxxxxxx             *)
-+    ^ "([0-9]{18})"
-+    (* xxxxx                     *)
-+    ^ "(.)"
-+    (* xxxxxxxxxxx               *)
-+    ^ "([0-9]{3})"
-+    (* xxxxxxxxxxxxxx            *)
-+    ^ "(.{15})"
-+    (* xxxxxxxxxxxxxxxxxxxx      *)
-+    ^ "(.{3})"
-+    (* xxxxxxxxxx                *)
-+    ^ "(.{27})$" )
- 
- type foo =
--  { some_field : int
--    (* long long long long long long long long long long long long long long
--     * long long long long *)
--  ; another_field : string }
-+  { some_field: int
-+        (* long long long long long long long long long long long long long long
-+         * long long long long *)
-+  ; another_field: string }
- 
- let _ =
-   [ "a"
-   ; "b"
--  (* first line
--     second line *)
-+    (* first line
-+       second line *)
-   ; "c"
--  (* first line
-+    (* first line
- 
--     second line
--  *)
-+       second line
-+    *)
-   ; "d"
--  (* first line
-+    (* first line
- 
- 
--     second line *)
-+       second line *)
-   ; "e"
--  (* first line
-+    (* first line
- 
--     second line
--         *)
-+       second line
-+    *)
-   ; "f"
--  (* first line
--
--     second line
-+    (* first line
- 
--
--         *)
--  ; "g"
--  ]
-+       second line
-+    *)
-+  ; "g" ]
- 
- let _ =
-   let _ =
-     (* This is indented 7
--This 0 *)
-+       This 0 *)
-     0
-   in
-   0
-@@ -153,7 +125,7 @@
- let _ =
-   (*no space before
-     just newline after
--*)
-+  *)
-   0
- 
- let _ =
-@@ -171,11 +143,9 @@
-         5-----o--------------o-----o--5
-       v} *)
-   ()
--;;
- 
- let _ =
--  (* 
--    blah blah
-+  (*
-+     blah blah
-   *)
-   ()
--;;
-```
-
-</details>
 <details><summary>--sequence-blank-line=compact sequence.ml</summary>
 
 ```
---- sequence.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:13.000000000 +0900
+--- origin
++++ formatted
 @@ -1,130 +0,0 @@
 -let foo x y =
 -  do_some_setup y ; do_some_setup y ;
@@ -22442,8 +22599,8 @@
 <details><summary>--sequence-blank-line=preserve-one sequence.ml</summary>
 
 ```
---- sequence.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:13.000000000 +0900
+--- origin
++++ formatted
 @@ -1,130 +0,0 @@
 -let foo x y =
 -  do_some_setup y ; do_some_setup y ;
@@ -22587,8 +22744,8 @@
 <details><summary>--space-around-lists types.ml</summary>
 
 ```
---- types.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:15.000000000 +0900
+--- origin
++++ formatted
 @@ -8,7 +8,7 @@
  
  type uu += B of 'a * (< leq: 'a > as 'a)
@@ -22604,8 +22761,8 @@
 <details><summary>--space-around-records types.ml</summary>
 
 ```
---- types.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:16.000000000 +0900
+--- origin
++++ formatted
 @@ -10,14 +10,14 @@
  
  let _ = ignore Async_unix.Fd.(([stdin (); stdout (); stderr ()] : t list))
@@ -22668,8 +22825,8 @@
 <details><summary>--space-around-variants types.ml</summary>
 
 ```
---- types.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:16.000000000 +0900
+--- origin
++++ formatted
 @@ -14,7 +14,7 @@
  
  type t = {a: int; b: int}
@@ -22718,8 +22875,8 @@
 <details><summary>--stritem-extension-indent=3 extensions.mli</summary>
 
 ```
---- extensions.mli	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:17.000000000 +0900
+--- origin
++++ formatted
 @@ -11,15 +11,15 @@
      foooooooooooooooooooooooooooo]
  
@@ -22749,8 +22906,8 @@
 <details><summary>--type-decl-indent=6 types.ml</summary>
 
 ```
---- types.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:17.000000000 +0900
+--- origin
++++ formatted
 @@ -17,7 +17,7 @@
  type t = [`A | `B]
  
@@ -22923,8 +23080,8 @@
 <details><summary>--type-decl=sparse types.ml</summary>
 
 ```
---- types.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:19.000000000 +0900
+--- origin
++++ formatted
 @@ -1,8 +1,14 @@
 -type uu = A of int | B of (< leq: 'a > as 'a)
 -
@@ -23034,8 +23191,8 @@
 <details><summary>--wrap-comments unicode.ml</summary>
 
 ```
---- unicode.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:19.000000000 +0900
+--- origin
++++ formatted
 @@ -1,9 +1,13 @@
  (* Don't edit this file with an editor that perform unicode normalization *)
  
@@ -23060,8 +23217,8 @@
 <details><summary>fit-or-vertical ite.ml</summary>
 
 ```
---- ite.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:19.000000000 +0900
+--- origin
++++ formatted
 @@ -1,121 +0,0 @@
 -let _ = if b then e else ( e1 ; e2 )
 -
@@ -23190,8 +23347,8 @@
 <details><summary>keyword-first ite.ml</summary>
 
 ```
---- ite.ml	2020-06-04 15:20:32.000000000 +0900
-+++ fuga.txt	2020-06-04 18:35:20.000000000 +0900
+--- origin
++++ formatted
 @@ -1,121 +0,0 @@
 -let _ = if b then e else ( e1 ; e2 )
 -
