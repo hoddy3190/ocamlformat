@@ -44,6 +44,7 @@ my $opt_src_list = [
     [qw/ --doc-comments=after-when-possible doc_comments.ml /],
     [qw/ --doc-comments=before-except-val doc_comments.ml /],
     [qw/ --doc-comments=before doc_comments.ml /],
+    [qw/ --doc-comments-padding=5 doc_comments.ml /],
     [qw/ --no-comment-check error4.ml /],
     [qw/ --exp-grouping=parens exp_grouping.ml /],
     [qw/ --exp-grouping=preserve exp_grouping.ml /],

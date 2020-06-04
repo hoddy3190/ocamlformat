@@ -2417,6 +2417,305 @@
 ```
 
 </details>
+<details><summary>--doc-comments-padding=5 doc_comments.ml  </summary>
+
+```
+--- origin
++++ formatted
+@@ -1,20 +1,20 @@
+-module A = B
+ (** test *)
++module A = B
+ 
+-include A
+ (** @open *)
++include A
+ 
+-include B
+ (** @open *)
++include B
+ 
+ include A
+ 
+-type t = C of int  (** docstring comment *)
++type t = C of int     (** docstring comment *)
+ 
+ type t = C of int [@ocaml.doc " docstring attribute "]
+ 
+-include Mod
+ (** comment *)
++include Mod
+ 
+ (** before *)
+ let x = 2
+@@ -32,8 +32,8 @@
+ (** A' *)
+ 
+ module Comment_placement : sig
+-  type t
+   (** Type *)
++  type t
+ 
+   (** Variant declaration *)
+   type t = T
+@@ -41,8 +41,8 @@
+   (** Type extension *)
+   type t += T
+ 
+-  module A : B
+   (** Module *)
++  module A : B
+ 
+   (** Module *)
+   module A : sig
+@@ -54,11 +54,11 @@
+   val a : b
+   (** Val *)
+ 
+-  exception E
+   (** Exception *)
++  exception E
+ 
+-  include M
+   (** Include *)
++  include M
+ 
+   (** Include *)
+   include sig
+@@ -67,14 +67,14 @@
+     type b
+   end
+ 
+-  open M
+   (** Open *)
++  open M
+ 
+   external a : b = "c"
+   (** External *)
+ 
+-  module rec A : B
+   (** Rec module *)
++  module rec A : B
+ 
+   (** Rec module *)
+   module rec A : sig
+@@ -83,8 +83,8 @@
+     type b
+   end
+ 
+-  module type A
+   (** Module type *)
++  module type A
+ 
+   (** Module type *)
+   module type A = sig
+@@ -93,16 +93,17 @@
+     type b
+   end
+ 
+-  class a : b
+   (** Class *)
++  class a : b
+ 
+-  class type a = b
+   (** Class type *)
++  class type a = b
+ 
+   (* [@@@some attribute] *)
+   (* (** Attribute *) *)
+ 
+-  [%%some extension]  (** Extension *)
++  (** Extension *)
++  [%%some extension]
+ 
+   (** A *)
+   external a : b = "double_comment"
+@@ -113,9 +114,10 @@
+     type t
+   end
+ 
+-  module Index : Index.S
+   (** This one goes after *)
++  module Index : Index.S
+ 
++  (** This one _still_ goes after *)
+   module Index2
+       (Paramater_module : BAR_LONG_MODULE_TYPE_NAME)
+       (Foo : BAR)
+@@ -123,21 +125,19 @@
+       (Foo : BAR)
+       (Foo : BAR)
+       (Foo : BAR) : sig end
+-  (** This one _still_ goes after *)
+ 
++  (** Doc comment still goes after *)
+   module Make (Config : sig
+     val blah : string
+ 
+     (* this could be a really long signature *)
+   end) : S
+-  (** Doc comment still goes after *)
+ 
+-  module Gen () : S
+   (** Generative functor *)
+-
++  module Gen () : S
+ end = struct
+-  type t = {a: int}
+   (** Type *)
++  type t = {a: int}
+ 
+   (** Variant declaration *)
+   type t = T
+@@ -145,8 +145,8 @@
+   (** Type extension *)
+   type t += T
+ 
+-  module A = B
+   (** Module *)
++  module A = B
+ 
+   (** Module *)
+   module A = struct
+@@ -166,11 +166,11 @@
+   (** Let *)
+   let a = b
+ 
+-  exception E
+   (** Exception *)
++  exception E
+ 
+-  include M
+   (** Include *)
++  include M
+ 
+   (** Include *)
+   include struct
+@@ -179,14 +179,14 @@
+     type b = B
+   end
+ 
+-  open M
+   (** Open *)
++  open M
+ 
+   external a : b = "c"
+   (** External *)
+ 
+-  module rec A : B = C
+   (** Rec module *)
++  module rec A : B = C
+ 
+   (** Rec module *)
+   module rec A : B = struct
+@@ -195,8 +195,8 @@
+     type b = B
+   end
+ 
+-  module type A = B
+   (** Module type *)
++  module type A = B
+ 
+   (** Module type *)
+   module type A = sig
+@@ -205,36 +205,36 @@
+     type b
+   end
+ 
+-  class a = b
+   (** Class *)
++  class a = b
+ 
+   (** Class *)
+   class b =
+     object
+-      method f = 0
+       (** Method *)
++      method f = 0
+ 
+-      inherit a
+       (** Inherit *)
++      inherit a
+ 
+-      val x = 1
+       (** Val *)
++      val x = 1
+ 
+-      constraint 'a = [> ]
+       (** Constraint *)
++      constraint 'a = [> ]
+ 
+-      initializer do_init ()
+       (** Initialiser *)
++      initializer do_init ()
+     end
+ 
+-  class type a = b
+   (** Class type *)
++  class type a = b
+ 
+   (* [@@@some attribute] *)
+   (* (** Attribute *) *)
+ 
+-  (** Extension *)[%%some
+-  extension]
++  (** Extension *)
++  [%%some extension]
+ 
+   (* ;; *)
+   (* (** Eval *) *)
+@@ -256,30 +256,37 @@
+ 
+ module A = struct
+   module B = struct
+-    (** It does not try to saturate
+-        (1a) A = B + C  /\  B = D + E  =>  A = C + D + E
+-        Nor combine more than 2 equations
+-        (1b) A = B + C  /\  B = D + E  /\  F = C + D + E  =>  A = F
+-
+-        xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+-        (2) A = B + C  /\  B = D + E  =>  A = C + D - E
+-    *)
++    (** It does not try to saturate (1a) A = B + C /\ B = D + E => A = C + D
++        \+ E Nor combine more than 2 equations (1b) A = B + C /\ B = D + E /\
++        F = C + D + E => A = F
++
++        xxxxxxxxxxxxxxxxxxxxxxxxxxxx (2) A = B + C /\ B = D + E => A = C + D
++        \- E *)
+     let a b = ()
+   end
+ end
+ 
+-(* Same with get_pure, except that when we have both "x = t" and "y = t" where t is a primed ident,
+-* we add "x = y" to the result. This is crucial for the normalizer, as it tend to drop "x = t" before
+-* processing "y = t". If we don't explicitly preserve "x = y", the normalizer cannot pick it up *)
++(* Same with get_pure, except that when we have both "x = t" and "y = t"
++   where t is a primed ident, * we add "x = y" to the result. This is crucial
++   for the normalizer, as it tend to drop "x = t" before * processing "y =
++   t". If we don't explicitly preserve "x = y", the normalizer cannot pick it
++   up *)
+ let _ = ()
+ 
+ (** Tags without text *)
++
+ (** @see <Abc> *)
++
+ (** @before a *)
++
+ (** @deprecated *)
++
+ (** @param b *)
++
+ (** @raise c *)
++
+ (** @return *)
+ 
+ (** @see 'file' *)
++
+ (** @see "title" *)
+```
+
+</details>
 <details><summary>--doc-comments=after-when-possible doc_comments.ml  </summary>
 
 ```
