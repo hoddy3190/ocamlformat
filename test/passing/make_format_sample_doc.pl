@@ -113,9 +113,6 @@ my $opt_src_list = [
     [qw/ --type-decl=sparse --space-around-arrays --space-around-lists --space-around-records --space-around-variants types.ml /],
     [qw/ --type-decl=sparse types.ml /],
     [qw/ --margin=80 --wrap-comments unicode.ml /],
-    [qw/ --print-config --doc-comments=before --config=doc-comments=before verbose1.ml /],
-    [qw/ --print-config --doc-comments=before --config=doc-comments=before verbose2.ml /],
-    [qw/ --profile=ocamlformat wrap_comments.ml /],
     [qw/ --no-wrap-fun-args --margin=67 wrap_comments_break.ml /]
 ];
 
