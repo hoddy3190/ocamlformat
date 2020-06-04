@@ -27,7 +27,6 @@ my $opt_src_list = [
     [qw/ --profile=janestreet --margin=58 break_record.ml /],
     [qw/ --break-separators=after --max-iter=3 break_separators.ml /],
     [qw/ --break-separators=after --dock-collection-brackets --max-iter=3 break_separators.ml /],
-    [qw/ --break-separators=after-and-docked break_separators.ml) /],
     [qw/ --break-separators=after --break-collection-expressions=wrap --dock-collection-brackets break_separators.ml /],
     [qw/ --break-separators=after --break-collection-expressions=wrap break_separators.ml /],
     [qw/ --break-separators=before --dock-collection-brackets --max-iter=3 break_separators.ml /],
