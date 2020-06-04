@@ -1,5 +1,5 @@
 
-<details><summary>--align-cases align_cases.ml  </summary>
+<details><summary>--align-cases align_cases.ml </summary>
 
 ```
 --- origin
@@ -67,7 +67,7 @@
 ```
 
 </details>
-<details><summary>--align-constructors-decl align_cases.ml  </summary>
+<details><summary>--align-constructors-decl align_cases.ml </summary>
 
 ```
 --- origin
@@ -136,7 +136,7 @@
 ```
 
 </details>
-<details><summary>--align-variants-decl align_cases.ml  </summary>
+<details><summary>--align-variants-decl align_cases.ml </summary>
 
 ```
 --- origin
@@ -232,7 +232,7 @@
 ```
 
 </details>
-<details><summary>--assignment-operator=begin-line field.ml  </summary>
+<details><summary>--assignment-operator=begin-line field.ml </summary>
 
 ```
 --- origin
@@ -285,7 +285,7 @@
 ```
 
 </details>
-<details><summary>--break-before-in=auto break_before_in.ml  </summary>
+<details><summary>--break-before-in=auto break_before_in.ml </summary>
 
 ```
 --- origin
@@ -371,19 +371,19 @@
 ```
 
 </details>
-<details><summary>--break-before-in=fit-or-vertical break_before_in.ml  </summary>
+<details><summary>--break-before-in=fit-or-vertical break_before_in.ml </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--break-collection-expressions=fit-or-vertical break_separators.ml  </summary>
+<details><summary>--break-collection-expressions=fit-or-vertical break_separators.ml </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--break-collection-expressions=wrap break_separators.ml  </summary>
+<details><summary>--break-collection-expressions=wrap break_separators.ml </summary>
 
 ```
 --- origin
@@ -734,7 +734,7 @@
 ```
 
 </details>
-<details><summary>--break-fun-decl=fit-or-vertical break_fun_decl.ml  </summary>
+<details><summary>--break-fun-decl=fit-or-vertical break_fun_decl.ml </summary>
 
 ```
 --- origin
@@ -822,7 +822,7 @@
 ```
 
 </details>
-<details><summary>--break-fun-decl=smart break_fun_decl.ml  </summary>
+<details><summary>--break-fun-decl=smart break_fun_decl.ml </summary>
 
 ```
 --- origin
@@ -908,31 +908,31 @@
 ```
 
 </details>
-<details><summary>--break-fun-decl=wrap break_fun_decl.ml  </summary>
+<details><summary>--break-fun-decl=wrap break_fun_decl.ml </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--break-fun-sig=fit-or-vertical break_fun_decl.ml  </summary>
+<details><summary>--break-fun-sig=fit-or-vertical break_fun_decl.ml </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--break-fun-sig=smart break_fun_decl.ml  </summary>
+<details><summary>--break-fun-sig=smart break_fun_decl.ml </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--break-fun-sig=wrap break_fun_decl.ml  </summary>
+<details><summary>--break-fun-sig=wrap break_fun_decl.ml </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--break-infix-before-func infix_bind.ml  </summary>
+<details><summary>--break-infix-before-func infix_bind.ml </summary>
 
 ```
 --- origin
@@ -1129,7 +1129,7 @@
 ```
 
 </details>
-<details><summary>--break-infix=fit-or-vertical infix_bind.ml  </summary>
+<details><summary>--break-infix=fit-or-vertical infix_bind.ml </summary>
 
 ```
 --- origin
@@ -1350,7 +1350,7 @@
 ```
 
 </details>
-<details><summary>--break-infix=wrap infix_bind.ml  </summary>
+<details><summary>--break-infix=wrap infix_bind.ml </summary>
 
 ```
 --- origin
@@ -1547,7 +1547,7 @@
 ```
 
 </details>
-<details><summary>--break-separators=after types.ml  </summary>
+<details><summary>--break-separators=after types.ml </summary>
 
 ```
 --- origin
@@ -1670,13 +1670,13 @@
 ```
 
 </details>
-<details><summary>--break-separators=before break_separators.ml  </summary>
+<details><summary>--break-separators=before break_separators.ml </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--break-string-literals=auto break_string_literals.ml  </summary>
+<details><summary>--break-string-literals=auto break_string_literals.ml </summary>
 
 ```
 --- origin
@@ -1770,7 +1770,7 @@
 ```
 
 </details>
-<details><summary>--break-string-literals=never break_string_literals.ml  </summary>
+<details><summary>--break-string-literals=never break_string_literals.ml </summary>
 
 ```
 --- origin
@@ -1829,7 +1829,7 @@
 ```
 
 </details>
-<details><summary>--cases-exp-indent=10 align_cases.ml  </summary>
+<details><summary>--cases-exp-indent=10 align_cases.ml </summary>
 
 ```
 --- origin
@@ -1949,7 +1949,7 @@
 ```
 
 </details>
-<details><summary>--cases-matching-exp-indent=normal break_cases.ml --break-cases=all (must option: --break-cases=all)</summary>
+<details><summary>--cases-matching-exp-indent=normal break_cases.ml (must option: --break-cases=all)</summary>
 
 ```
 --- origin
@@ -2260,7 +2260,7 @@
 ```
 
 </details>
-<details><summary>--config=margin=20 profiles.ml  </summary>
+<details><summary>--config=margin=20 profiles.ml </summary>
 
 ```
 --- origin
@@ -2278,7 +2278,7 @@
 ```
 
 </details>
-<details><summary>--config=module-item-spacing=compact cmdline_override2.ml  </summary>
+<details><summary>--config=module-item-spacing=compact cmdline_override2.ml </summary>
 
 ```
 --- origin
@@ -2290,13 +2290,13 @@
 ```
 
 </details>
-<details><summary>--disable disabled.ml  </summary>
+<details><summary>--disable disabled.ml </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--disambiguate-non-breaking-match align_cases.ml  </summary>
+<details><summary>--disambiguate-non-breaking-match align_cases.ml </summary>
 
 ```
 --- origin
@@ -2417,7 +2417,7 @@
 ```
 
 </details>
-<details><summary>--doc-comments-padding=5 doc_comments.ml  </summary>
+<details><summary>--doc-comments-padding=5 doc_comments.ml </summary>
 
 ```
 --- origin
@@ -2716,7 +2716,7 @@
 ```
 
 </details>
-<details><summary>--doc-comments-tag-only=default doc_comments.ml  </summary>
+<details><summary>--doc-comments-tag-only=default doc_comments.ml </summary>
 
 ```
 --- origin
@@ -3014,7 +3014,7 @@
 ```
 
 </details>
-<details><summary>--doc-comments-tag-only=fit doc_comments.ml  </summary>
+<details><summary>--doc-comments-tag-only=fit doc_comments.ml </summary>
 
 ```
 --- origin
@@ -3304,7 +3304,7 @@
 ```
 
 </details>
-<details><summary>--doc-comments=after-when-possible doc_comments.ml  </summary>
+<details><summary>--doc-comments=after-when-possible doc_comments.ml </summary>
 
 ```
 --- origin
@@ -3410,7 +3410,7 @@
 ```
 
 </details>
-<details><summary>--doc-comments=before doc_comments.ml  </summary>
+<details><summary>--doc-comments=before doc_comments.ml </summary>
 
 ```
 --- origin
@@ -3714,7 +3714,7 @@
 ```
 
 </details>
-<details><summary>--doc-comments=before-except-val doc_comments.ml  </summary>
+<details><summary>--doc-comments=before-except-val doc_comments.ml </summary>
 
 ```
 --- origin
@@ -4012,7 +4012,7 @@
 ```
 
 </details>
-<details><summary>--dock-collection-brackets types.ml  </summary>
+<details><summary>--dock-collection-brackets types.ml </summary>
 
 ```
 --- origin
@@ -4065,7 +4065,7 @@
 ```
 
 </details>
-<details><summary>--exp-grouping=parens exp_grouping.ml  </summary>
+<details><summary>--exp-grouping=parens exp_grouping.ml </summary>
 
 ```
 --- origin
@@ -4433,7 +4433,7 @@
 ```
 
 </details>
-<details><summary>--exp-grouping=preserve exp_grouping.ml  </summary>
+<details><summary>--exp-grouping=preserve exp_grouping.ml </summary>
 
 ```
 --- origin
@@ -4766,7 +4766,7 @@
 ```
 
 </details>
-<details><summary>--extension-indent=5 extensions.mli  </summary>
+<details><summary>--extension-indent=5 extensions.mli </summary>
 
 ```
 --- origin
@@ -4794,7 +4794,7 @@
 ```
 
 </details>
-<details><summary>--field-space=loose record.ml  </summary>
+<details><summary>--field-space=loose record.ml </summary>
 
 ```
 --- origin
@@ -4932,7 +4932,7 @@
 ```
 
 </details>
-<details><summary>--field-space=tight record.ml  </summary>
+<details><summary>--field-space=tight record.ml </summary>
 
 ```
 --- origin
@@ -4963,7 +4963,7 @@
 ```
 
 </details>
-<details><summary>--field-space=tight-decl record.ml  </summary>
+<details><summary>--field-space=tight-decl record.ml </summary>
 
 ```
 --- origin
@@ -5098,7 +5098,7 @@
 ```
 
 </details>
-<details><summary>--function-indent-nested=always function_indent.ml  </summary>
+<details><summary>--function-indent-nested=always function_indent.ml </summary>
 
 ```
 --- origin
@@ -5139,7 +5139,7 @@
 ```
 
 </details>
-<details><summary>--function-indent-nested=never function_indent.ml  </summary>
+<details><summary>--function-indent-nested=never function_indent.ml </summary>
 
 ```
 --- origin
@@ -5176,7 +5176,7 @@
 ```
 
 </details>
-<details><summary>--function-indent=4 function_indent.ml  </summary>
+<details><summary>--function-indent=4 function_indent.ml </summary>
 
 ```
 --- origin
@@ -5204,7 +5204,7 @@
 ```
 
 </details>
-<details><summary>--indent-after-in=4 let_binding.ml  </summary>
+<details><summary>--indent-after-in=4 let_binding.ml </summary>
 
 ```
 --- origin
@@ -5381,7 +5381,7 @@
 ```
 
 </details>
-<details><summary>--indicate-multiline-delimiters=closing-on-separate-line ite.ml --if-then-else=compact (must option: --if-then-else=compact)</summary>
+<details><summary>--indicate-multiline-delimiters=closing-on-separate-line ite.ml (must option: --if-then-else=compact)</summary>
 
 ```
 --- origin
@@ -5486,7 +5486,7 @@
 ```
 
 </details>
-<details><summary>--indicate-multiline-delimiters=no ite.ml --if-then-else=compact (must option: --if-then-else=compact)</summary>
+<details><summary>--indicate-multiline-delimiters=no ite.ml (must option: --if-then-else=compact)</summary>
 
 ```
 --- origin
@@ -5585,19 +5585,19 @@
 ```
 
 </details>
-<details><summary>--infix-precedence=parens infix_precedence.ml  </summary>
+<details><summary>--infix-precedence=parens infix_precedence.ml </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--leading-nested-match-parens match2.ml  </summary>
+<details><summary>--leading-nested-match-parens match2.ml </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--let-binding-indent=6 let_binding.ml  </summary>
+<details><summary>--let-binding-indent=6 let_binding.ml </summary>
 
 ```
 --- origin
@@ -5840,7 +5840,7 @@
 ```
 
 </details>
-<details><summary>--let-module=compact let_module.ml  </summary>
+<details><summary>--let-module=compact let_module.ml </summary>
 
 ```
 --- origin
@@ -5916,7 +5916,7 @@
 ```
 
 </details>
-<details><summary>--let-module=sparse let_module.ml  </summary>
+<details><summary>--let-module=sparse let_module.ml </summary>
 
 ```
 --- origin
@@ -5949,7 +5949,7 @@
 ```
 
 </details>
-<details><summary>--let-open=auto open.ml  </summary>
+<details><summary>--let-open=auto open.ml </summary>
 
 ```
 --- origin
@@ -6120,7 +6120,7 @@
 ```
 
 </details>
-<details><summary>--let-open=long open.ml  </summary>
+<details><summary>--let-open=long open.ml </summary>
 
 ```
 --- origin
@@ -6319,7 +6319,7 @@
 ```
 
 </details>
-<details><summary>--let-open=preserve open.ml  </summary>
+<details><summary>--let-open=preserve open.ml </summary>
 
 ```
 --- origin
@@ -6459,7 +6459,7 @@
 ```
 
 </details>
-<details><summary>--let-open=short open.ml  </summary>
+<details><summary>--let-open=short open.ml </summary>
 
 ```
 --- origin
@@ -6693,7 +6693,7 @@
 ```
 
 </details>
-<details><summary>--margin=58 break_record.ml  </summary>
+<details><summary>--margin=58 break_record.ml </summary>
 
 ```
 --- origin
@@ -6709,7 +6709,7 @@
 ```
 
 </details>
-<details><summary>--margin=80 unicode.ml  </summary>
+<details><summary>--margin=80 unicode.ml </summary>
 
 ```
 --- origin
@@ -6735,7 +6735,7 @@
 ```
 
 </details>
-<details><summary>--match-indent-nested=always match_indent.ml  </summary>
+<details><summary>--match-indent-nested=always match_indent.ml </summary>
 
 ```
 --- origin
@@ -6759,7 +6759,7 @@
 ```
 
 </details>
-<details><summary>--match-indent-nested=never match_indent.ml  </summary>
+<details><summary>--match-indent-nested=never match_indent.ml </summary>
 
 ```
 --- origin
@@ -6783,7 +6783,7 @@
 ```
 
 </details>
-<details><summary>--match-indent=4 match_indent.ml  </summary>
+<details><summary>--match-indent=4 match_indent.ml </summary>
 
 ```
 --- origin
@@ -6799,13 +6799,13 @@
 ```
 
 </details>
-<details><summary>--max-indent=2 max_indent.ml  </summary>
+<details><summary>--max-indent=2 max_indent.ml </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--max-iter=2 reformat_string.ml  </summary>
+<details><summary>--max-iter=2 reformat_string.ml </summary>
 
 ```
 --- origin
@@ -6845,7 +6845,7 @@
 ```
 
 </details>
-<details><summary>--max-iter=4 comments_args.ml  </summary>
+<details><summary>--max-iter=4 comments_args.ml </summary>
 
 ```
 --- origin
@@ -6893,7 +6893,7 @@
 ```
 
 </details>
-<details><summary>--max-iters=1 need_format.ml  </summary>
+<details><summary>--max-iters=1 need_format.ml </summary>
 
 ```
 --- origin
@@ -6903,7 +6903,7 @@
 ```
 
 </details>
-<details><summary>--max-iters=3 source.ml  </summary>
+<details><summary>--max-iters=3 source.ml </summary>
 
 ```
 --- origin
@@ -20308,7 +20308,7 @@
 ```
 
 </details>
-<details><summary>--max-iters=4 label_option_default_args.ml  </summary>
+<details><summary>--max-iters=4 label_option_default_args.ml </summary>
 
 ```
 --- origin
@@ -20498,7 +20498,7 @@
 ```
 
 </details>
-<details><summary>--module-item-spacing=compact module_item_spacing.ml --max-iter=3 (must option: --max-iter=3)</summary>
+<details><summary>--module-item-spacing=compact module_item_spacing.ml (must option: --max-iter=3)</summary>
 
 ```
 --- origin
@@ -20618,7 +20618,7 @@
 ```
 
 </details>
-<details><summary>--module-item-spacing=preserve module_item_spacing.ml --max-iter=3 (must option: --max-iter=3)</summary>
+<details><summary>--module-item-spacing=preserve module_item_spacing.ml (must option: --max-iter=3)</summary>
 
 ```
 --- origin
@@ -20721,13 +20721,13 @@
 ```
 
 </details>
-<details><summary>--module-item-spacing=sparse profiles.ml  </summary>
+<details><summary>--module-item-spacing=sparse profiles.ml </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--nested-match=align break_cases.ml --break-cases=all (must option: --break-cases=all)</summary>
+<details><summary>--nested-match=align break_cases.ml (must option: --break-cases=all)</summary>
 
 ```
 --- origin
@@ -21017,13 +21017,13 @@
 ```
 
 </details>
-<details><summary>--no-break-infix-before-func infix_bind.ml  </summary>
+<details><summary>--no-break-infix-before-func infix_bind.ml </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--no-comment-check error4.ml  </summary>
+<details><summary>--no-comment-check error4.ml </summary>
 
 ```
 --- origin
@@ -21038,7 +21038,7 @@
 ```
 
 </details>
-<details><summary>--ocp-indent-config ocp_indent_options.ml  </summary>
+<details><summary>--ocp-indent-config ocp_indent_options.ml </summary>
 
 ```
 --- origin
@@ -21056,25 +21056,25 @@
 ```
 
 </details>
-<details><summary>--parens-tuple=always tuple.ml  </summary>
+<details><summary>--parens-tuple=always tuple.ml </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--parens-tuple=multi-line-only tuple_less_parens.ml  </summary>
+<details><summary>--parens-tuple=multi-line-only tuple_less_parens.ml </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--profile=janestreet profiles2.ml  </summary>
+<details><summary>--profile=janestreet profiles2.ml </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--sequence-blank-line=compact sequence.ml --max-iter=3 (must option: --max-iter=3)</summary>
+<details><summary>--sequence-blank-line=compact sequence.ml (must option: --max-iter=3)</summary>
 
 ```
 --- origin
@@ -21214,7 +21214,7 @@
 ```
 
 </details>
-<details><summary>--sequence-blank-line=preserve-one sequence.ml --max-iter=3 (must option: --max-iter=3)</summary>
+<details><summary>--sequence-blank-line=preserve-one sequence.ml (must option: --max-iter=3)</summary>
 
 ```
 --- origin
@@ -21332,13 +21332,13 @@
 ```
 
 </details>
-<details><summary>--space-around-arrays types.ml  </summary>
+<details><summary>--space-around-arrays types.ml </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--space-around-lists types.ml  </summary>
+<details><summary>--space-around-lists types.ml </summary>
 
 ```
 --- origin
@@ -21355,7 +21355,7 @@
 ```
 
 </details>
-<details><summary>--space-around-records types.ml  </summary>
+<details><summary>--space-around-records types.ml </summary>
 
 ```
 --- origin
@@ -21419,7 +21419,7 @@
 ```
 
 </details>
-<details><summary>--space-around-variants types.ml  </summary>
+<details><summary>--space-around-variants types.ml </summary>
 
 ```
 --- origin
@@ -21469,7 +21469,7 @@
 ```
 
 </details>
-<details><summary>--stritem-extension-indent=3 extensions.mli  </summary>
+<details><summary>--stritem-extension-indent=3 extensions.mli </summary>
 
 ```
 --- origin
@@ -21500,7 +21500,7 @@
 ```
 
 </details>
-<details><summary>--type-decl-indent=6 types.ml  </summary>
+<details><summary>--type-decl-indent=6 types.ml </summary>
 
 ```
 --- origin
@@ -21668,13 +21668,13 @@
 ```
 
 </details>
-<details><summary>--type-decl=compact types.ml  </summary>
+<details><summary>--type-decl=compact types.ml </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--type-decl=sparse types.ml  </summary>
+<details><summary>--type-decl=sparse types.ml </summary>
 
 ```
 --- origin
@@ -21785,7 +21785,7 @@
 ```
 
 </details>
-<details><summary>--wrap-comments unicode.ml  </summary>
+<details><summary>--wrap-comments unicode.ml </summary>
 
 ```
 --- origin

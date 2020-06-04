@@ -145,7 +145,7 @@ for my $opt (sort keys $opt_src_hash) {
     }
     my $must_opt_str = (scalar @$must_opt_list > 0) ? join("", @$must_opt_list) : "";
     my $must_opt_annotation = (scalar @$must_opt_list > 0) ? "(must option: $must_opt_str)" : "";
-    system ("echo \'\<details\>\<summary\>$opt $src $must_opt_str $must_opt_annotation\<\/summary\>\' >> ../../formatSample.md");
+    system ("echo \'\<details\>\<summary\>$opt $src $must_opt_annotation\<\/summary\>\' >> ../../formatSample.md");
     system ("echo '' >> ../../formatSample.md");
     system ("echo \'\`\`\`\' >> ../../formatSample.md");
     system ("ocamlformat $must_opt_str $opt $src > fuga.txt; diff -u -L origin -L formatted $src fuga.txt >> ../../formatSample.md");
