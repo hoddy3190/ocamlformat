@@ -48,10 +48,8 @@ my $opt_src_list = [
     [qw/ --exp-grouping=preserve exp_grouping.ml /],
     [qw/ --max-iters=3 --extension-indent=5 --stritem-extension-indent=3 extensions.ml /],
     [qw/ --extension-indent=5 --stritem-extension-indent=3 extensions.mli /],
-    [qw/ --max-iters=3 --extension-sugar=always extensions.ml /],
     [qw/ --max-iters=3 extensions.ml /],
     [qw/ --assignment-operator=begin-line field.ml /],
-    [qw/ --format-invalid-files=auto format_invalid_files.ml /],
     [qw/ --function-indent=4 --function-indent-nested=never function_indent.ml /],
     [qw/ --function-indent=4 --function-indent-nested=always function_indent.ml /],
     [qw/ --break-infix=wrap --break-infix-before-func infix_bind.ml /],
@@ -111,7 +109,6 @@ my $opt_src_list = [
     [qw/ --type-decl=sparse --space-around-arrays --space-around-lists --space-around-records --space-around-variants types.ml /],
     [qw/ --type-decl=sparse types.ml /],
     [qw/ --margin=80 --wrap-comments unicode.ml /],
-    [qw/ --no-wrap-fun-args --margin=67 wrap_comments_break.ml /],
     [qw/ --disambiguate-non-breaking-match align_cases.ml/ ]
 ];
 
