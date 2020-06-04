@@ -1,5 +1,5 @@
 
-<details><summary>--align-cases align_cases.ml</summary>
+<details><summary>--align-cases align_cases.ml  </summary>
 
 ```
 --- origin
@@ -67,7 +67,7 @@
 ```
 
 </details>
-<details><summary>--align-constructors-decl align_cases.ml</summary>
+<details><summary>--align-constructors-decl align_cases.ml  </summary>
 
 ```
 --- origin
@@ -136,7 +136,7 @@
 ```
 
 </details>
-<details><summary>--align-variants-decl align_cases.ml</summary>
+<details><summary>--align-variants-decl align_cases.ml  </summary>
 
 ```
 --- origin
@@ -232,7 +232,7 @@
 ```
 
 </details>
-<details><summary>--assignment-operator=begin-line field.ml</summary>
+<details><summary>--assignment-operator=begin-line field.ml  </summary>
 
 ```
 --- origin
@@ -285,7 +285,7 @@
 ```
 
 </details>
-<details><summary>--break-before-in=auto break_before_in.ml</summary>
+<details><summary>--break-before-in=auto break_before_in.ml  </summary>
 
 ```
 --- origin
@@ -371,1421 +371,19 @@
 ```
 
 </details>
-<details><summary>--break-before-in=fit-or-vertical break_before_in.ml</summary>
+<details><summary>--break-before-in=fit-or-vertical break_before_in.ml  </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--break-cases=all break_cases.ml</summary>
+<details><summary>--break-collection-expressions=fit-or-vertical break_separators.ml  </summary>
 
 ```
---- origin
-+++ formatted
-@@ -1,6 +1,8 @@
- let f x = function
--  | C | P (this, test, [is; wide; enough; _to; break], [the; line]) | A | K
--    ->
-+  | C
-+   |P (this, test, [is; wide; enough; _to; break], [the; line])
-+   |A
-+   |K ->
-       1
-   | D ->
-       let a = "this" in
-@@ -8,12 +10,24 @@
-       ()
- 
- let f =
--  let g = function H when x y <> k -> 2 | T | P | U -> 3 in
-+  let g = function
-+    | H when x y <> k -> 2
-+    | T
-+     |P
-+     |U ->
-+        3
-+  in
-   fun x g t h y u ->
-     match x with
-     | E -> 4
--    | Z | P | M -> (
--      match y with O -> 5 | P when h x -> ( function A -> 6 ) )
-+    | Z
-+     |P
-+     |M -> (
-+      match y with
-+      | O -> 5
-+      | P when h x -> (
-+          function
-+          | A -> 6 ) )
- 
- ;;
- match x with
-@@ -34,9 +48,8 @@
-   match exp.pexp_desc with
-   | Pexp_sequence _
-    |Pexp_extension
--      ( _
--      , PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}]
--      ) ->
-+      (_, PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}])
-+    ->
-       true
-   | _ -> false
- 
-@@ -46,14 +59,15 @@
-     | None -> false
-     | Some looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong
-       -> (
--      match y with Some _ -> true | None -> false )
-+      match y with
-+      | Some _ -> true
-+      | None -> false )
-   in
-   ()
- 
- let () =
-   match fooooo with
--  | x ->
--      x
-+  | x -> x
- 
- let () =
-   match foooo with
-@@ -65,8 +79,7 @@
-    |foooooooooo
-    |fooooooooo ->
-       y
--  | foooooo
--    when ff fff fooooooooooooooooooo ->
-+  | foooooo when ff fff fooooooooooooooooooo ->
-       foooooooooooooooooooooo foooooooooooooooooo
- 
- let foo =
-@@ -87,19 +100,20 @@
- 
- let mod_int c1 c2 is_safe dbg =
-   match (c1, c2) with
--    (c1, Cconst_int (0, _)) ->
--      Csequence(c1, raise_symbol dbg "caml_exn_Division_by_zero")
--  | (c1, Cconst_int ((1 | (-1)), _)) ->
--      Csequence(c1, Cconst_int (0, dbg))
--  | x | -1 -> ()
-+  | c1, Cconst_int (0, _) ->
-+      Csequence (c1, raise_symbol dbg "caml_exn_Division_by_zero")
-+  | c1, Cconst_int ((1 | -1), _) -> Csequence (c1, Cconst_int (0, dbg))
-+  | x
-+   | -1 ->
-+      ()
- 
- let merge_columns l old_table =
--   let rec aux = function
-+  let rec aux = function
-     | []
-      |[None] ->
--        [], []
--   in
--   foooooooooooooooooooooooooo fooooooooooooooooooooo
-+        ([], [])
-+  in
-+  foooooooooooooooooooooooooo fooooooooooooooooooooo
- 
- [@@@ocamlformat "indicate-nested-or-patterns=unsafe-no"]
- 
-@@ -107,9 +121,8 @@
-   match exp.pexp_desc with
-   | Pexp_sequence _
-   | Pexp_extension
--      ( _
--      , PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}]
--      ) ->
-+      (_, PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}])
-+    ->
-       true
-   | _ -> false
- 
-@@ -123,8 +136,7 @@
-   | foooooooooo
-   | fooooooooo ->
-       y
--  | foooooo
--    when ff fff fooooooooooooooooooo ->
-+  | foooooo when ff fff fooooooooooooooooooo ->
-       foooooooooooooooooooooo foooooooooooooooooo
- 
- let rec loop items =
-@@ -140,43 +152,53 @@
-       a
- 
- let ffffff ~foo =
-- match (foo : Fooooooooooooo.t) with
-- | Aaaaaaaaaaaaaaaaa | Bbbbbbbbbbbbbbbbb | Ccccccccccccccccc
-- | Ddddddddddddddddd | Eeeeeeeeeeeeeeeee -> foooooooooooooooooooo
-- | Fffffffffffffffff -> fooooooooooooooooo
-+  match (foo : Fooooooooooooo.t) with
-+  | Aaaaaaaaaaaaaaaaa
-+  | Bbbbbbbbbbbbbbbbb
-+  | Ccccccccccccccccc
-+  | Ddddddddddddddddd
-+  | Eeeeeeeeeeeeeeeee ->
-+      foooooooooooooooooooo
-+  | Fffffffffffffffff -> fooooooooooooooooo
- 
- let () =
-   match v with
-   | None -> None
--  | Some x ->
--  match x with
--  | None -> None
--  | Some x ->
--  match x with
--  | None -> None
--  | Some x -> x
-+  | Some x -> (
-+    match x with
-+    | None -> None
-+    | Some x -> (
-+      match x with
-+      | None -> None
-+      | Some x -> x ) )
- 
- let _ = function
--  | exception A | B -> 1
-+  | (exception A)
-+  | B ->
-+      1
-   | C -> 2
- 
- let _ = function
--  | A | exception B -> 1
-+  | A
-+  | (exception B) ->
-+      1
-   | C -> 2
- 
- let _ =
-   match x with
--  | exception A | exception B -> 1
-+  | (exception A)
-+  | (exception B) ->
-+      1
-   | C -> 2
- 
- let _ =
-   match x with
-   | fooooooooooooooooo ->
--     assert
--       ( match fooooooooo with
--       | foooooooooo -> fooooooooooo
--       | foooooooooo -> fooooooooooo
--       | foooooooooo -> fooooooooooo )
-+      assert (
-+        match fooooooooo with
-+        | foooooooooo -> fooooooooooo
-+        | foooooooooo -> fooooooooooo
-+        | foooooooooo -> fooooooooooo )
- 
- let handler =
-   object
-@@ -184,56 +206,63 @@
-       match x with
-       | Call Thing
-       (* isset($var::thing) but not isset($foo::$bar) *)
--      |Call OtherThing ->
-+      | Call OtherThing ->
-           Errors.isset_in_strict p
-       | _ -> ()
-   end
- 
- let _ =
-   match abc with
--  | Fooooooooooooooooo (* comment *)
--  | Baaaaaaaaaaaaaaaar
-+  | Fooooooooooooooooo
-   (* comment *)
--  | Baaaaaaaaaaaaaaaaz
-+  | Baaaaaaaaaaaaaaaar
-   (* comment *)
--    -> ()
-+  | Baaaaaaaaaaaaaaaaz (* comment *) ->
-+      ()
- 
- let _ =
-   match x with
--  | { y =
-+  | { y=
-         (* _____________________________________________________________________ *)
--        ( X _ | Y _ )
--    } -> ()
--;;
-+        ( X _ | Y _ ) } ->
-+      ()
- 
- let _ =
-   match x with
--  | { y =
--        Z |
-+  | { y=
-+        ( Z
-         (* _____________________________________________________________________ *)
--        ( X _ | Y _ )
--    } -> ()
--;;
-+        | X _ | Y _ ) } ->
-+      ()
- 
- let foooooooooooooo = function
--  | Fooo (* fooooo foo foo foooooo foooooooo foooooooooooo *)
--  | Foo (* foooooo foooo fooooo fooooooo fooooooo fooooo  *)
--  | Foooooooooooooooo (* foooooo foooo fooooooooooo *)
-+  | Fooo
-+  (* fooooo foo foo foooooo foooooooo foooooooooooo *)
-+  | Foo
-+  (* foooooo foooo fooooo fooooooo fooooooo fooooo *)
-+  | Foooooooooooooooo
-+  (* foooooo foooo fooooooooooo *)
-   | Foooooooooooooo _
-   (* Foooooooooooooooooooooooooooo fooooooooooooooooooooooooooo fooooooooo.
-      Foooooooooooooooooooooooooooooooooooo foooooooooooooooooooooooo foooooo.
--     Foooooooooooooooooooooooooooooooooooooo foooooooooooooooooooo foooooooooooooooooo foooooooo.
--     Foooooooooooo fooooooooooo fooooooooooooo foooooooooooooo foooooo.
--  *)
-+     Foooooooooooooooooooooooooooooooooooooo foooooooooooooooooooo
-+     foooooooooooooooooo foooooooo. Foooooooooooo fooooooooooo fooooooooooooo
-+     foooooooooooooo foooooo. *)
-   | Foooooooooo
--  | FooooFoooooFoooooo (* fooooooooooooooooooooooooooooooooooo *)
--  | Foooo (* Fooo foooo fooooo foooooooo fooooooooo foooooooooooo fooooooooo fooo *) ->
-+  | FooooFoooooFoooooo
-+  (* fooooooooooooooooooooooooooooooooooo *)
-+  | Foooo
-+  (* Fooo foooo fooooo foooooooo fooooooooo foooooooooooo fooooooooo fooo *)
-+    ->
-       Foooooooooo.Foooooo
-   | Foooo {foooo_fooo= {foooooooooo}} ->
-       Foooo_Foooo_fooooooo.get_foooooooooo fooooo_fooo
- 
- let get_nullability = function
--  | ArrayAccess | OptimisticFallback (* non-null is the most optimistic type *)
-+  | ArrayAccess
-+  | OptimisticFallback
-+  (* non-null is the most optimistic type *)
-   | Undef
--  (* This is a very special case, assigning non-null is a technical trick *) ->
-+  (* This is a very special case, assigning non-null is a technical trick *)
-+    ->
-       Nullability.Nonnull
 ```
 
 </details>
-<details><summary>--break-cases=fit break_cases.ml</summary>
-
-```
---- origin
-+++ formatted
-@@ -1,239 +0,0 @@
--let f x = function
--  | C | P (this, test, [is; wide; enough; _to; break], [the; line]) | A | K
--    ->
--      1
--  | D ->
--      let a = "this" in
--      let b = "breaks" in
--      ()
--
--let f =
--  let g = function H when x y <> k -> 2 | T | P | U -> 3 in
--  fun x g t h y u ->
--    match x with
--    | E -> 4
--    | Z | P | M -> (
--      match y with O -> 5 | P when h x -> ( function A -> 6 ) )
--
--;;
--match x with
--| true -> (
--  match y with
--  | true -> "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
--  | false -> "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" )
--| false -> "cccccccccccccccccccccccccccccc"
--
--;;
--match x with
--| "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", yyyyyyyyyy
--  when fffffffffffffff bbbbbbbbbb yyyyyyyyyy ->
--    ()
--| _ -> ()
--
--let is_sequence exp =
--  match exp.pexp_desc with
--  | Pexp_sequence _
--   |Pexp_extension
--      ( _
--      , PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}]
--      ) ->
--      true
--  | _ -> false
--
--let _ =
--  let f x y =
--    match x with
--    | None -> false
--    | Some looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong
--      -> (
--      match y with Some _ -> true | None -> false )
--  in
--  ()
--
--let () =
--  match fooooo with
--  | x ->
--      x
--
--let () =
--  match foooo with
--  | x
--   |x
--   |x ->
--      x
--  | y
--   |foooooooooo
--   |fooooooooo ->
--      y
--  | foooooo
--    when ff fff fooooooooooooooooooo ->
--      foooooooooooooooooooooo foooooooooooooooooo
--
--let foo =
--  match instr with
--  | Store (Lvar lhs_pvar, lhs_typ, rhs_exp, loc)
--    when Pvar.is_ssa_frontend_tmp lhs_pvar ->
--      (* do not need to add deref here as it is added implicitly in of_pvar
--         by forgetting the & *)
--      analyze_id_assignment (Var.of_pvar lhs_pvar) rhs_exp lhs_typ loc
--  | Call
--      ( (ret_id, _)
--      , Const (Cfun callee_pname)
--      , (target_exp, _) :: (Sizeof {typ= cast_typ}, _) :: _
--      , loc
--      , _ )
--    when Typ.Procname.equal callee_pname BuiltinDecl.__cast ->
--      analyze_id_assignment (Var.of_id ret_id) target_exp cast_typ loc
--
--let mod_int c1 c2 is_safe dbg =
--  match (c1, c2) with
--    (c1, Cconst_int (0, _)) ->
--      Csequence(c1, raise_symbol dbg "caml_exn_Division_by_zero")
--  | (c1, Cconst_int ((1 | (-1)), _)) ->
--      Csequence(c1, Cconst_int (0, dbg))
--  | x | -1 -> ()
--
--let merge_columns l old_table =
--   let rec aux = function
--    | []
--     |[None] ->
--        [], []
--   in
--   foooooooooooooooooooooooooo fooooooooooooooooooooo
--
--[@@@ocamlformat "indicate-nested-or-patterns=unsafe-no"]
--
--let is_sequence exp =
--  match exp.pexp_desc with
--  | Pexp_sequence _
--  | Pexp_extension
--      ( _
--      , PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}]
--      ) ->
--      true
--  | _ -> false
--
--let () =
--  match foooo with
--  | x
--  | x
--  | x ->
--      x
--  | y
--  | foooooooooo
--  | fooooooooo ->
--      y
--  | foooooo
--    when ff fff fooooooooooooooooooo ->
--      foooooooooooooooooooooo foooooooooooooooooo
--
--let rec loop items =
--  match [] with
--  | _ :: _ :: items ->
--      (* a comment *)
--      loop items
--  | _ :: items ->
--      (* another comment*)
--      loop items
--  | _ ->
--      let a = 3 in
--      a
--
--let ffffff ~foo =
-- match (foo : Fooooooooooooo.t) with
-- | Aaaaaaaaaaaaaaaaa | Bbbbbbbbbbbbbbbbb | Ccccccccccccccccc
-- | Ddddddddddddddddd | Eeeeeeeeeeeeeeeee -> foooooooooooooooooooo
-- | Fffffffffffffffff -> fooooooooooooooooo
--
--let () =
--  match v with
--  | None -> None
--  | Some x ->
--  match x with
--  | None -> None
--  | Some x ->
--  match x with
--  | None -> None
--  | Some x -> x
--
--let _ = function
--  | exception A | B -> 1
--  | C -> 2
--
--let _ = function
--  | A | exception B -> 1
--  | C -> 2
--
--let _ =
--  match x with
--  | exception A | exception B -> 1
--  | C -> 2
--
--let _ =
--  match x with
--  | fooooooooooooooooo ->
--     assert
--       ( match fooooooooo with
--       | foooooooooo -> fooooooooooo
--       | foooooooooo -> fooooooooooo
--       | foooooooooo -> fooooooooooo )
--
--let handler =
--  object
--    method at_expr x =
--      match x with
--      | Call Thing
--      (* isset($var::thing) but not isset($foo::$bar) *)
--      |Call OtherThing ->
--          Errors.isset_in_strict p
--      | _ -> ()
--  end
--
--let _ =
--  match abc with
--  | Fooooooooooooooooo (* comment *)
--  | Baaaaaaaaaaaaaaaar
--  (* comment *)
--  | Baaaaaaaaaaaaaaaaz
--  (* comment *)
--    -> ()
--
--let _ =
--  match x with
--  | { y =
--        (* _____________________________________________________________________ *)
--        ( X _ | Y _ )
--    } -> ()
--;;
--
--let _ =
--  match x with
--  | { y =
--        Z |
--        (* _____________________________________________________________________ *)
--        ( X _ | Y _ )
--    } -> ()
--;;
--
--let foooooooooooooo = function
--  | Fooo (* fooooo foo foo foooooo foooooooo foooooooooooo *)
--  | Foo (* foooooo foooo fooooo fooooooo fooooooo fooooo  *)
--  | Foooooooooooooooo (* foooooo foooo fooooooooooo *)
--  | Foooooooooooooo _
--  (* Foooooooooooooooooooooooooooo fooooooooooooooooooooooooooo fooooooooo.
--     Foooooooooooooooooooooooooooooooooooo foooooooooooooooooooooooo foooooo.
--     Foooooooooooooooooooooooooooooooooooooo foooooooooooooooooooo foooooooooooooooooo foooooooo.
--     Foooooooooooo fooooooooooo fooooooooooooo foooooooooooooo foooooo.
--  *)
--  | Foooooooooo
--  | FooooFoooooFoooooo (* fooooooooooooooooooooooooooooooooooo *)
--  | Foooo (* Fooo foooo fooooo foooooooo fooooooooo foooooooooooo fooooooooo fooo *) ->
--      Foooooooooo.Foooooo
--  | Foooo {foooo_fooo= {foooooooooo}} ->
--      Foooo_Foooo_fooooooo.get_foooooooooo fooooo_fooo
--
--let get_nullability = function
--  | ArrayAccess | OptimisticFallback (* non-null is the most optimistic type *)
--  | Undef
--  (* This is a very special case, assigning non-null is a technical trick *) ->
--      Nullability.Nonnull
-```
-
-</details>
-<details><summary>--break-cases=fit-or-vertical break_cases.ml</summary>
-
-```
---- origin
-+++ formatted
-@@ -1,19 +1,25 @@
- let f x = function
-   | C | P (this, test, [is; wide; enough; _to; break], [the; line]) | A | K
--    ->
--      1
-+    -> 1
-   | D ->
-       let a = "this" in
-       let b = "breaks" in
-       ()
- 
- let f =
--  let g = function H when x y <> k -> 2 | T | P | U -> 3 in
-+  let g = function
-+    | H when x y <> k -> 2
-+    | T | P | U -> 3
-+  in
-   fun x g t h y u ->
-     match x with
-     | E -> 4
-     | Z | P | M -> (
--      match y with O -> 5 | P when h x -> ( function A -> 6 ) )
-+      match y with
-+      | O -> 5
-+      | P when h x -> (
-+          function
-+          | A -> 6 ) )
- 
- ;;
- match x with
-@@ -26,18 +32,15 @@
- ;;
- match x with
- | "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", yyyyyyyyyy
--  when fffffffffffffff bbbbbbbbbb yyyyyyyyyy ->
--    ()
-+  when fffffffffffffff bbbbbbbbbb yyyyyyyyyy -> ()
- | _ -> ()
- 
- let is_sequence exp =
-   match exp.pexp_desc with
-   | Pexp_sequence _
-    |Pexp_extension
--      ( _
--      , PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}]
--      ) ->
--      true
-+      (_, PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}])
-+    -> true
-   | _ -> false
- 
- let _ =
-@@ -46,27 +49,21 @@
-     | None -> false
-     | Some looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong
-       -> (
--      match y with Some _ -> true | None -> false )
-+      match y with
-+      | Some _ -> true
-+      | None -> false )
-   in
-   ()
- 
- let () =
-   match fooooo with
--  | x ->
--      x
-+  | x -> x
- 
- let () =
-   match foooo with
--  | x
--   |x
--   |x ->
--      x
--  | y
--   |foooooooooo
--   |fooooooooo ->
--      y
--  | foooooo
--    when ff fff fooooooooooooooooooo ->
-+  | x | x | x -> x
-+  | y | foooooooooo | fooooooooo -> y
-+  | foooooo when ff fff fooooooooooooooooooo ->
-       foooooooooooooooooooooo foooooooooooooooooo
- 
- let foo =
-@@ -87,19 +84,16 @@
- 
- let mod_int c1 c2 is_safe dbg =
-   match (c1, c2) with
--    (c1, Cconst_int (0, _)) ->
--      Csequence(c1, raise_symbol dbg "caml_exn_Division_by_zero")
--  | (c1, Cconst_int ((1 | (-1)), _)) ->
--      Csequence(c1, Cconst_int (0, dbg))
-+  | c1, Cconst_int (0, _) ->
-+      Csequence (c1, raise_symbol dbg "caml_exn_Division_by_zero")
-+  | c1, Cconst_int ((1 | -1), _) -> Csequence (c1, Cconst_int (0, dbg))
-   | x | -1 -> ()
- 
- let merge_columns l old_table =
--   let rec aux = function
--    | []
--     |[None] ->
--        [], []
--   in
--   foooooooooooooooooooooooooo fooooooooooooooooooooo
-+  let rec aux = function
-+    | [] | [None] -> ([], [])
-+  in
-+  foooooooooooooooooooooooooo fooooooooooooooooooooo
- 
- [@@@ocamlformat "indicate-nested-or-patterns=unsafe-no"]
- 
-@@ -107,24 +101,15 @@
-   match exp.pexp_desc with
-   | Pexp_sequence _
-   | Pexp_extension
--      ( _
--      , PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}]
--      ) ->
--      true
-+      (_, PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}])
-+    -> true
-   | _ -> false
- 
- let () =
-   match foooo with
--  | x
--  | x
--  | x ->
--      x
--  | y
--  | foooooooooo
--  | fooooooooo ->
--      y
--  | foooooo
--    when ff fff fooooooooooooooooooo ->
-+  | x | x | x -> x
-+  | y | foooooooooo | fooooooooo -> y
-+  | foooooo when ff fff fooooooooooooooooooo ->
-       foooooooooooooooooooooo foooooooooooooooooo
- 
- let rec loop items =
-@@ -140,43 +125,46 @@
-       a
- 
- let ffffff ~foo =
-- match (foo : Fooooooooooooo.t) with
-- | Aaaaaaaaaaaaaaaaa | Bbbbbbbbbbbbbbbbb | Ccccccccccccccccc
-- | Ddddddddddddddddd | Eeeeeeeeeeeeeeeee -> foooooooooooooooooooo
-- | Fffffffffffffffff -> fooooooooooooooooo
-+  match (foo : Fooooooooooooo.t) with
-+  | Aaaaaaaaaaaaaaaaa
-+  | Bbbbbbbbbbbbbbbbb
-+  | Ccccccccccccccccc
-+  | Ddddddddddddddddd
-+  | Eeeeeeeeeeeeeeeee -> foooooooooooooooooooo
-+  | Fffffffffffffffff -> fooooooooooooooooo
- 
- let () =
-   match v with
-   | None -> None
--  | Some x ->
--  match x with
--  | None -> None
--  | Some x ->
--  match x with
--  | None -> None
--  | Some x -> x
-+  | Some x -> (
-+    match x with
-+    | None -> None
-+    | Some x -> (
-+      match x with
-+      | None -> None
-+      | Some x -> x ) )
- 
- let _ = function
--  | exception A | B -> 1
-+  | (exception A) | B -> 1
-   | C -> 2
- 
- let _ = function
--  | A | exception B -> 1
-+  | A | (exception B) -> 1
-   | C -> 2
- 
- let _ =
-   match x with
--  | exception A | exception B -> 1
-+  | (exception A) | (exception B) -> 1
-   | C -> 2
- 
- let _ =
-   match x with
-   | fooooooooooooooooo ->
--     assert
--       ( match fooooooooo with
--       | foooooooooo -> fooooooooooo
--       | foooooooooo -> fooooooooooo
--       | foooooooooo -> fooooooooooo )
-+      assert (
-+        match fooooooooo with
-+        | foooooooooo -> fooooooooooo
-+        | foooooooooo -> fooooooooooo
-+        | foooooooooo -> fooooooooooo )
- 
- let handler =
-   object
-@@ -184,56 +172,59 @@
-       match x with
-       | Call Thing
-       (* isset($var::thing) but not isset($foo::$bar) *)
--      |Call OtherThing ->
--          Errors.isset_in_strict p
-+      | Call OtherThing -> Errors.isset_in_strict p
-       | _ -> ()
-   end
- 
- let _ =
-   match abc with
--  | Fooooooooooooooooo (* comment *)
-+  | Fooooooooooooooooo
-+  (* comment *)
-   | Baaaaaaaaaaaaaaaar
-   (* comment *)
-   | Baaaaaaaaaaaaaaaaz
--  (* comment *)
--    -> ()
-+  (* comment *) -> ()
- 
- let _ =
-   match x with
--  | { y =
-+  | { y=
-         (* _____________________________________________________________________ *)
--        ( X _ | Y _ )
--    } -> ()
--;;
-+        ( X _ | Y _ ) } -> ()
- 
- let _ =
-   match x with
--  | { y =
--        Z |
-+  | { y=
-+        ( Z
-         (* _____________________________________________________________________ *)
--        ( X _ | Y _ )
--    } -> ()
--;;
-+        | X _
-+        | Y _ ) } -> ()
- 
- let foooooooooooooo = function
--  | Fooo (* fooooo foo foo foooooo foooooooo foooooooooooo *)
--  | Foo (* foooooo foooo fooooo fooooooo fooooooo fooooo  *)
--  | Foooooooooooooooo (* foooooo foooo fooooooooooo *)
-+  | Fooo
-+  (* fooooo foo foo foooooo foooooooo foooooooooooo *)
-+  | Foo
-+  (* foooooo foooo fooooo fooooooo fooooooo fooooo *)
-+  | Foooooooooooooooo
-+  (* foooooo foooo fooooooooooo *)
-   | Foooooooooooooo _
-   (* Foooooooooooooooooooooooooooo fooooooooooooooooooooooooooo fooooooooo.
-      Foooooooooooooooooooooooooooooooooooo foooooooooooooooooooooooo foooooo.
--     Foooooooooooooooooooooooooooooooooooooo foooooooooooooooooooo foooooooooooooooooo foooooooo.
--     Foooooooooooo fooooooooooo fooooooooooooo foooooooooooooo foooooo.
--  *)
-+     Foooooooooooooooooooooooooooooooooooooo foooooooooooooooooooo
-+     foooooooooooooooooo foooooooo. Foooooooooooo fooooooooooo fooooooooooooo
-+     foooooooooooooo foooooo. *)
-   | Foooooooooo
--  | FooooFoooooFoooooo (* fooooooooooooooooooooooooooooooooooo *)
--  | Foooo (* Fooo foooo fooooo foooooooo fooooooooo foooooooooooo fooooooooo fooo *) ->
--      Foooooooooo.Foooooo
-+  | FooooFoooooFoooooo
-+  (* fooooooooooooooooooooooooooooooooooo *)
-+  | Foooo
-+  (* Fooo foooo fooooo foooooooo fooooooooo foooooooooooo fooooooooo fooo *)
-+    -> Foooooooooo.Foooooo
-   | Foooo {foooo_fooo= {foooooooooo}} ->
-       Foooo_Foooo_fooooooo.get_foooooooooo fooooo_fooo
- 
- let get_nullability = function
--  | ArrayAccess | OptimisticFallback (* non-null is the most optimistic type *)
-+  | ArrayAccess
-+  | OptimisticFallback
-+  (* non-null is the most optimistic type *)
-   | Undef
--  (* This is a very special case, assigning non-null is a technical trick *) ->
--      Nullability.Nonnull
-+  (* This is a very special case, assigning non-null is a technical trick *)
-+    -> Nullability.Nonnull
-```
-
-</details>
-<details><summary>--break-cases=nested break_cases.ml</summary>
-
-```
---- origin
-+++ formatted
-@@ -11,7 +11,8 @@
-   let g = function H when x y <> k -> 2 | T | P | U -> 3 in
-   fun x g t h y u ->
-     match x with
--    | E -> 4
-+    | E ->
-+        4
-     | Z | P | M -> (
-       match y with O -> 5 | P when h x -> ( function A -> 6 ) )
- 
-@@ -19,54 +20,51 @@
- match x with
- | true -> (
-   match y with
--  | true -> "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
--  | false -> "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" )
--| false -> "cccccccccccccccccccccccccccccc"
-+  | true ->
-+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-+  | false ->
-+      "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" )
-+| false ->
-+    "cccccccccccccccccccccccccccccc"
- 
- ;;
- match x with
- | "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", yyyyyyyyyy
-   when fffffffffffffff bbbbbbbbbb yyyyyyyyyy ->
-     ()
--| _ -> ()
-+| _ ->
-+    ()
- 
- let is_sequence exp =
-   match exp.pexp_desc with
-   | Pexp_sequence _
--   |Pexp_extension
--      ( _
--      , PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}]
--      ) ->
-+  | Pexp_extension
-+      (_, PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}])
-+    ->
-       true
--  | _ -> false
-+  | _ ->
-+      false
- 
- let _ =
-   let f x y =
-     match x with
--    | None -> false
-+    | None ->
-+        false
-     | Some looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong
-       -> (
-       match y with Some _ -> true | None -> false )
-   in
-   ()
- 
--let () =
--  match fooooo with
--  | x ->
--      x
-+let () = match fooooo with x -> x
- 
- let () =
-   match foooo with
--  | x
--   |x
--   |x ->
-+  | x | x | x ->
-       x
--  | y
--   |foooooooooo
--   |fooooooooo ->
-+  | y | foooooooooo | fooooooooo ->
-       y
--  | foooooo
--    when ff fff fooooooooooooooooooo ->
-+  | foooooo when ff fff fooooooooooooooooooo ->
-       foooooooooooooooooooooo foooooooooooooooooo
- 
- let foo =
-@@ -87,19 +85,16 @@
- 
- let mod_int c1 c2 is_safe dbg =
-   match (c1, c2) with
--    (c1, Cconst_int (0, _)) ->
--      Csequence(c1, raise_symbol dbg "caml_exn_Division_by_zero")
--  | (c1, Cconst_int ((1 | (-1)), _)) ->
--      Csequence(c1, Cconst_int (0, dbg))
--  | x | -1 -> ()
-+  | c1, Cconst_int (0, _) ->
-+      Csequence (c1, raise_symbol dbg "caml_exn_Division_by_zero")
-+  | c1, Cconst_int ((1 | -1), _) ->
-+      Csequence (c1, Cconst_int (0, dbg))
-+  | x | -1 ->
-+      ()
- 
- let merge_columns l old_table =
--   let rec aux = function
--    | []
--     |[None] ->
--        [], []
--   in
--   foooooooooooooooooooooooooo fooooooooooooooooooooo
-+  let rec aux = function [] | [None] -> ([], []) in
-+  foooooooooooooooooooooooooo fooooooooooooooooooooo
- 
- [@@@ocamlformat "indicate-nested-or-patterns=unsafe-no"]
- 
-@@ -107,24 +102,19 @@
-   match exp.pexp_desc with
-   | Pexp_sequence _
-   | Pexp_extension
--      ( _
--      , PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}]
--      ) ->
-+      (_, PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}])
-+    ->
-       true
--  | _ -> false
-+  | _ ->
-+      false
- 
- let () =
-   match foooo with
--  | x
--  | x
--  | x ->
-+  | x | x | x ->
-       x
--  | y
--  | foooooooooo
--  | fooooooooo ->
-+  | y | foooooooooo | fooooooooo ->
-       y
--  | foooooo
--    when ff fff fooooooooooooooooooo ->
-+  | foooooo when ff fff fooooooooooooooooooo ->
-       foooooooooooooooooooooo foooooooooooooooooo
- 
- let rec loop items =
-@@ -140,43 +130,44 @@
-       a
- 
- let ffffff ~foo =
-- match (foo : Fooooooooooooo.t) with
-- | Aaaaaaaaaaaaaaaaa | Bbbbbbbbbbbbbbbbb | Ccccccccccccccccc
-- | Ddddddddddddddddd | Eeeeeeeeeeeeeeeee -> foooooooooooooooooooo
-- | Fffffffffffffffff -> fooooooooooooooooo
-+  match (foo : Fooooooooooooo.t) with
-+  | Aaaaaaaaaaaaaaaaa
-+  | Bbbbbbbbbbbbbbbbb
-+  | Ccccccccccccccccc
-+  | Ddddddddddddddddd
-+  | Eeeeeeeeeeeeeeeee ->
-+      foooooooooooooooooooo
-+  | Fffffffffffffffff ->
-+      fooooooooooooooooo
- 
- let () =
-   match v with
--  | None -> None
--  | Some x ->
--  match x with
--  | None -> None
--  | Some x ->
--  match x with
--  | None -> None
--  | Some x -> x
-+  | None ->
-+      None
-+  | Some x -> (
-+    match x with
-+    | None ->
-+        None
-+    | Some x -> (
-+      match x with None -> None | Some x -> x ) )
- 
--let _ = function
--  | exception A | B -> 1
--  | C -> 2
--
--let _ = function
--  | A | exception B -> 1
--  | C -> 2
-+let _ = function (exception A) | B -> 1 | C -> 2
- 
--let _ =
--  match x with
--  | exception A | exception B -> 1
--  | C -> 2
-+let _ = function A | (exception B) -> 1 | C -> 2
-+
-+let _ = match x with (exception A) | (exception B) -> 1 | C -> 2
- 
- let _ =
-   match x with
-   | fooooooooooooooooo ->
--     assert
--       ( match fooooooooo with
--       | foooooooooo -> fooooooooooo
--       | foooooooooo -> fooooooooooo
--       | foooooooooo -> fooooooooooo )
-+      assert (
-+        match fooooooooo with
-+        | foooooooooo ->
-+            fooooooooooo
-+        | foooooooooo ->
-+            fooooooooooo
-+        | foooooooooo ->
-+            fooooooooooo )
- 
- let handler =
-   object
-@@ -184,9 +175,10 @@
-       match x with
-       | Call Thing
-       (* isset($var::thing) but not isset($foo::$bar) *)
--      |Call OtherThing ->
-+      | Call OtherThing ->
-           Errors.isset_in_strict p
--      | _ -> ()
-+      | _ ->
-+          ()
-   end
- 
- let _ =
-@@ -194,46 +186,49 @@
-   | Fooooooooooooooooo (* comment *)
-   | Baaaaaaaaaaaaaaaar
-   (* comment *)
--  | Baaaaaaaaaaaaaaaaz
--  (* comment *)
--    -> ()
-+  | Baaaaaaaaaaaaaaaaz (* comment *) ->
-+      ()
- 
- let _ =
-   match x with
--  | { y =
-+  | { y=
-         (* _____________________________________________________________________ *)
--        ( X _ | Y _ )
--    } -> ()
--;;
-+        ( X _
-+        | Y _ ) } ->
-+      ()
- 
- let _ =
-   match x with
--  | { y =
--        Z |
-+  | { y=
-+        ( Z
-         (* _____________________________________________________________________ *)
--        ( X _ | Y _ )
--    } -> ()
--;;
-+        | X _
-+        | Y _ ) } ->
-+      ()
- 
- let foooooooooooooo = function
-   | Fooo (* fooooo foo foo foooooo foooooooo foooooooooooo *)
--  | Foo (* foooooo foooo fooooo fooooooo fooooooo fooooo  *)
-+  | Foo (* foooooo foooo fooooo fooooooo fooooooo fooooo *)
-   | Foooooooooooooooo (* foooooo foooo fooooooooooo *)
-   | Foooooooooooooo _
-   (* Foooooooooooooooooooooooooooo fooooooooooooooooooooooooooo fooooooooo.
-      Foooooooooooooooooooooooooooooooooooo foooooooooooooooooooooooo foooooo.
--     Foooooooooooooooooooooooooooooooooooooo foooooooooooooooooooo foooooooooooooooooo foooooooo.
--     Foooooooooooo fooooooooooo fooooooooooooo foooooooooooooo foooooo.
--  *)
-+     Foooooooooooooooooooooooooooooooooooooo foooooooooooooooooooo
-+     foooooooooooooooooo foooooooo. Foooooooooooo fooooooooooo fooooooooooooo
-+     foooooooooooooo foooooo. *)
-   | Foooooooooo
-   | FooooFoooooFoooooo (* fooooooooooooooooooooooooooooooooooo *)
--  | Foooo (* Fooo foooo fooooo foooooooo fooooooooo foooooooooooo fooooooooo fooo *) ->
-+  | Foooo
-+  (* Fooo foooo fooooo foooooooo fooooooooo foooooooooooo fooooooooo fooo *)
-+    ->
-       Foooooooooo.Foooooo
-   | Foooo {foooo_fooo= {foooooooooo}} ->
-       Foooo_Foooo_fooooooo.get_foooooooooo fooooo_fooo
- 
- let get_nullability = function
--  | ArrayAccess | OptimisticFallback (* non-null is the most optimistic type *)
-+  | ArrayAccess
-+  | OptimisticFallback (* non-null is the most optimistic type *)
-   | Undef
--  (* This is a very special case, assigning non-null is a technical trick *) ->
-+  (* This is a very special case, assigning non-null is a technical trick *)
-+    ->
-       Nullability.Nonnull
-```
-
-</details>
-<details><summary>--break-cases=toplevel break_cases.ml</summary>
-
-```
---- origin
-+++ formatted
-@@ -1,239 +0,0 @@
--let f x = function
--  | C | P (this, test, [is; wide; enough; _to; break], [the; line]) | A | K
--    ->
--      1
--  | D ->
--      let a = "this" in
--      let b = "breaks" in
--      ()
--
--let f =
--  let g = function H when x y <> k -> 2 | T | P | U -> 3 in
--  fun x g t h y u ->
--    match x with
--    | E -> 4
--    | Z | P | M -> (
--      match y with O -> 5 | P when h x -> ( function A -> 6 ) )
--
--;;
--match x with
--| true -> (
--  match y with
--  | true -> "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
--  | false -> "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" )
--| false -> "cccccccccccccccccccccccccccccc"
--
--;;
--match x with
--| "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", yyyyyyyyyy
--  when fffffffffffffff bbbbbbbbbb yyyyyyyyyy ->
--    ()
--| _ -> ()
--
--let is_sequence exp =
--  match exp.pexp_desc with
--  | Pexp_sequence _
--   |Pexp_extension
--      ( _
--      , PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}]
--      ) ->
--      true
--  | _ -> false
--
--let _ =
--  let f x y =
--    match x with
--    | None -> false
--    | Some looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong
--      -> (
--      match y with Some _ -> true | None -> false )
--  in
--  ()
--
--let () =
--  match fooooo with
--  | x ->
--      x
--
--let () =
--  match foooo with
--  | x
--   |x
--   |x ->
--      x
--  | y
--   |foooooooooo
--   |fooooooooo ->
--      y
--  | foooooo
--    when ff fff fooooooooooooooooooo ->
--      foooooooooooooooooooooo foooooooooooooooooo
--
--let foo =
--  match instr with
--  | Store (Lvar lhs_pvar, lhs_typ, rhs_exp, loc)
--    when Pvar.is_ssa_frontend_tmp lhs_pvar ->
--      (* do not need to add deref here as it is added implicitly in of_pvar
--         by forgetting the & *)
--      analyze_id_assignment (Var.of_pvar lhs_pvar) rhs_exp lhs_typ loc
--  | Call
--      ( (ret_id, _)
--      , Const (Cfun callee_pname)
--      , (target_exp, _) :: (Sizeof {typ= cast_typ}, _) :: _
--      , loc
--      , _ )
--    when Typ.Procname.equal callee_pname BuiltinDecl.__cast ->
--      analyze_id_assignment (Var.of_id ret_id) target_exp cast_typ loc
--
--let mod_int c1 c2 is_safe dbg =
--  match (c1, c2) with
--    (c1, Cconst_int (0, _)) ->
--      Csequence(c1, raise_symbol dbg "caml_exn_Division_by_zero")
--  | (c1, Cconst_int ((1 | (-1)), _)) ->
--      Csequence(c1, Cconst_int (0, dbg))
--  | x | -1 -> ()
--
--let merge_columns l old_table =
--   let rec aux = function
--    | []
--     |[None] ->
--        [], []
--   in
--   foooooooooooooooooooooooooo fooooooooooooooooooooo
--
--[@@@ocamlformat "indicate-nested-or-patterns=unsafe-no"]
--
--let is_sequence exp =
--  match exp.pexp_desc with
--  | Pexp_sequence _
--  | Pexp_extension
--      ( _
--      , PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}]
--      ) ->
--      true
--  | _ -> false
--
--let () =
--  match foooo with
--  | x
--  | x
--  | x ->
--      x
--  | y
--  | foooooooooo
--  | fooooooooo ->
--      y
--  | foooooo
--    when ff fff fooooooooooooooooooo ->
--      foooooooooooooooooooooo foooooooooooooooooo
--
--let rec loop items =
--  match [] with
--  | _ :: _ :: items ->
--      (* a comment *)
--      loop items
--  | _ :: items ->
--      (* another comment*)
--      loop items
--  | _ ->
--      let a = 3 in
--      a
--
--let ffffff ~foo =
-- match (foo : Fooooooooooooo.t) with
-- | Aaaaaaaaaaaaaaaaa | Bbbbbbbbbbbbbbbbb | Ccccccccccccccccc
-- | Ddddddddddddddddd | Eeeeeeeeeeeeeeeee -> foooooooooooooooooooo
-- | Fffffffffffffffff -> fooooooooooooooooo
--
--let () =
--  match v with
--  | None -> None
--  | Some x ->
--  match x with
--  | None -> None
--  | Some x ->
--  match x with
--  | None -> None
--  | Some x -> x
--
--let _ = function
--  | exception A | B -> 1
--  | C -> 2
--
--let _ = function
--  | A | exception B -> 1
--  | C -> 2
--
--let _ =
--  match x with
--  | exception A | exception B -> 1
--  | C -> 2
--
--let _ =
--  match x with
--  | fooooooooooooooooo ->
--     assert
--       ( match fooooooooo with
--       | foooooooooo -> fooooooooooo
--       | foooooooooo -> fooooooooooo
--       | foooooooooo -> fooooooooooo )
--
--let handler =
--  object
--    method at_expr x =
--      match x with
--      | Call Thing
--      (* isset($var::thing) but not isset($foo::$bar) *)
--      |Call OtherThing ->
--          Errors.isset_in_strict p
--      | _ -> ()
--  end
--
--let _ =
--  match abc with
--  | Fooooooooooooooooo (* comment *)
--  | Baaaaaaaaaaaaaaaar
--  (* comment *)
--  | Baaaaaaaaaaaaaaaaz
--  (* comment *)
--    -> ()
--
--let _ =
--  match x with
--  | { y =
--        (* _____________________________________________________________________ *)
--        ( X _ | Y _ )
--    } -> ()
--;;
--
--let _ =
--  match x with
--  | { y =
--        Z |
--        (* _____________________________________________________________________ *)
--        ( X _ | Y _ )
--    } -> ()
--;;
--
--let foooooooooooooo = function
--  | Fooo (* fooooo foo foo foooooo foooooooo foooooooooooo *)
--  | Foo (* foooooo foooo fooooo fooooooo fooooooo fooooo  *)
--  | Foooooooooooooooo (* foooooo foooo fooooooooooo *)
--  | Foooooooooooooo _
--  (* Foooooooooooooooooooooooooooo fooooooooooooooooooooooooooo fooooooooo.
--     Foooooooooooooooooooooooooooooooooooo foooooooooooooooooooooooo foooooo.
--     Foooooooooooooooooooooooooooooooooooooo foooooooooooooooooooo foooooooooooooooooo foooooooo.
--     Foooooooooooo fooooooooooo fooooooooooooo foooooooooooooo foooooo.
--  *)
--  | Foooooooooo
--  | FooooFoooooFoooooo (* fooooooooooooooooooooooooooooooooooo *)
--  | Foooo (* Fooo foooo fooooo foooooooo fooooooooo foooooooooooo fooooooooo fooo *) ->
--      Foooooooooo.Foooooo
--  | Foooo {foooo_fooo= {foooooooooo}} ->
--      Foooo_Foooo_fooooooo.get_foooooooooo fooooo_fooo
--
--let get_nullability = function
--  | ArrayAccess | OptimisticFallback (* non-null is the most optimistic type *)
--  | Undef
--  (* This is a very special case, assigning non-null is a technical trick *) ->
--      Nullability.Nonnull
-```
-
-</details>
-<details><summary>--break-collection-expressions=wrap break_separators.ml</summary>
+<details><summary>--break-collection-expressions=wrap break_separators.ml  </summary>
 
 ```
 --- origin
@@ -2136,7 +734,7 @@
 ```
 
 </details>
-<details><summary>--break-fun-decl=fit-or-vertical break_fun_decl.ml</summary>
+<details><summary>--break-fun-decl=fit-or-vertical break_fun_decl.ml  </summary>
 
 ```
 --- origin
@@ -2224,7 +822,7 @@
 ```
 
 </details>
-<details><summary>--break-fun-decl=smart break_fun_decl.ml</summary>
+<details><summary>--break-fun-decl=smart break_fun_decl.ml  </summary>
 
 ```
 --- origin
@@ -2310,31 +908,31 @@
 ```
 
 </details>
-<details><summary>--break-fun-decl=wrap break_fun_decl.ml</summary>
+<details><summary>--break-fun-decl=wrap break_fun_decl.ml  </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--break-fun-sig=fit-or-vertical break_fun_decl.ml</summary>
+<details><summary>--break-fun-sig=fit-or-vertical break_fun_decl.ml  </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--break-fun-sig=smart break_fun_decl.ml</summary>
+<details><summary>--break-fun-sig=smart break_fun_decl.ml  </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--break-fun-sig=wrap break_fun_decl.ml</summary>
+<details><summary>--break-fun-sig=wrap break_fun_decl.ml  </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--break-infix-before-func infix_bind.ml</summary>
+<details><summary>--break-infix-before-func infix_bind.ml  </summary>
 
 ```
 --- origin
@@ -2531,7 +1129,7 @@
 ```
 
 </details>
-<details><summary>--break-infix=fit-or-vertical infix_bind.ml</summary>
+<details><summary>--break-infix=fit-or-vertical infix_bind.ml  </summary>
 
 ```
 --- origin
@@ -2752,7 +1350,7 @@
 ```
 
 </details>
-<details><summary>--break-infix=wrap infix_bind.ml</summary>
+<details><summary>--break-infix=wrap infix_bind.ml  </summary>
 
 ```
 --- origin
@@ -2949,7 +1547,7 @@
 ```
 
 </details>
-<details><summary>--break-separators=after types.ml</summary>
+<details><summary>--break-separators=after types.ml  </summary>
 
 ```
 --- origin
@@ -3072,13 +1670,13 @@
 ```
 
 </details>
-<details><summary>--break-separators=before break_separators.ml</summary>
+<details><summary>--break-separators=before break_separators.ml  </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--break-string-literals=auto break_string_literals.ml</summary>
+<details><summary>--break-string-literals=auto break_string_literals.ml  </summary>
 
 ```
 --- origin
@@ -3172,7 +1770,7 @@
 ```
 
 </details>
-<details><summary>--break-string-literals=never break_string_literals.ml</summary>
+<details><summary>--break-string-literals=never break_string_literals.ml  </summary>
 
 ```
 --- origin
@@ -3231,168 +1829,293 @@
 ```
 
 </details>
-<details><summary>--break-string-literals=wrap break_string_literals.ml)</summary>
-
-```
-```
-
-</details>
-<details><summary>--cases-matching-exp-indent=normal break_cases.ml</summary>
+<details><summary>--cases-exp-indent=10 align_cases.ml  </summary>
 
 ```
 --- origin
 +++ formatted
-@@ -1,239 +0,0 @@
--let f x = function
+@@ -3,19 +3,19 @@
+   | Fooooooooooooo
+   | Fooooooooooooooo
+   | Foooooooooooooooooo
+-  | Foo                 of padding * int array
+-  | Foooooooo           of padding * int array
+-  | Fooooooooo          of padding * int array
+-  | Fooooooooooo        of padding * int array * int array
++  | Foo of padding * int array
++  | Foooooooo of padding * int array
++  | Fooooooooo of padding * int array
++  | Fooooooooooo of padding * int array * int array
+   (* fooooooooooooooooo *)
+   | Fooooooooooo
+       (* fooooooooooooooooooo *) of
+       padding * int array * int array
+   (* fooooooooooooooooo *)
+-  | Foooooooooo         of padding * int array * int array
+-  | Foooo               of padding * int array * int array
+-  | Fooooooo            of padding * int array * int array
+-  | Foooooo             of int array
++  | Foooooooooo of padding * int array * int array
++  | Foooo of padding * int array * int array
++  | Fooooooo of padding * int array * int array
++  | Foooooo of int array
+ 
+ type x =
+   [ `Foooooooooooooo
+@@ -26,15 +26,15 @@
+   | `Foooooo (* fooooo *) of padding * int array
+   | `Fooooooooo (* fooooooooooooooooo *) of padding * int array * int array
+   | (* fooooooooooooooooo *)
+-    `Fooooooooo          of int array
+-  | `Foooooooooooo       of int array ]
++    `Fooooooooo of int array
++  | `Foooooooooooo of int array ]
+ 
+ (* alignment disabled due to unpredictible patterns *)
+ let fooooooooooo =
+   match foooooooooooooooooooooooo with
+   | Bfooooooooooooooooo -> foooooooooooo
+-  | C (a, b, c, d)      -> fooooooooooooooooooo
+-  | _                   -> fooooooooooooooooooo
++  | C (a, b, c, d) -> fooooooooooooooooooo
++  | _ -> fooooooooooooooooooo
+ 
+ let fooooooooooo =
+   match foooooooooooooooooooooooo with
+@@ -54,23 +54,24 @@
+   | "foooooooooooooo"
+   (* foooooooooooooooooooooo foooooooooooooooo foooooooooooooo fooooooooo*)
+     ->
+-      foo
++            foo
+   | 3453535353533 ->
+-      foooooooooooooooooo
+-      (* foooooooooooooooooooooo foooooooooooooooo foooooooooooooo fooooooooo*)
++            foooooooooooooooooo
++            (* foooooooooooooooooooooo foooooooooooooooo foooooooooooooo
++               fooooooooo*)
+   | _ -> fooooooooooooooooooo
+ 
+ let _ =
+   match f with
+-  | 'a'     -> 1
+-  | '\n'    -> 2
+-  | '\t'    -> 2
+-  | '\x12'  -> 2
++  | 'a' -> 1
++  | '\n' -> 2
++  | '\t' -> 2
++  | '\x12' -> 2
+   | pattern -> 3
+ 
+ type t =
+   | ( :: ) of a * b
+-  | []     of looooooooooooooooooooooooooooooooooooooong_break
++  | [] of looooooooooooooooooooooooooooooooooooooong_break
+ 
+ let _ = match (a, b) with A, B -> a | AA, BB -> b | p -> c
+ 
+@@ -86,14 +87,14 @@
+ let _ =
+   match (foooooooooooooo, foooooooooooooo) with
+   | Some a, Some b -> a + b
+-  | None, _        -> 1
+-  | Some _, None   -> 2
++  | None, _ -> 1
++  | Some _, None -> 2
+ 
+ let _ =
+   match (foooooooooooooo, foooooooooooooo) with
+-  | [x]    -> x
++  | [x] -> x
+   | [_; x] -> x
+-  | _      -> 0
++  | _ -> 0
+ 
+ type x = Foooooooo of int | Fooooooooooooo of int
+ 
+@@ -102,9 +103,9 @@
+ [@@@ocamlformat "type-decl=sparse"]
+ 
+ type x =
+-  | Foooooooo      of int
++  | Foooooooo of int
+   | Fooooooooooooo of int
+ 
+ type x =
+-  [ `Foooooooo      of int
++  [ `Foooooooo of int
+   | `Fooooooooooooo of int ]
+```
+
+</details>
+<details><summary>--cases-matching-exp-indent=normal break_cases.ml --break-cases=all (must option: --break-cases=all)</summary>
+
+```
+--- origin
++++ formatted
+@@ -1,6 +1,8 @@
+ let f x = function
 -  | C | P (this, test, [is; wide; enough; _to; break], [the; line]) | A | K
 -    ->
--      1
--  | D ->
--      let a = "this" in
--      let b = "breaks" in
--      ()
--
--let f =
++  | C
++   |P (this, test, [is; wide; enough; _to; break], [the; line])
++   |A
++   |K ->
+       1
+   | D ->
+       let a = "this" in
+@@ -8,19 +10,31 @@
+       ()
+ 
+ let f =
 -  let g = function H when x y <> k -> 2 | T | P | U -> 3 in
--  fun x g t h y u ->
--    match x with
--    | E -> 4
++  let g = function
++    | H when x y <> k -> 2
++    | T
++     |P
++     |U ->
++        3
++  in
+   fun x g t h y u ->
+     match x with
+     | E -> 4
 -    | Z | P | M -> (
 -      match y with O -> 5 | P when h x -> ( function A -> 6 ) )
--
--;;
--match x with
--| true -> (
++    | Z
++     |P
++     |M -> (
++        match y with
++        | O -> 5
++        | P when h x -> (
++            function
++            | A -> 6 ) )
+ 
+ ;;
+ match x with
+ | true -> (
 -  match y with
 -  | true -> "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 -  | false -> "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" )
--| false -> "cccccccccccccccccccccccccccccc"
--
--;;
--match x with
--| "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", yyyyyyyyyy
--  when fffffffffffffff bbbbbbbbbb yyyyyyyyyy ->
--    ()
--| _ -> ()
--
--let is_sequence exp =
--  match exp.pexp_desc with
--  | Pexp_sequence _
--   |Pexp_extension
++    match y with
++    | true -> "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
++    | false -> "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" )
+ | false -> "cccccccccccccccccccccccccccccc"
+ 
+ ;;
+@@ -34,9 +48,8 @@
+   match exp.pexp_desc with
+   | Pexp_sequence _
+    |Pexp_extension
 -      ( _
 -      , PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}]
 -      ) ->
--      true
--  | _ -> false
--
--let _ =
--  let f x y =
--    match x with
--    | None -> false
--    | Some looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong
--      -> (
++      (_, PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}])
++    ->
+       true
+   | _ -> false
+ 
+@@ -46,14 +59,15 @@
+     | None -> false
+     | Some looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong
+       -> (
 -      match y with Some _ -> true | None -> false )
--  in
--  ()
--
--let () =
--  match fooooo with
++        match y with
++        | Some _ -> true
++        | None -> false )
+   in
+   ()
+ 
+ let () =
+   match fooooo with
 -  | x ->
 -      x
--
--let () =
--  match foooo with
--  | x
--   |x
--   |x ->
--      x
--  | y
--   |foooooooooo
--   |fooooooooo ->
--      y
++  | x -> x
+ 
+ let () =
+   match foooo with
+@@ -65,8 +79,7 @@
+    |foooooooooo
+    |fooooooooo ->
+       y
 -  | foooooo
 -    when ff fff fooooooooooooooooooo ->
--      foooooooooooooooooooooo foooooooooooooooooo
--
--let foo =
--  match instr with
--  | Store (Lvar lhs_pvar, lhs_typ, rhs_exp, loc)
--    when Pvar.is_ssa_frontend_tmp lhs_pvar ->
--      (* do not need to add deref here as it is added implicitly in of_pvar
--         by forgetting the & *)
--      analyze_id_assignment (Var.of_pvar lhs_pvar) rhs_exp lhs_typ loc
--  | Call
--      ( (ret_id, _)
--      , Const (Cfun callee_pname)
--      , (target_exp, _) :: (Sizeof {typ= cast_typ}, _) :: _
--      , loc
--      , _ )
--    when Typ.Procname.equal callee_pname BuiltinDecl.__cast ->
--      analyze_id_assignment (Var.of_id ret_id) target_exp cast_typ loc
--
--let mod_int c1 c2 is_safe dbg =
--  match (c1, c2) with
++  | foooooo when ff fff fooooooooooooooooooo ->
+       foooooooooooooooooooooo foooooooooooooooooo
+ 
+ let foo =
+@@ -87,19 +100,20 @@
+ 
+ let mod_int c1 c2 is_safe dbg =
+   match (c1, c2) with
 -    (c1, Cconst_int (0, _)) ->
 -      Csequence(c1, raise_symbol dbg "caml_exn_Division_by_zero")
 -  | (c1, Cconst_int ((1 | (-1)), _)) ->
 -      Csequence(c1, Cconst_int (0, dbg))
 -  | x | -1 -> ()
--
--let merge_columns l old_table =
++  | c1, Cconst_int (0, _) ->
++      Csequence (c1, raise_symbol dbg "caml_exn_Division_by_zero")
++  | c1, Cconst_int ((1 | -1), _) -> Csequence (c1, Cconst_int (0, dbg))
++  | x
++   | -1 ->
++      ()
+ 
+ let merge_columns l old_table =
 -   let rec aux = function
--    | []
--     |[None] ->
++  let rec aux = function
+     | []
+      |[None] ->
 -        [], []
 -   in
 -   foooooooooooooooooooooooooo fooooooooooooooooooooo
--
--[@@@ocamlformat "indicate-nested-or-patterns=unsafe-no"]
--
--let is_sequence exp =
--  match exp.pexp_desc with
--  | Pexp_sequence _
--  | Pexp_extension
++        ([], [])
++  in
++  foooooooooooooooooooooooooo fooooooooooooooooooooo
+ 
+ [@@@ocamlformat "indicate-nested-or-patterns=unsafe-no"]
+ 
+@@ -107,9 +121,8 @@
+   match exp.pexp_desc with
+   | Pexp_sequence _
+   | Pexp_extension
 -      ( _
 -      , PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}]
 -      ) ->
--      true
--  | _ -> false
--
--let () =
--  match foooo with
--  | x
--  | x
--  | x ->
--      x
--  | y
--  | foooooooooo
--  | fooooooooo ->
--      y
++      (_, PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}])
++    ->
+       true
+   | _ -> false
+ 
+@@ -123,8 +136,7 @@
+   | foooooooooo
+   | fooooooooo ->
+       y
 -  | foooooo
 -    when ff fff fooooooooooooooooooo ->
--      foooooooooooooooooooooo foooooooooooooooooo
--
--let rec loop items =
--  match [] with
--  | _ :: _ :: items ->
--      (* a comment *)
--      loop items
--  | _ :: items ->
--      (* another comment*)
--      loop items
--  | _ ->
--      let a = 3 in
--      a
--
--let ffffff ~foo =
++  | foooooo when ff fff fooooooooooooooooooo ->
+       foooooooooooooooooooooo foooooooooooooooooo
+ 
+ let rec loop items =
+@@ -140,43 +152,53 @@
+       a
+ 
+ let ffffff ~foo =
 - match (foo : Fooooooooooooo.t) with
 - | Aaaaaaaaaaaaaaaaa | Bbbbbbbbbbbbbbbbb | Ccccccccccccccccc
 - | Ddddddddddddddddd | Eeeeeeeeeeeeeeeee -> foooooooooooooooooooo
 - | Fffffffffffffffff -> fooooooooooooooooo
--
--let () =
--  match v with
--  | None -> None
++  match (foo : Fooooooooooooo.t) with
++  | Aaaaaaaaaaaaaaaaa
++  | Bbbbbbbbbbbbbbbbb
++  | Ccccccccccccccccc
++  | Ddddddddddddddddd
++  | Eeeeeeeeeeeeeeeee ->
++      foooooooooooooooooooo
++  | Fffffffffffffffff -> fooooooooooooooooo
+ 
+ let () =
+   match v with
+   | None -> None
 -  | Some x ->
 -  match x with
 -  | None -> None
@@ -3400,92 +2123,144 @@
 -  match x with
 -  | None -> None
 -  | Some x -> x
--
--let _ = function
++  | Some x -> (
++      match x with
++      | None -> None
++      | Some x -> (
++          match x with
++          | None -> None
++          | Some x -> x ) )
+ 
+ let _ = function
 -  | exception A | B -> 1
--  | C -> 2
--
--let _ = function
++  | (exception A)
++  | B ->
++      1
+   | C -> 2
+ 
+ let _ = function
 -  | A | exception B -> 1
--  | C -> 2
--
--let _ =
--  match x with
++  | A
++  | (exception B) ->
++      1
+   | C -> 2
+ 
+ let _ =
+   match x with
 -  | exception A | exception B -> 1
--  | C -> 2
--
--let _ =
--  match x with
--  | fooooooooooooooooo ->
++  | (exception A)
++  | (exception B) ->
++      1
+   | C -> 2
+ 
+ let _ =
+   match x with
+   | fooooooooooooooooo ->
 -     assert
 -       ( match fooooooooo with
 -       | foooooooooo -> fooooooooooo
 -       | foooooooooo -> fooooooooooo
 -       | foooooooooo -> fooooooooooo )
--
--let handler =
--  object
--    method at_expr x =
--      match x with
--      | Call Thing
--      (* isset($var::thing) but not isset($foo::$bar) *)
++      assert (
++        match fooooooooo with
++        | foooooooooo -> fooooooooooo
++        | foooooooooo -> fooooooooooo
++        | foooooooooo -> fooooooooooo )
+ 
+ let handler =
+   object
+@@ -184,56 +206,63 @@
+       match x with
+       | Call Thing
+       (* isset($var::thing) but not isset($foo::$bar) *)
 -      |Call OtherThing ->
--          Errors.isset_in_strict p
--      | _ -> ()
--  end
--
--let _ =
--  match abc with
++      | Call OtherThing ->
+           Errors.isset_in_strict p
+       | _ -> ()
+   end
+ 
+ let _ =
+   match abc with
 -  | Fooooooooooooooooo (* comment *)
 -  | Baaaaaaaaaaaaaaaar
--  (* comment *)
++  | Fooooooooooooooooo
+   (* comment *)
 -  | Baaaaaaaaaaaaaaaaz
--  (* comment *)
++  | Baaaaaaaaaaaaaaaar
+   (* comment *)
 -    -> ()
--
--let _ =
--  match x with
++  | Baaaaaaaaaaaaaaaaz (* comment *) ->
++      ()
+ 
+ let _ =
+   match x with
 -  | { y =
--        (* _____________________________________________________________________ *)
++  | { y=
+         (* _____________________________________________________________________ *)
 -        ( X _ | Y _ )
 -    } -> ()
 -;;
--
--let _ =
--  match x with
++        ( X _ | Y _ ) } ->
++      ()
+ 
+ let _ =
+   match x with
 -  | { y =
 -        Z |
--        (* _____________________________________________________________________ *)
++  | { y=
++        ( Z
+         (* _____________________________________________________________________ *)
 -        ( X _ | Y _ )
 -    } -> ()
 -;;
--
--let foooooooooooooo = function
++        | X _ | Y _ ) } ->
++      ()
+ 
+ let foooooooooooooo = function
 -  | Fooo (* fooooo foo foo foooooo foooooooo foooooooooooo *)
 -  | Foo (* foooooo foooo fooooo fooooooo fooooooo fooooo  *)
 -  | Foooooooooooooooo (* foooooo foooo fooooooooooo *)
--  | Foooooooooooooo _
--  (* Foooooooooooooooooooooooooooo fooooooooooooooooooooooooooo fooooooooo.
--     Foooooooooooooooooooooooooooooooooooo foooooooooooooooooooooooo foooooo.
++  | Fooo
++  (* fooooo foo foo foooooo foooooooo foooooooooooo *)
++  | Foo
++  (* foooooo foooo fooooo fooooooo fooooooo fooooo *)
++  | Foooooooooooooooo
++  (* foooooo foooo fooooooooooo *)
+   | Foooooooooooooo _
+   (* Foooooooooooooooooooooooooooo fooooooooooooooooooooooooooo fooooooooo.
+      Foooooooooooooooooooooooooooooooooooo foooooooooooooooooooooooo foooooo.
 -     Foooooooooooooooooooooooooooooooooooooo foooooooooooooooooooo foooooooooooooooooo foooooooo.
 -     Foooooooooooo fooooooooooo fooooooooooooo foooooooooooooo foooooo.
 -  *)
--  | Foooooooooo
++     Foooooooooooooooooooooooooooooooooooooo foooooooooooooooooooo
++     foooooooooooooooooo foooooooo. Foooooooooooo fooooooooooo fooooooooooooo
++     foooooooooooooo foooooo. *)
+   | Foooooooooo
 -  | FooooFoooooFoooooo (* fooooooooooooooooooooooooooooooooooo *)
 -  | Foooo (* Fooo foooo fooooo foooooooo fooooooooo foooooooooooo fooooooooo fooo *) ->
--      Foooooooooo.Foooooo
--  | Foooo {foooo_fooo= {foooooooooo}} ->
--      Foooo_Foooo_fooooooo.get_foooooooooo fooooo_fooo
--
--let get_nullability = function
++  | FooooFoooooFoooooo
++  (* fooooooooooooooooooooooooooooooooooo *)
++  | Foooo
++  (* Fooo foooo fooooo foooooooo fooooooooo foooooooooooo fooooooooo fooo *)
++    ->
+       Foooooooooo.Foooooo
+   | Foooo {foooo_fooo= {foooooooooo}} ->
+       Foooo_Foooo_fooooooo.get_foooooooooo fooooo_fooo
+ 
+ let get_nullability = function
 -  | ArrayAccess | OptimisticFallback (* non-null is the most optimistic type *)
--  | Undef
++  | ArrayAccess
++  | OptimisticFallback
++  (* non-null is the most optimistic type *)
+   | Undef
 -  (* This is a very special case, assigning non-null is a technical trick *) ->
--      Nullability.Nonnull
++  (* This is a very special case, assigning non-null is a technical trick *)
++    ->
+       Nullability.Nonnull
 ```
 
 </details>
-<details><summary>--config=margin=20 profiles.ml</summary>
+<details><summary>--config=margin=20 profiles.ml  </summary>
 
 ```
 --- origin
@@ -3503,7 +2278,7 @@
 ```
 
 </details>
-<details><summary>--config=module-item-spacing=compact cmdline_override2.ml</summary>
+<details><summary>--config=module-item-spacing=compact cmdline_override2.ml  </summary>
 
 ```
 --- origin
@@ -3515,13 +2290,13 @@
 ```
 
 </details>
-<details><summary>--disable disabled.ml</summary>
+<details><summary>--disable disabled.ml  </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--disambiguate-non-breaking-match align_cases.ml</summary>
+<details><summary>--disambiguate-non-breaking-match align_cases.ml  </summary>
 
 ```
 --- origin
@@ -3642,7 +2417,7 @@
 ```
 
 </details>
-<details><summary>--doc-comments=after-when-possible doc_comments.ml</summary>
+<details><summary>--doc-comments=after-when-possible doc_comments.ml  </summary>
 
 ```
 --- origin
@@ -3748,7 +2523,7 @@
 ```
 
 </details>
-<details><summary>--doc-comments=before doc_comments.ml</summary>
+<details><summary>--doc-comments=before doc_comments.ml  </summary>
 
 ```
 --- origin
@@ -4052,7 +2827,7 @@
 ```
 
 </details>
-<details><summary>--doc-comments=before-except-val doc_comments.ml</summary>
+<details><summary>--doc-comments=before-except-val doc_comments.ml  </summary>
 
 ```
 --- origin
@@ -4350,7 +3125,7 @@
 ```
 
 </details>
-<details><summary>--dock-collection-brackets types.ml</summary>
+<details><summary>--dock-collection-brackets types.ml  </summary>
 
 ```
 --- origin
@@ -4403,7 +3178,7 @@
 ```
 
 </details>
-<details><summary>--exp-grouping=parens exp_grouping.ml</summary>
+<details><summary>--exp-grouping=parens exp_grouping.ml  </summary>
 
 ```
 --- origin
@@ -4771,7 +3546,7 @@
 ```
 
 </details>
-<details><summary>--exp-grouping=preserve exp_grouping.ml</summary>
+<details><summary>--exp-grouping=preserve exp_grouping.ml  </summary>
 
 ```
 --- origin
@@ -5104,7 +3879,7 @@
 ```
 
 </details>
-<details><summary>--extension-indent=5 extensions.mli</summary>
+<details><summary>--extension-indent=5 extensions.mli  </summary>
 
 ```
 --- origin
@@ -5132,225 +3907,7 @@
 ```
 
 </details>
-<details><summary>--extension-sugar=always extensions.ml</summary>
-
-```
---- origin
-+++ formatted
-@@ -1,209 +0,0 @@
--let () = [%ext expr] ; ()
--
--let _ = (match%ext x with () -> ()) [@attr y]
--
--let _ =
--  match%ext x with () ->
--    let y = [%test let x = y] in
--    let%test x = d in
--    d
--
--val f : compare:[%compare : 'a] -> sexp_of:[%sexp_of : 'a] -> t
--
--let invariant t =
--  Invariant.invariant [%here] t [%sexp_of : t] (fun () ->
--      assert (check_t_invariant t) )
--
--;; [%e
--     ? ( xxxxxxxxx
--       , xxxxxxxxxxxxx
--       , xxxxxxxxxxxxxxxx
--       , xxxxxxxxxxxxxx
--       , xxxxxxxxxxx
--       , xxxxxxxxxxxxxxxxxxxx )]
--
--;; [%e
--     ? ( xxxxxxxxx
--       , xxxxxxxxxxxxx
--       , xxxxxxxxxxxxxxxx
--       , xxxxxxxxxxxxxx
--       , xxxxxxxxxxx
--       , xxxxxxxxxxxxxxxxxxxx ) when a < b]
--
--
--[%ext let f = () and g () = () in e]
--(let%ext f = () and g () = () in e)
--
--
--[%ext let rec f = () and g () = () in e]
--(let%ext rec f = () and g () = () in e);;
--
--let _ = ([%ext? (x:x)] : [%ext? (x:x)]);;
--
--
--[%%ext
--11111111111111111111]
--
--[%%ext
--11111111111111111111111 22222222222222222222222 33333333333333333333333]
--
--[%%ext
--;; 11111111111111111111
--
--;; 22222222222222222222]
--
--[%%ext
--;; 11111111111111111111
--
--;; 22222222222222222222
--
--;; 33333333333333333333]
--
--[%%ext
--let foooooooooooooooo = foooo
--
--let fooooooooooooooo = foo]
--
--let _ = [%stri
--  let [%p xxx] =
--    fun (t : [%t tt]) (ut : [%t tt]) ->
--      [%e xxx]]
--
--
--let _ =
--  [ x;
--    x ---> [%expr [%e x ~loc [%expr x] x] ; iter tail]
--    ;x]
--
--
--let _ =
--  [%expr let x = e in f y][@x]
--
--
--let _ = f (for i = 0 to 1 do () done) (while true do () done)
--let _ = f (for%ext i = 0 to 1 do () done) (while%ext true do () done)
--
--let _ = function%ext x -> x
--
--let _ = f (function%ext x -> x)
--
--let _ = f (function%ext x -> x) x
--
--let _ = [%ext function x -> x]
--
--let _ = f [%ext function x -> x]
--
--let _ = f [%ext function x -> x] x
--
--let _ = f ([%ext e] [@attr]) x
--
--let _ = a ;%ext b ; [%ext (a ; b)]
--
--let _ =
--  try%lwt Lwt.return 2
--  with _ -> assert false
--
--let _ =
--  (* foooooooooooo *)
--  try%lwt
--    (* fooooooooooo *)
--    Lwt.return 2
--  with _ -> assert false
--
--let _ =
--  try%lwt
--    let a = 3 in
--    Lwt.return a
--  with _ -> assert false
--
--let _ =
--  (* foooooooooooo *)
--  try%lwt
--    (* fooooooooooo *)
--    let a = 3 in
--    Lwt.return a
--  with _ -> assert false
--
--let%lwt f = function
--  | _ -> ()
--
--type%any_extension t =
--  < a: 'a >
--
--let value =
--  f
--    [%any_extension
--      function
--      | 0 -> false
--      | _ -> true
--    ]
--
--let value =
--    [%any_extension
--      fun x -> y
--    ]
--      x
--
--let value =
--  f
--    [%any_extension
--      try x with
--      | x -> false
--      | _ -> true
--    ]
--
--let value =
--  f
--    [%any_extension
--      match x with
--      | x -> false
--      | _ -> true
--    ]
--
--let foo =
--  [%foooooooooo
--    fooooooooooooooooooooooooooo
--      foooooooooooooooooooooooooooooooooo
--      foooooooooooooooooooooooooooooooooo
--      foooooooooooooooooooooooooooo
--      foooooooooooooooooooooooooooo]
--  [@@foooooooooo
--    fooooooooooooooooooooooooooo
--      foooooooooooooooooooooooooooooooooo
--      foooooooooooooooooooooooooooooooooo
--      foooooooooooooooooooooooooooo
--      foooooooooooooooooooooooooooo]
--
--;;
--[%%foooooooooo:
--  fooooooooooooooooooooooooooo
--    foooooooooooooooooooooooooooooooooo
--    foooooooooooooooooooooooooooooooooo
--    foooooooooooooooooooooooooooo
--    foooooooooooooooooooooooooooo]
--
--[@@@foooooooooo
--  fooooooooooooooooooooooooooo
--    foooooooooooooooooooooooooooooooooo
--    foooooooooooooooooooooooooooooooooo
--    foooooooooooooooooooooooooooo
--    foooooooooooooooooooooooooooo]
--
--let _ = [%ext let+ a = b in c]
--
--let _ = (begin%ext "foo"; "bar" end)
--
--let this_function_has_a_long_name plus very many arguments = "and a kind of long body"
--
--[%%expect
--  {||}]
--
--;;
--[%expect {|
--___________________________________________________________
--|}]
--
--[%%expect
--  {|
--___________________________________________________________
--|}]
-```
-
-</details>
-<details><summary>--field-space=loose record.ml</summary>
+<details><summary>--field-space=loose record.ml  </summary>
 
 ```
 --- origin
@@ -5488,7 +4045,7 @@
 ```
 
 </details>
-<details><summary>--field-space=tight record.ml</summary>
+<details><summary>--field-space=tight record.ml  </summary>
 
 ```
 --- origin
@@ -5519,7 +4076,7 @@
 ```
 
 </details>
-<details><summary>--field-space=tight-decl record.ml</summary>
+<details><summary>--field-space=tight-decl record.ml  </summary>
 
 ```
 --- origin
@@ -5654,37 +4211,7 @@
 ```
 
 </details>
-<details><summary>--format-invalid-files=auto format_invalid_files.ml</summary>
-
-```
---- origin
-+++ formatted
-@@ -1,8 +1,6 @@
--let foooooo
--= fooooooooo
-+let foooooo = fooooooooo
- 
--let foooooooo
--= bar baaaaar barrr
-+let foooooooo = bar baaaaar barrr
- 
- module K = struct
-   let k
-@@ -12,9 +10,6 @@
-   let x = in
-   ()
- 
--;;
--let foooooo =
--  fooooo
--  foooooooo
-+let foooooo = fooooo foooooooo
- 
- let k =
-```
-
-</details>
-<details><summary>--function-indent-nested=always function_indent.ml</summary>
+<details><summary>--function-indent-nested=always function_indent.ml  </summary>
 
 ```
 --- origin
@@ -5725,7 +4252,7 @@
 ```
 
 </details>
-<details><summary>--function-indent-nested=never function_indent.ml</summary>
+<details><summary>--function-indent-nested=never function_indent.ml  </summary>
 
 ```
 --- origin
@@ -5762,7 +4289,7 @@
 ```
 
 </details>
-<details><summary>--function-indent=4 function_indent.ml</summary>
+<details><summary>--function-indent=4 function_indent.ml  </summary>
 
 ```
 --- origin
@@ -5790,678 +4317,7 @@
 ```
 
 </details>
-<details><summary>--if-then-else ite.ml</summary>
-
-```
---- origin
-+++ formatted
-@@ -1,121 +0,0 @@
--let _ = if b then e else ( e1 ; e2 )
--
--let _ =
--  if b then e
--  else (
--    something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
--    this is more )
--
--let _ =
--  if b then ( e1 ; e2 )
--  else (
--    something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
--    this is more )
--
--let _ =
--  if b then (
--    something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
--    this is more )
--  else if b1 then (
--    something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
--    this is more )
--  else e
--
--;;
--f
--  ( if loooooooooooooooooooooooooooooooooooooooooooooooooooooooooong then ()
--  else () )
--
--;;
--f
--  ( if loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger then
--    ()
--  else () )
--
--;;
--f
--  ( if even loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger
--  then ()
--  else () )
--
--;;
--f
--  ( if
--    and_ even
--      loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger
--  then ()
--  else () )
--
--let () = if [@test] true then () else if [@other] true then ()
--
--let foo = if cond1 then arm1 else if cond2 then arm2 else arm3
--
--let _ =
--  if condition then
--    let a = 1 in
--    let b = 2 in
--    a + b
--  else if other_condition then 12
--  else 0
--
--let _ =
--  if foo then
--    let a = 1 in
--    let b = 2 in
--    a + b
--  else if foo then 12
--  else 0
--
--let foo =
--  if is_sugared_list e2 then Some (Semi, Non)
--  else Some (ColonColon, if exp == e2 then Right else Left)
--
--let foo =
--  if is_sugared_list e2 then Some (Semi, Non)
--  else
--    Some
--      ( ColonColon
--      , if exp == e2 then Right
--        else (Left foooooo, foooo, fooo, foooooo, fooooooo, foooooooo) )
--
--let foo =
--  if cond1 then (
--    arm1 ;
--    foooooooooooooo ;
--    fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
--    List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
--  else if cond2 then (
--    arm2 ;
--    foooooooooooooo ;
--    fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
--    List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
--  else (
--    arm3 ;
--    foooooooooooooo ;
--    fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
--    List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
--
--let foo =
--  if some condition then
--    if some nested condition then some action else some other action
--  else some default action
--
--let foo =
--  if some condition then
--    if some nested condition then
--      some action + foooo + foooo + foooooooo + foooo + foooooo
--    else some other action
--  else some default action
--
--let foo = if cmp < 0 then (* foo *) a + b else (* foo *) a - b
--
--let foo =
--  if cmp < 0 then (* ast higher precedence than context: no parens *)
--    false
--  else if cmp > 0 then (* context higher prec than ast: add parens *)
--    true
--  else if Poly.(assoc_of_prec prec_ast = which_child && which_child <> Non)
--  then foo
-```
-
-</details>
-<details><summary>--if-then-else=compact ite.ml</summary>
-
-```
---- origin
-+++ formatted
-@@ -1,4 +1,4 @@
--let _ = if b then e else ( e1 ; e2 )
-+let _ = if b then e else (e1 ; e2)
- 
- let _ =
-   if b then e
-@@ -7,7 +7,7 @@
-     this is more )
- 
- let _ =
--  if b then ( e1 ; e2 )
-+  if b then (e1 ; e2)
-   else (
-     something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
-     this is more )
-@@ -28,8 +28,7 @@
- 
- ;;
- f
--  ( if loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger then
--    ()
-+  ( if loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger then ()
-   else () )
- 
- ;;
-@@ -41,8 +40,7 @@
- ;;
- f
-   ( if
--    and_ even
--      loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger
-+    and_ even loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger
-   then ()
-   else () )
- 
-@@ -84,19 +82,19 @@
-     foooooooooooooo ;
-     fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
-     List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
-+        fooooooooooooo ) )
-   else if cond2 then (
-     arm2 ;
-     foooooooooooooo ;
-     fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
-     List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
-+        fooooooooooooo ) )
-   else (
-     arm3 ;
-     foooooooooooooo ;
-     fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
-     List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
-+        fooooooooooooo ) )
- 
- let foo =
-   if some condition then
-```
-
-</details>
-<details><summary>--if-then-else=fit-or-vertical ite.ml</summary>
-
-```
---- origin
-+++ formatted
-@@ -1,13 +1,15 @@
--let _ = if b then e else ( e1 ; e2 )
-+let _ = if b then e else (e1 ; e2)
- 
- let _ =
--  if b then e
-+  if b then
-+    e
-   else (
-     something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
-     this is more )
- 
- let _ =
--  if b then ( e1 ; e2 )
-+  if b then (
-+    e1 ; e2 )
-   else (
-     something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
-     this is more )
-@@ -19,32 +21,39 @@
-   else if b1 then (
-     something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
-     this is more )
--  else e
-+  else
-+    e
- 
- ;;
- f
--  ( if loooooooooooooooooooooooooooooooooooooooooooooooooooooooooong then ()
--  else () )
-+  ( if loooooooooooooooooooooooooooooooooooooooooooooooooooooooooong then
-+      ()
-+  else
-+    () )
- 
- ;;
- f
-   ( if loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger then
--    ()
--  else () )
-+      ()
-+  else
-+    () )
- 
- ;;
- f
-   ( if even loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger
--  then ()
--  else () )
-+  then
-+      ()
-+  else
-+    () )
- 
- ;;
- f
-   ( if
--    and_ even
--      loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger
--  then ()
--  else () )
-+    and_ even loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger
-+  then
-+      ()
-+  else
-+    () )
- 
- let () = if [@test] true then () else if [@other] true then ()
- 
-@@ -55,28 +64,37 @@
-     let a = 1 in
-     let b = 2 in
-     a + b
--  else if other_condition then 12
--  else 0
-+  else if other_condition then
-+    12
-+  else
-+    0
- 
- let _ =
-   if foo then
-     let a = 1 in
-     let b = 2 in
-     a + b
--  else if foo then 12
--  else 0
-+  else if foo then
-+    12
-+  else
-+    0
- 
- let foo =
--  if is_sugared_list e2 then Some (Semi, Non)
--  else Some (ColonColon, if exp == e2 then Right else Left)
-+  if is_sugared_list e2 then
-+    Some (Semi, Non)
-+  else
-+    Some (ColonColon, if exp == e2 then Right else Left)
- 
- let foo =
--  if is_sugared_list e2 then Some (Semi, Non)
-+  if is_sugared_list e2 then
-+    Some (Semi, Non)
-   else
-     Some
-       ( ColonColon
--      , if exp == e2 then Right
--        else (Left foooooo, foooo, fooo, foooooo, fooooooo, foooooooo) )
-+      , if exp == e2 then
-+          Right
-+        else
-+          (Left foooooo, foooo, fooo, foooooo, fooooooo, foooooooo) )
- 
- let foo =
-   if cond1 then (
-@@ -84,31 +102,34 @@
-     foooooooooooooo ;
-     fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
-     List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
-+        fooooooooooooo ) )
-   else if cond2 then (
-     arm2 ;
-     foooooooooooooo ;
-     fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
-     List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
-+        fooooooooooooo ) )
-   else (
-     arm3 ;
-     foooooooooooooo ;
-     fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
-     List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
-+        fooooooooooooo ) )
- 
- let foo =
-   if some condition then
-     if some nested condition then some action else some other action
--  else some default action
-+  else
-+    some default action
- 
- let foo =
-   if some condition then
-     if some nested condition then
-       some action + foooo + foooo + foooooooo + foooo + foooooo
--    else some other action
--  else some default action
-+    else
-+      some other action
-+  else
-+    some default action
- 
- let foo = if cmp < 0 then (* foo *) a + b else (* foo *) a - b
- 
-@@ -118,4 +139,5 @@
-   else if cmp > 0 then (* context higher prec than ast: add parens *)
-     true
-   else if Poly.(assoc_of_prec prec_ast = which_child && which_child <> Non)
--  then foo
-+  then
-+    foo
-```
-
-</details>
-<details><summary>--if-then-else=k-r ite.ml</summary>
-
-```
---- origin
-+++ formatted
-@@ -1,121 +0,0 @@
--let _ = if b then e else ( e1 ; e2 )
--
--let _ =
--  if b then e
--  else (
--    something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
--    this is more )
--
--let _ =
--  if b then ( e1 ; e2 )
--  else (
--    something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
--    this is more )
--
--let _ =
--  if b then (
--    something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
--    this is more )
--  else if b1 then (
--    something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
--    this is more )
--  else e
--
--;;
--f
--  ( if loooooooooooooooooooooooooooooooooooooooooooooooooooooooooong then ()
--  else () )
--
--;;
--f
--  ( if loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger then
--    ()
--  else () )
--
--;;
--f
--  ( if even loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger
--  then ()
--  else () )
--
--;;
--f
--  ( if
--    and_ even
--      loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger
--  then ()
--  else () )
--
--let () = if [@test] true then () else if [@other] true then ()
--
--let foo = if cond1 then arm1 else if cond2 then arm2 else arm3
--
--let _ =
--  if condition then
--    let a = 1 in
--    let b = 2 in
--    a + b
--  else if other_condition then 12
--  else 0
--
--let _ =
--  if foo then
--    let a = 1 in
--    let b = 2 in
--    a + b
--  else if foo then 12
--  else 0
--
--let foo =
--  if is_sugared_list e2 then Some (Semi, Non)
--  else Some (ColonColon, if exp == e2 then Right else Left)
--
--let foo =
--  if is_sugared_list e2 then Some (Semi, Non)
--  else
--    Some
--      ( ColonColon
--      , if exp == e2 then Right
--        else (Left foooooo, foooo, fooo, foooooo, fooooooo, foooooooo) )
--
--let foo =
--  if cond1 then (
--    arm1 ;
--    foooooooooooooo ;
--    fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
--    List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
--  else if cond2 then (
--    arm2 ;
--    foooooooooooooo ;
--    fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
--    List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
--  else (
--    arm3 ;
--    foooooooooooooo ;
--    fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
--    List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
--
--let foo =
--  if some condition then
--    if some nested condition then some action else some other action
--  else some default action
--
--let foo =
--  if some condition then
--    if some nested condition then
--      some action + foooo + foooo + foooooooo + foooo + foooooo
--    else some other action
--  else some default action
--
--let foo = if cmp < 0 then (* foo *) a + b else (* foo *) a - b
--
--let foo =
--  if cmp < 0 then (* ast higher precedence than context: no parens *)
--    false
--  else if cmp > 0 then (* context higher prec than ast: add parens *)
--    true
--  else if Poly.(assoc_of_prec prec_ast = which_child && which_child <> Non)
--  then foo
-```
-
-</details>
-<details><summary>--if-then-else=keyword-first ite.ml</summary>
-
-```
---- origin
-+++ formatted
-@@ -1,35 +1,40 @@
--let _ = if b then e else ( e1 ; e2 )
-+let _ = if b then e else (e1 ; e2)
- 
- let _ =
--  if b then e
-+  if b
-+  then e
-   else (
-     something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
-     this is more )
- 
- let _ =
--  if b then ( e1 ; e2 )
-+  if b
-+  then (e1 ; e2)
-   else (
-     something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
-     this is more )
- 
- let _ =
--  if b then (
-+  if b
-+  then (
-     something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
-     this is more )
--  else if b1 then (
-+  else if b1
-+  then (
-     something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
-     this is more )
-   else e
- 
- ;;
- f
--  ( if loooooooooooooooooooooooooooooooooooooooooooooooooooooooooong then ()
-+  ( if loooooooooooooooooooooooooooooooooooooooooooooooooooooooooong
-+  then ()
-   else () )
- 
- ;;
- f
--  ( if loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger then
--    ()
-+  ( if loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger
-+  then ()
-   else () )
- 
- ;;
-@@ -40,9 +45,8 @@
- 
- ;;
- f
--  ( if
--    and_ even
--      loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger
-+  ( if and_ even
-+         loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger
-   then ()
-   else () )
- 
-@@ -51,71 +55,83 @@
- let foo = if cond1 then arm1 else if cond2 then arm2 else arm3
- 
- let _ =
--  if condition then
-+  if condition
-+  then
-     let a = 1 in
-     let b = 2 in
-     a + b
--  else if other_condition then 12
-+  else if other_condition
-+  then 12
-   else 0
- 
- let _ =
--  if foo then
-+  if foo
-+  then
-     let a = 1 in
-     let b = 2 in
-     a + b
--  else if foo then 12
-+  else if foo
-+  then 12
-   else 0
- 
- let foo =
--  if is_sugared_list e2 then Some (Semi, Non)
-+  if is_sugared_list e2
-+  then Some (Semi, Non)
-   else Some (ColonColon, if exp == e2 then Right else Left)
- 
- let foo =
--  if is_sugared_list e2 then Some (Semi, Non)
-+  if is_sugared_list e2
-+  then Some (Semi, Non)
-   else
-     Some
-       ( ColonColon
--      , if exp == e2 then Right
-+      , if exp == e2
-+        then Right
-         else (Left foooooo, foooo, fooo, foooooo, fooooooo, foooooooo) )
- 
- let foo =
--  if cond1 then (
-+  if cond1
-+  then (
-     arm1 ;
-     foooooooooooooo ;
-     fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
-     List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
--  else if cond2 then (
-+        fooooooooooooo ) )
-+  else if cond2
-+  then (
-     arm2 ;
-     foooooooooooooo ;
-     fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
-     List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
-+        fooooooooooooo ) )
-   else (
-     arm3 ;
-     foooooooooooooo ;
-     fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
-     List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
-+        fooooooooooooo ) )
- 
- let foo =
--  if some condition then
--    if some nested condition then some action else some other action
-+  if some condition
-+  then if some nested condition then some action else some other action
-   else some default action
- 
- let foo =
--  if some condition then
--    if some nested condition then
--      some action + foooo + foooo + foooooooo + foooo + foooooo
-+  if some condition
-+  then
-+    if some nested condition
-+    then some action + foooo + foooo + foooooooo + foooo + foooooo
-     else some other action
-   else some default action
- 
- let foo = if cmp < 0 then (* foo *) a + b else (* foo *) a - b
- 
- let foo =
--  if cmp < 0 then (* ast higher precedence than context: no parens *)
-+  if cmp < 0
-+  then (* ast higher precedence than context: no parens *)
-     false
--  else if cmp > 0 then (* context higher prec than ast: add parens *)
-+  else if cmp > 0
-+  then (* context higher prec than ast: add parens *)
-     true
-   else if Poly.(assoc_of_prec prec_ast = which_child && which_child <> Non)
-   then foo
-```
-
-</details>
-<details><summary>--indent-after-in=4 let_binding.ml</summary>
+<details><summary>--indent-after-in=4 let_binding.ml  </summary>
 
 ```
 --- origin
@@ -6638,7 +4494,7 @@
 ```
 
 </details>
-<details><summary>--indicate-multiline-delimiters=closing-on-separate-line ite.ml</summary>
+<details><summary>--indicate-multiline-delimiters=closing-on-separate-line ite.ml --if-then-else=compact (must option: --if-then-else=compact)</summary>
 
 ```
 --- origin
@@ -6743,7 +4599,7 @@
 ```
 
 </details>
-<details><summary>--indicate-multiline-delimiters=no ite.ml</summary>
+<details><summary>--indicate-multiline-delimiters=no ite.ml --if-then-else=compact (must option: --if-then-else=compact)</summary>
 
 ```
 --- origin
@@ -6842,19 +4698,19 @@
 ```
 
 </details>
-<details><summary>--infix-precedence=parens infix_precedence.ml</summary>
+<details><summary>--infix-precedence=parens infix_precedence.ml  </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--leading-nested-match-parens match2.ml</summary>
+<details><summary>--leading-nested-match-parens match2.ml  </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--let-binding-indent=6 let_binding.ml</summary>
+<details><summary>--let-binding-indent=6 let_binding.ml  </summary>
 
 ```
 --- origin
@@ -7097,7 +4953,7 @@
 ```
 
 </details>
-<details><summary>--let-module=compact let_module.ml</summary>
+<details><summary>--let-module=compact let_module.ml  </summary>
 
 ```
 --- origin
@@ -7173,7 +5029,7 @@
 ```
 
 </details>
-<details><summary>--let-module=sparse let_module.ml</summary>
+<details><summary>--let-module=sparse let_module.ml  </summary>
 
 ```
 --- origin
@@ -7206,7 +5062,7 @@
 ```
 
 </details>
-<details><summary>--let-open=auto open.ml</summary>
+<details><summary>--let-open=auto open.ml  </summary>
 
 ```
 --- origin
@@ -7377,7 +5233,7 @@
 ```
 
 </details>
-<details><summary>--let-open=long open.ml</summary>
+<details><summary>--let-open=long open.ml  </summary>
 
 ```
 --- origin
@@ -7576,7 +5432,7 @@
 ```
 
 </details>
-<details><summary>--let-open=preserve open.ml</summary>
+<details><summary>--let-open=preserve open.ml  </summary>
 
 ```
 --- origin
@@ -7716,7 +5572,7 @@
 ```
 
 </details>
-<details><summary>--let-open=short open.ml</summary>
+<details><summary>--let-open=short open.ml  </summary>
 
 ```
 --- origin
@@ -7950,7 +5806,7 @@
 ```
 
 </details>
-<details><summary>--margin=58 break_record.ml</summary>
+<details><summary>--margin=58 break_record.ml  </summary>
 
 ```
 --- origin
@@ -7966,24 +5822,7 @@
 ```
 
 </details>
-<details><summary>--margin=67 wrap_comments_break.ml</summary>
-
-```
---- origin
-+++ formatted
-@@ -1,8 +0,0 @@
--let _ =
--  let _ =
--    fffffffffff
--      aaaaaaaaaaaaaaaaaaaaaaaaaaaa
--      bbbbbbbbbbbbbbbbbbbbbbbbbb
--      ~f:(fun x -> return xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx)
--  in
--  2
-```
-
-</details>
-<details><summary>--margin=80 unicode.ml</summary>
+<details><summary>--margin=80 unicode.ml  </summary>
 
 ```
 --- origin
@@ -8009,7 +5848,7 @@
 ```
 
 </details>
-<details><summary>--match-indent-nested=always match_indent.ml</summary>
+<details><summary>--match-indent-nested=always match_indent.ml  </summary>
 
 ```
 --- origin
@@ -8033,7 +5872,7 @@
 ```
 
 </details>
-<details><summary>--match-indent-nested=never match_indent.ml</summary>
+<details><summary>--match-indent-nested=never match_indent.ml  </summary>
 
 ```
 --- origin
@@ -8057,7 +5896,7 @@
 ```
 
 </details>
-<details><summary>--match-indent=4 match_indent.ml</summary>
+<details><summary>--match-indent=4 match_indent.ml  </summary>
 
 ```
 --- origin
@@ -8073,13 +5912,13 @@
 ```
 
 </details>
-<details><summary>--max-indent=2 max_indent.ml</summary>
+<details><summary>--max-indent=2 max_indent.ml  </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--max-iter=2 reformat_string.ml</summary>
+<details><summary>--max-iter=2 reformat_string.ml  </summary>
 
 ```
 --- origin
@@ -8119,147 +5958,7 @@
 ```
 
 </details>
-<details><summary>--max-iter=3 sequence.ml</summary>
-
-```
---- origin
-+++ formatted
-@@ -1,26 +1,20 @@
- let foo x y =
--  do_some_setup y ; do_some_setup y ;
--
--  do_some_setup y ; do_some_setup y ;
--  important_function x
--
--let foo x y =
-+  do_some_setup y ;
-+  do_some_setup y ;
-+  do_some_setup y ;
-   do_some_setup y ;
-   important_function x
- 
--let foo x y =
--  do_some_setup y ;
-+let foo x y = do_some_setup y ; important_function x
- 
--  important_function x
-+let foo x y = do_some_setup y ; important_function x
- 
- let foo x y =
-   do_some_setup x ;
-   do_some_setup y ;
--
-   (* Empty line before *)
-   important_function x ;
-   another_important_function x y ;
--
-   cleanup x y
- 
- let foo x y =
-@@ -35,15 +29,14 @@
-   do_some_setup x ;
-   do_some_setup y ;
-   (* Empty line after *)
--
-   important_function x ;
-   another_important_function x y ;
-   cleanup x y
- 
- let foo x y =
-   do_some_setup x ;
--  do_some_setup y ; (* Empty line after, this above *)
--
-+  do_some_setup y ;
-+  (* Empty line after, this above *)
-   important_function x ;
-   another_important_function x y ;
-   cleanup x y
-@@ -51,71 +44,59 @@
- let foo x y =
-   do_some_setup x ;
-   do_some_setup y ;
--
-   (* Empty line before, this under *) important_function x ;
-   another_important_function x y ;
-   cleanup x y
- 
- let foo x y =
-   (* Break should not cause an empty line *)
--  do_some_setup x
--  ;
-+  do_some_setup x ;
-   do_some_setup y ;
--
-   important_function x ;
-   another_important_function x y ;
-   cleanup x y
- 
- let foo x y =
-   do_some_setup x ;
--  let () = do_some_setup y in (* Empty line after let *)
--
-+  let () = do_some_setup y in
-+  (* Empty line after let *)
-   important_function x ;
-   another_important_function x y ;
-   cleanup x y
- 
- let foo x y =
-   (* in should not cause an empty line *)
--  let () = do_some_setup x
--  in
-+  let () = do_some_setup x in
-   do_some_setup y ;
--
-   important_function x ;
-   another_important_function x y ;
-   cleanup x y
- 
- (* This test require --max-iter=3 *)
- let _ =
--  some statement;
--  (* comment with an empty line in it
--
--     tricky *)
-+  some statement ;
-+  (* comment with an empty line in it tricky *)
-   an other statement
- 
- let foo x y =
-   do_some_setup x ;
--  let* () = do_some_setup y in (* Empty line after letop *)
--
-+  let* () = do_some_setup y in
-+  (* Empty line after letop *)
-   important_function x ;
-   another_important_function x y ;
-   cleanup x y
- 
- let foo x y =
-   (* letop in should not cause an empty line *)
--  let* () = do_some_setup x
--  in
-+  let* () = do_some_setup x in
-   do_some_setup y ;
--
-   important_function x ;
-   another_important_function x y ;
-   cleanup x y
- 
- let _ =
-   (* This let will wrap *)
--  let x =
--    1
--  in
--
-+  let x = 1 in
-   (* some comment *)
-   next statement
- 
-```
-
-</details>
-<details><summary>--max-iter=4 comments_args.ml</summary>
+<details><summary>--max-iter=4 comments_args.ml  </summary>
 
 ```
 --- origin
@@ -8307,13 +6006,17 @@
 ```
 
 </details>
-<details><summary>--max-iters=1 need_format.ml)</summary>
+<details><summary>--max-iters=1 need_format.ml  </summary>
 
 ```
+--- origin
++++ formatted
+@@ -1 +0,0 @@
+-        2
 ```
 
 </details>
-<details><summary>--max-iters=3 source.ml</summary>
+<details><summary>--max-iters=3 source.ml  </summary>
 
 ```
 --- origin
@@ -21718,7 +19421,7 @@
 ```
 
 </details>
-<details><summary>--max-iters=4 label_option_default_args.ml</summary>
+<details><summary>--max-iters=4 label_option_default_args.ml  </summary>
 
 ```
 --- origin
@@ -21908,66 +19611,58 @@
 ```
 
 </details>
-<details><summary>--module-item-spacing=compact module_item_spacing.ml</summary>
+<details><summary>--module-item-spacing=compact module_item_spacing.ml --max-iter=3 (must option: --max-iter=3)</summary>
 
 ```
 --- origin
 +++ formatted
-@@ -1,120 +0,0 @@
--let z = this one is pretty looooooooooooooooooooooooooooooooooong
--and z = so is this oooooooooooooooooooooooooooooooooooooooooooone
--let f x = x + 1
--let z = this one is pretty looooooooooooooooooooooooooooooooooong
--let z = so is this oooooooooooooooooooooooooooooooooooooooooooone
--let g = ()
--
--let f = function
--  | `a | `b | `c -> foo
--  | `xxxxxxxxxxxxxxxxxx ->
--      yyyyyyyyyyyyyyyyyyyyyyyy
--        zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
--        zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
--        zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
--
--let x = 1
--and y = 2
--let z = this one is pretty looooooooooooooooooooooooooooooooooong
--let z = so is this oooooooooooooooooooooooooooooooooooooooooooone
--
--module A = AA
--module B = BB
--open AA
--module C = CC
--
--module M =
--  X
--    (Y)
--    (struct
--      let x = k
--    end)
--
--let x = 1
--let y = 2
--let x = 1
--and y = 2
+@@ -1,5 +1,6 @@
+ let z = this one is pretty looooooooooooooooooooooooooooooooooong
+ and z = so is this oooooooooooooooooooooooooooooooooooooooooooone
++
+ let f x = x + 1
+ let z = this one is pretty looooooooooooooooooooooooooooooooooong
+ let z = so is this oooooooooooooooooooooooooooooooooooooooooooone
+@@ -15,6 +16,7 @@
+ 
+ let x = 1
+ and y = 2
++
+ let z = this one is pretty looooooooooooooooooooooooooooooooooong
+ let z = so is this oooooooooooooooooooooooooooooooooooooooooooone
+ 
+@@ -32,36 +34,32 @@
+ 
+ let x = 1
+ let y = 2
++
+ let x = 1
+ and y = 2
 -and c = {a : int; b : toto; c : char * char * char; d : [`Foo | `Bar]}
--and z = this one is pretty looooooooooooooooooooooooooooooooooong
--and z = so is this oooooooooooooooooooooooooooooooooooooooooooone
--
--type k = A | B | K of int * char * string | E
--
--let x = 1
++and c = {a: int; b: toto; c: char * char * char; d: [`Foo | `Bar]}
+ and z = this one is pretty looooooooooooooooooooooooooooooooooong
+ and z = so is this oooooooooooooooooooooooooooooooooooooooooooone
+ 
+ type k = A | B | K of int * char * string | E
+ 
+ let x = 1
 -let z =
 -  this
 -    one
 -    (is short)
--let y = 2
++let z = this one (is short)
+ let y = 2
 -let w = this one is toooooooooooooooooooooooooo (looooooooooooooooooooooooog but is (originally a one-liner))
 -let k = z
--
--
--module N = struct
--  let x = 1
+ 
++let w =
++  this one is toooooooooooooooooooooooooo
++    (looooooooooooooooooooooooog but is (originally a one - liner))
++
++let k = z
+ 
+ module N = struct
+   let x = 1
 -
 -  let z =
 -    soooooooooo
@@ -21975,69 +19670,68 @@
 -      this
 -      oooooooooooooooooooooooooooooooooooooooooooone
 -
--  let y = 2
--  let z = soooooooooo iis this oooooooooooooooooooooooooooooooooooooooooooone
--  let y = 2
--  module A = AA
--  include A
--  module B = BB
--  open B
--end
--
--let x = x
--
--(** comment *)
--and y = y
--
--let x = x
--
--(** floating comment *)
--
--and y = y
--
--let x = x
++  let z = soooooooooo is this oooooooooooooooooooooooooooooooooooooooooooone
+   let y = 2
+   let z = soooooooooo iis this oooooooooooooooooooooooooooooooooooooooooooone
+   let y = 2
++
+   module A = AA
+   include A
+   module B = BB
+@@ -80,15 +78,20 @@
+ and y = y
+ 
+ let x = x
 -and y = something veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery veeeeeeeeeeeeeeeeeeeeeeeeeeeery long
--
+ 
 -let y = something veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery veeeeeeeeeeeeeeeeeeeeeeeeeeeery long
--and x = x
++and y =
++  something veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery
++    veeeeeeeeeeeeeeeeeeeeeeeeeeeery long
++
++let y =
++  something veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery
++    veeeeeeeeeeeeeeeeeeeeeeeeeeeery long
++
+ and x = x
+ 
+ let a = a
+ and a = a
+ and a = a
 -
--let a = a
--and a = a
--and a = a
+ and a = a
+ and a = a
+ and a = a
+@@ -98,23 +101,18 @@
+ (* floating *)
+ 
+ let y = 2
 -
--and a = a
--and a = a
--and a = a
+ let cmos_rtc_seconds = 0x00
+ let cmos_rtc_seconds_alarm = 0x01
+ let cmos_rtc_minutes = 0x02
 -
--let x = 1
+ let x = o
 -
--(* floating *)
+ let log_other = 0x000001
+ let log_cpu = 0x000002
+ let log_fpu = 0x000004
 -
--let y = 2
--
--let cmos_rtc_seconds = 0x00
--let cmos_rtc_seconds_alarm = 0x01
--let cmos_rtc_minutes = 0x02
--
--let x = o
--
--let log_other = 0x000001
--let log_cpu = 0x000002
--let log_fpu = 0x000004
--
--let cr0_pe = 1 lsl 0
--let cr0_mp = 1 lsl 1
--let cr0_em = 1 lsl 2
--
--(* with double semicolons *)
--
+ let cr0_pe = 1 lsl 0
+ let cr0_mp = 1 lsl 1
+ let cr0_em = 1 lsl 2
+ 
+ (* with double semicolons *)
+ 
 -let foo = fooooooooooooooooooooooooooooo;;
 -
 -let foo = fooooooooooooooooooooooooooooo;;
++let foo = fooooooooooooooooooooooooooooo
++let foo = fooooooooooooooooooooooooooooo
 ```
 
 </details>
-<details><summary>--module-item-spacing=preserve module_item_spacing.ml</summary>
+<details><summary>--module-item-spacing=preserve module_item_spacing.ml --max-iter=3 (must option: --max-iter=3)</summary>
 
 ```
 --- origin
@@ -22140,267 +19834,309 @@
 ```
 
 </details>
-<details><summary>--module-item-spacing=sparse profiles.ml</summary>
+<details><summary>--module-item-spacing=sparse profiles.ml  </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--nested-match=align break_cases.ml</summary>
+<details><summary>--nested-match=align break_cases.ml --break-cases=all (must option: --break-cases=all)</summary>
 
 ```
 --- origin
 +++ formatted
-@@ -1,239 +0,0 @@
--let f x = function
+@@ -1,6 +1,8 @@
+ let f x = function
 -  | C | P (this, test, [is; wide; enough; _to; break], [the; line]) | A | K
 -    ->
--      1
--  | D ->
--      let a = "this" in
--      let b = "breaks" in
--      ()
--
--let f =
++  | C
++   |P (this, test, [is; wide; enough; _to; break], [the; line])
++   |A
++   |K ->
+       1
+   | D ->
+       let a = "this" in
+@@ -8,12 +10,24 @@
+       ()
+ 
+ let f =
 -  let g = function H when x y <> k -> 2 | T | P | U -> 3 in
--  fun x g t h y u ->
--    match x with
--    | E -> 4
++  let g = function
++    | H when x y <> k -> 2
++    | T
++     |P
++     |U ->
++        3
++  in
+   fun x g t h y u ->
+     match x with
+     | E -> 4
 -    | Z | P | M -> (
 -      match y with O -> 5 | P when h x -> ( function A -> 6 ) )
--
--;;
--match x with
--| true -> (
--  match y with
--  | true -> "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
--  | false -> "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" )
--| false -> "cccccccccccccccccccccccccccccc"
--
--;;
--match x with
--| "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", yyyyyyyyyy
--  when fffffffffffffff bbbbbbbbbb yyyyyyyyyy ->
--    ()
--| _ -> ()
--
--let is_sequence exp =
--  match exp.pexp_desc with
--  | Pexp_sequence _
--   |Pexp_extension
++    | Z
++     |P
++     |M ->
++    match y with
++    | O -> 5
++    | P when h x -> (
++        function
++        | A -> 6 )
+ 
+ ;;
+ match x with
+@@ -34,9 +48,8 @@
+   match exp.pexp_desc with
+   | Pexp_sequence _
+    |Pexp_extension
 -      ( _
 -      , PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}]
 -      ) ->
--      true
--  | _ -> false
--
--let _ =
--  let f x y =
--    match x with
--    | None -> false
--    | Some looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong
++      (_, PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}])
++    ->
+       true
+   | _ -> false
+ 
+@@ -45,15 +58,16 @@
+     match x with
+     | None -> false
+     | Some looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong
 -      -> (
 -      match y with Some _ -> true | None -> false )
--  in
--  ()
--
--let () =
--  match fooooo with
++      ->
++    match y with
++    | Some _ -> true
++    | None -> false
+   in
+   ()
+ 
+ let () =
+   match fooooo with
 -  | x ->
 -      x
--
--let () =
--  match foooo with
--  | x
--   |x
--   |x ->
--      x
--  | y
--   |foooooooooo
--   |fooooooooo ->
--      y
++  | x -> x
+ 
+ let () =
+   match foooo with
+@@ -65,8 +79,7 @@
+    |foooooooooo
+    |fooooooooo ->
+       y
 -  | foooooo
 -    when ff fff fooooooooooooooooooo ->
--      foooooooooooooooooooooo foooooooooooooooooo
--
--let foo =
--  match instr with
--  | Store (Lvar lhs_pvar, lhs_typ, rhs_exp, loc)
--    when Pvar.is_ssa_frontend_tmp lhs_pvar ->
--      (* do not need to add deref here as it is added implicitly in of_pvar
--         by forgetting the & *)
--      analyze_id_assignment (Var.of_pvar lhs_pvar) rhs_exp lhs_typ loc
--  | Call
--      ( (ret_id, _)
--      , Const (Cfun callee_pname)
--      , (target_exp, _) :: (Sizeof {typ= cast_typ}, _) :: _
--      , loc
--      , _ )
--    when Typ.Procname.equal callee_pname BuiltinDecl.__cast ->
--      analyze_id_assignment (Var.of_id ret_id) target_exp cast_typ loc
--
--let mod_int c1 c2 is_safe dbg =
--  match (c1, c2) with
++  | foooooo when ff fff fooooooooooooooooooo ->
+       foooooooooooooooooooooo foooooooooooooooooo
+ 
+ let foo =
+@@ -87,19 +100,20 @@
+ 
+ let mod_int c1 c2 is_safe dbg =
+   match (c1, c2) with
 -    (c1, Cconst_int (0, _)) ->
 -      Csequence(c1, raise_symbol dbg "caml_exn_Division_by_zero")
 -  | (c1, Cconst_int ((1 | (-1)), _)) ->
 -      Csequence(c1, Cconst_int (0, dbg))
 -  | x | -1 -> ()
--
--let merge_columns l old_table =
++  | c1, Cconst_int (0, _) ->
++      Csequence (c1, raise_symbol dbg "caml_exn_Division_by_zero")
++  | c1, Cconst_int ((1 | -1), _) -> Csequence (c1, Cconst_int (0, dbg))
++  | x
++   | -1 ->
++      ()
+ 
+ let merge_columns l old_table =
 -   let rec aux = function
--    | []
--     |[None] ->
++  let rec aux = function
+     | []
+      |[None] ->
 -        [], []
 -   in
 -   foooooooooooooooooooooooooo fooooooooooooooooooooo
--
--[@@@ocamlformat "indicate-nested-or-patterns=unsafe-no"]
--
--let is_sequence exp =
--  match exp.pexp_desc with
--  | Pexp_sequence _
--  | Pexp_extension
++        ([], [])
++  in
++  foooooooooooooooooooooooooo fooooooooooooooooooooo
+ 
+ [@@@ocamlformat "indicate-nested-or-patterns=unsafe-no"]
+ 
+@@ -107,9 +121,8 @@
+   match exp.pexp_desc with
+   | Pexp_sequence _
+   | Pexp_extension
 -      ( _
 -      , PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}]
 -      ) ->
--      true
--  | _ -> false
--
--let () =
--  match foooo with
--  | x
--  | x
--  | x ->
--      x
--  | y
--  | foooooooooo
--  | fooooooooo ->
--      y
++      (_, PStr [{pstr_desc= Pstr_eval ({pexp_desc= Pexp_sequence _}, []); _}])
++    ->
+       true
+   | _ -> false
+ 
+@@ -123,8 +136,7 @@
+   | foooooooooo
+   | fooooooooo ->
+       y
 -  | foooooo
 -    when ff fff fooooooooooooooooooo ->
--      foooooooooooooooooooooo foooooooooooooooooo
--
--let rec loop items =
--  match [] with
--  | _ :: _ :: items ->
--      (* a comment *)
--      loop items
--  | _ :: items ->
--      (* another comment*)
--      loop items
--  | _ ->
--      let a = 3 in
--      a
--
--let ffffff ~foo =
++  | foooooo when ff fff fooooooooooooooooooo ->
+       foooooooooooooooooooooo foooooooooooooooooo
+ 
+ let rec loop items =
+@@ -140,10 +152,14 @@
+       a
+ 
+ let ffffff ~foo =
 - match (foo : Fooooooooooooo.t) with
 - | Aaaaaaaaaaaaaaaaa | Bbbbbbbbbbbbbbbbb | Ccccccccccccccccc
 - | Ddddddddddddddddd | Eeeeeeeeeeeeeeeee -> foooooooooooooooooooo
 - | Fffffffffffffffff -> fooooooooooooooooo
--
--let () =
--  match v with
--  | None -> None
--  | Some x ->
--  match x with
--  | None -> None
--  | Some x ->
--  match x with
--  | None -> None
--  | Some x -> x
--
--let _ = function
++  match (foo : Fooooooooooooo.t) with
++  | Aaaaaaaaaaaaaaaaa
++  | Bbbbbbbbbbbbbbbbb
++  | Ccccccccccccccccc
++  | Ddddddddddddddddd
++  | Eeeeeeeeeeeeeeeee ->
++      foooooooooooooooooooo
++  | Fffffffffffffffff -> fooooooooooooooooo
+ 
+ let () =
+   match v with
+@@ -157,26 +173,32 @@
+   | Some x -> x
+ 
+ let _ = function
 -  | exception A | B -> 1
--  | C -> 2
--
--let _ = function
++  | (exception A)
++  | B ->
++      1
+   | C -> 2
+ 
+ let _ = function
 -  | A | exception B -> 1
--  | C -> 2
--
--let _ =
--  match x with
++  | A
++  | (exception B) ->
++      1
+   | C -> 2
+ 
+ let _ =
+   match x with
 -  | exception A | exception B -> 1
--  | C -> 2
--
--let _ =
--  match x with
--  | fooooooooooooooooo ->
++  | (exception A)
++  | (exception B) ->
++      1
+   | C -> 2
+ 
+ let _ =
+   match x with
+   | fooooooooooooooooo ->
 -     assert
 -       ( match fooooooooo with
 -       | foooooooooo -> fooooooooooo
 -       | foooooooooo -> fooooooooooo
 -       | foooooooooo -> fooooooooooo )
--
--let handler =
--  object
--    method at_expr x =
--      match x with
--      | Call Thing
--      (* isset($var::thing) but not isset($foo::$bar) *)
++      assert (
++        match fooooooooo with
++        | foooooooooo -> fooooooooooo
++        | foooooooooo -> fooooooooooo
++        | foooooooooo -> fooooooooooo )
+ 
+ let handler =
+   object
+@@ -184,56 +206,63 @@
+       match x with
+       | Call Thing
+       (* isset($var::thing) but not isset($foo::$bar) *)
 -      |Call OtherThing ->
--          Errors.isset_in_strict p
--      | _ -> ()
--  end
--
--let _ =
--  match abc with
++      | Call OtherThing ->
+           Errors.isset_in_strict p
+       | _ -> ()
+   end
+ 
+ let _ =
+   match abc with
 -  | Fooooooooooooooooo (* comment *)
 -  | Baaaaaaaaaaaaaaaar
--  (* comment *)
++  | Fooooooooooooooooo
+   (* comment *)
 -  | Baaaaaaaaaaaaaaaaz
--  (* comment *)
++  | Baaaaaaaaaaaaaaaar
+   (* comment *)
 -    -> ()
--
--let _ =
--  match x with
++  | Baaaaaaaaaaaaaaaaz (* comment *) ->
++      ()
+ 
+ let _ =
+   match x with
 -  | { y =
--        (* _____________________________________________________________________ *)
++  | { y=
+         (* _____________________________________________________________________ *)
 -        ( X _ | Y _ )
 -    } -> ()
 -;;
--
--let _ =
--  match x with
++        ( X _ | Y _ ) } ->
++      ()
+ 
+ let _ =
+   match x with
 -  | { y =
 -        Z |
--        (* _____________________________________________________________________ *)
++  | { y=
++        ( Z
+         (* _____________________________________________________________________ *)
 -        ( X _ | Y _ )
 -    } -> ()
 -;;
--
--let foooooooooooooo = function
++        | X _ | Y _ ) } ->
++      ()
+ 
+ let foooooooooooooo = function
 -  | Fooo (* fooooo foo foo foooooo foooooooo foooooooooooo *)
 -  | Foo (* foooooo foooo fooooo fooooooo fooooooo fooooo  *)
 -  | Foooooooooooooooo (* foooooo foooo fooooooooooo *)
--  | Foooooooooooooo _
--  (* Foooooooooooooooooooooooooooo fooooooooooooooooooooooooooo fooooooooo.
--     Foooooooooooooooooooooooooooooooooooo foooooooooooooooooooooooo foooooo.
++  | Fooo
++  (* fooooo foo foo foooooo foooooooo foooooooooooo *)
++  | Foo
++  (* foooooo foooo fooooo fooooooo fooooooo fooooo *)
++  | Foooooooooooooooo
++  (* foooooo foooo fooooooooooo *)
+   | Foooooooooooooo _
+   (* Foooooooooooooooooooooooooooo fooooooooooooooooooooooooooo fooooooooo.
+      Foooooooooooooooooooooooooooooooooooo foooooooooooooooooooooooo foooooo.
 -     Foooooooooooooooooooooooooooooooooooooo foooooooooooooooooooo foooooooooooooooooo foooooooo.
 -     Foooooooooooo fooooooooooo fooooooooooooo foooooooooooooo foooooo.
 -  *)
--  | Foooooooooo
++     Foooooooooooooooooooooooooooooooooooooo foooooooooooooooooooo
++     foooooooooooooooooo foooooooo. Foooooooooooo fooooooooooo fooooooooooooo
++     foooooooooooooo foooooo. *)
+   | Foooooooooo
 -  | FooooFoooooFoooooo (* fooooooooooooooooooooooooooooooooooo *)
 -  | Foooo (* Fooo foooo fooooo foooooooo fooooooooo foooooooooooo fooooooooo fooo *) ->
--      Foooooooooo.Foooooo
--  | Foooo {foooo_fooo= {foooooooooo}} ->
--      Foooo_Foooo_fooooooo.get_foooooooooo fooooo_fooo
--
--let get_nullability = function
++  | FooooFoooooFoooooo
++  (* fooooooooooooooooooooooooooooooooooo *)
++  | Foooo
++  (* Fooo foooo fooooo foooooooo fooooooooo foooooooooooo fooooooooo fooo *)
++    ->
+       Foooooooooo.Foooooo
+   | Foooo {foooo_fooo= {foooooooooo}} ->
+       Foooo_Foooo_fooooooo.get_foooooooooo fooooo_fooo
+ 
+ let get_nullability = function
 -  | ArrayAccess | OptimisticFallback (* non-null is the most optimistic type *)
--  | Undef
++  | ArrayAccess
++  | OptimisticFallback
++  (* non-null is the most optimistic type *)
+   | Undef
 -  (* This is a very special case, assigning non-null is a technical trick *) ->
--      Nullability.Nonnull
++  (* This is a very special case, assigning non-null is a technical trick *)
++    ->
+       Nullability.Nonnull
 ```
 
 </details>
-<details><summary>--no-break-infix-before-func infix_bind.ml</summary>
+<details><summary>--no-break-infix-before-func infix_bind.ml  </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--no-comment-check error4.ml</summary>
+<details><summary>--no-comment-check error4.ml  </summary>
 
 ```
 --- origin
@@ -22415,13 +20151,7 @@
 ```
 
 </details>
-<details><summary>--no-wrap-fun-args wrap_comments_break.ml</summary>
-
-```
-```
-
-</details>
-<details><summary>--ocp-indent-config ocp_indent_options.ml</summary>
+<details><summary>--ocp-indent-config ocp_indent_options.ml  </summary>
 
 ```
 --- origin
@@ -22439,309 +20169,289 @@
 ```
 
 </details>
-<details><summary>--parens-tuple=always tuple.ml</summary>
+<details><summary>--parens-tuple=always tuple.ml  </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--parens-tuple=multi-line-only tuple_less_parens.ml</summary>
+<details><summary>--parens-tuple=multi-line-only tuple_less_parens.ml  </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--profile=janestreet profiles2.ml</summary>
+<details><summary>--profile=janestreet profiles2.ml  </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--sequence-blank-line=compact sequence.ml</summary>
+<details><summary>--sequence-blank-line=compact sequence.ml --max-iter=3 (must option: --max-iter=3)</summary>
 
 ```
 --- origin
 +++ formatted
-@@ -1,130 +0,0 @@
--let foo x y =
+@@ -1,26 +1,20 @@
+ let foo x y =
 -  do_some_setup y ; do_some_setup y ;
 -
 -  do_some_setup y ; do_some_setup y ;
 -  important_function x
 -
 -let foo x y =
++  do_some_setup y ;
++  do_some_setup y ;
++  do_some_setup y ;
+   do_some_setup y ;
+   important_function x
+ 
+-let foo x y =
 -  do_some_setup y ;
++let foo x y = do_some_setup y ; important_function x
+ 
 -  important_function x
++let foo x y = do_some_setup y ; important_function x
+ 
+ let foo x y =
+   do_some_setup x ;
+   do_some_setup y ;
 -
--let foo x y =
--  do_some_setup y ;
+   (* Empty line before *)
+   important_function x ;
+   another_important_function x y ;
 -
--  important_function x
+   cleanup x y
+ 
+ let foo x y =
+@@ -35,15 +29,14 @@
+   do_some_setup x ;
+   do_some_setup y ;
+   (* Empty line after *)
 -
--let foo x y =
--  do_some_setup x ;
--  do_some_setup y ;
--
--  (* Empty line before *)
--  important_function x ;
--  another_important_function x y ;
--
--  cleanup x y
--
--let foo x y =
--  do_some_setup x ;
--  do_some_setup y ;
--  (* No empty line *)
--  important_function x ;
--  another_important_function x y ;
--  cleanup x y
--
--let foo x y =
--  do_some_setup x ;
--  do_some_setup y ;
--  (* Empty line after *)
--
--  important_function x ;
--  another_important_function x y ;
--  cleanup x y
--
--let foo x y =
--  do_some_setup x ;
+   important_function x ;
+   another_important_function x y ;
+   cleanup x y
+ 
+ let foo x y =
+   do_some_setup x ;
 -  do_some_setup y ; (* Empty line after, this above *)
 -
--  important_function x ;
--  another_important_function x y ;
--  cleanup x y
++  do_some_setup y ;
++  (* Empty line after, this above *)
+   important_function x ;
+   another_important_function x y ;
+   cleanup x y
+@@ -51,71 +44,59 @@
+ let foo x y =
+   do_some_setup x ;
+   do_some_setup y ;
 -
--let foo x y =
--  do_some_setup x ;
--  do_some_setup y ;
--
--  (* Empty line before, this under *) important_function x ;
--  another_important_function x y ;
--  cleanup x y
--
--let foo x y =
--  (* Break should not cause an empty line *)
+   (* Empty line before, this under *) important_function x ;
+   another_important_function x y ;
+   cleanup x y
+ 
+ let foo x y =
+   (* Break should not cause an empty line *)
 -  do_some_setup x
 -  ;
--  do_some_setup y ;
++  do_some_setup x ;
+   do_some_setup y ;
 -
--  important_function x ;
--  another_important_function x y ;
--  cleanup x y
--
--let foo x y =
--  do_some_setup x ;
+   important_function x ;
+   another_important_function x y ;
+   cleanup x y
+ 
+ let foo x y =
+   do_some_setup x ;
 -  let () = do_some_setup y in (* Empty line after let *)
 -
--  important_function x ;
--  another_important_function x y ;
--  cleanup x y
--
--let foo x y =
--  (* in should not cause an empty line *)
++  let () = do_some_setup y in
++  (* Empty line after let *)
+   important_function x ;
+   another_important_function x y ;
+   cleanup x y
+ 
+ let foo x y =
+   (* in should not cause an empty line *)
 -  let () = do_some_setup x
 -  in
--  do_some_setup y ;
++  let () = do_some_setup x in
+   do_some_setup y ;
 -
--  important_function x ;
--  another_important_function x y ;
--  cleanup x y
--
--(* This test require --max-iter=3 *)
--let _ =
+   important_function x ;
+   another_important_function x y ;
+   cleanup x y
+ 
+ (* This test require --max-iter=3 *)
+ let _ =
 -  some statement;
 -  (* comment with an empty line in it
 -
 -     tricky *)
--  an other statement
--
--let foo x y =
--  do_some_setup x ;
++  some statement ;
++  (* comment with an empty line in it tricky *)
+   an other statement
+ 
+ let foo x y =
+   do_some_setup x ;
 -  let* () = do_some_setup y in (* Empty line after letop *)
 -
--  important_function x ;
--  another_important_function x y ;
--  cleanup x y
--
--let foo x y =
--  (* letop in should not cause an empty line *)
++  let* () = do_some_setup y in
++  (* Empty line after letop *)
+   important_function x ;
+   another_important_function x y ;
+   cleanup x y
+ 
+ let foo x y =
+   (* letop in should not cause an empty line *)
 -  let* () = do_some_setup x
 -  in
--  do_some_setup y ;
++  let* () = do_some_setup x in
+   do_some_setup y ;
 -
--  important_function x ;
--  another_important_function x y ;
--  cleanup x y
--
--let _ =
--  (* This let will wrap *)
+   important_function x ;
+   another_important_function x y ;
+   cleanup x y
+ 
+ let _ =
+   (* This let will wrap *)
 -  let x =
 -    1
 -  in
 -
--  (* some comment *)
--  next statement
--
--[@@@ocamlformat "indicate-multiline-delimiters=closing-on-separate-line"]
--
--let foo x y =
--  lazy
--    ( fooooooooooooooooooooooo ;
--      fooooooooooooooooooooooo ;
--      foooooooooooooooooooooooooo ;
--      fooooooooooooooooooooooooo
--    )
++  let x = 1 in
+   (* some comment *)
+   next statement
+ 
 ```
 
 </details>
-<details><summary>--sequence-blank-line=preserve-one sequence.ml</summary>
+<details><summary>--sequence-blank-line=preserve-one sequence.ml --max-iter=3 (must option: --max-iter=3)</summary>
 
 ```
 --- origin
 +++ formatted
-@@ -1,130 +0,0 @@
--let foo x y =
+@@ -1,13 +1,13 @@
+ let foo x y =
 -  do_some_setup y ; do_some_setup y ;
 -
 -  do_some_setup y ; do_some_setup y ;
 -  important_function x
--
++  do_some_setup y ;
++  do_some_setup y ;
+ 
 -let foo x y =
--  do_some_setup y ;
--  important_function x
--
--let foo x y =
--  do_some_setup y ;
--
--  important_function x
--
--let foo x y =
--  do_some_setup x ;
--  do_some_setup y ;
--
--  (* Empty line before *)
--  important_function x ;
--  another_important_function x y ;
--
--  cleanup x y
--
--let foo x y =
--  do_some_setup x ;
--  do_some_setup y ;
--  (* No empty line *)
--  important_function x ;
--  another_important_function x y ;
--  cleanup x y
--
--let foo x y =
--  do_some_setup x ;
--  do_some_setup y ;
++  do_some_setup y ;
+   do_some_setup y ;
+   important_function x
+ 
++let foo x y = do_some_setup y ; important_function x
++
+ let foo x y =
+   do_some_setup y ;
+ 
+@@ -34,16 +34,17 @@
+ let foo x y =
+   do_some_setup x ;
+   do_some_setup y ;
 -  (* Empty line after *)
--
--  important_function x ;
--  another_important_function x y ;
--  cleanup x y
--
--let foo x y =
--  do_some_setup x ;
+ 
++  (* Empty line after *)
+   important_function x ;
+   another_important_function x y ;
+   cleanup x y
+ 
+ let foo x y =
+   do_some_setup x ;
 -  do_some_setup y ; (* Empty line after, this above *)
--
--  important_function x ;
--  another_important_function x y ;
--  cleanup x y
--
--let foo x y =
--  do_some_setup x ;
--  do_some_setup y ;
--
--  (* Empty line before, this under *) important_function x ;
--  another_important_function x y ;
--  cleanup x y
--
--let foo x y =
--  (* Break should not cause an empty line *)
++  do_some_setup y ;
+ 
++  (* Empty line after, this above *)
+   important_function x ;
+   another_important_function x y ;
+   cleanup x y
+@@ -58,8 +59,7 @@
+ 
+ let foo x y =
+   (* Break should not cause an empty line *)
 -  do_some_setup x
 -  ;
--  do_some_setup y ;
--
--  important_function x ;
--  another_important_function x y ;
--  cleanup x y
--
--let foo x y =
--  do_some_setup x ;
++  do_some_setup x ;
+   do_some_setup y ;
+ 
+   important_function x ;
+@@ -68,16 +68,16 @@
+ 
+ let foo x y =
+   do_some_setup x ;
 -  let () = do_some_setup y in (* Empty line after let *)
--
--  important_function x ;
--  another_important_function x y ;
--  cleanup x y
--
--let foo x y =
--  (* in should not cause an empty line *)
++  let () = do_some_setup y in
+ 
++  (* Empty line after let *)
+   important_function x ;
+   another_important_function x y ;
+   cleanup x y
+ 
+ let foo x y =
+   (* in should not cause an empty line *)
 -  let () = do_some_setup x
 -  in
--  do_some_setup y ;
--
--  important_function x ;
--  another_important_function x y ;
--  cleanup x y
--
--(* This test require --max-iter=3 *)
--let _ =
++  let () = do_some_setup x in
+   do_some_setup y ;
+ 
+   important_function x ;
+@@ -86,24 +86,22 @@
+ 
+ (* This test require --max-iter=3 *)
+ let _ =
 -  some statement;
 -  (* comment with an empty line in it
 -
 -     tricky *)
--  an other statement
--
--let foo x y =
--  do_some_setup x ;
++  some statement ;
++  (* comment with an empty line in it tricky *)
+   an other statement
+ 
+ let foo x y =
+   do_some_setup x ;
 -  let* () = do_some_setup y in (* Empty line after letop *)
--
--  important_function x ;
--  another_important_function x y ;
--  cleanup x y
--
--let foo x y =
--  (* letop in should not cause an empty line *)
++  let* () = do_some_setup y in
+ 
++  (* Empty line after letop *)
+   important_function x ;
+   another_important_function x y ;
+   cleanup x y
+ 
+ let foo x y =
+   (* letop in should not cause an empty line *)
 -  let* () = do_some_setup x
 -  in
--  do_some_setup y ;
--
--  important_function x ;
--  another_important_function x y ;
--  cleanup x y
--
--let _ =
--  (* This let will wrap *)
++  let* () = do_some_setup x in
+   do_some_setup y ;
+ 
+   important_function x ;
+@@ -112,9 +110,7 @@
+ 
+ let _ =
+   (* This let will wrap *)
 -  let x =
 -    1
 -  in
--
--  (* some comment *)
--  next statement
--
--[@@@ocamlformat "indicate-multiline-delimiters=closing-on-separate-line"]
--
--let foo x y =
--  lazy
--    ( fooooooooooooooooooooooo ;
--      fooooooooooooooooooooooo ;
--      foooooooooooooooooooooooooo ;
--      fooooooooooooooooooooooooo
--    )
++  let x = 1 in
+ 
+   (* some comment *)
+   next statement
 ```
 
 </details>
-<details><summary>--space-around-arrays types.ml</summary>
+<details><summary>--space-around-arrays types.ml  </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--space-around-lists types.ml</summary>
+<details><summary>--space-around-lists types.ml  </summary>
 
 ```
 --- origin
@@ -22758,7 +20468,7 @@
 ```
 
 </details>
-<details><summary>--space-around-records types.ml</summary>
+<details><summary>--space-around-records types.ml  </summary>
 
 ```
 --- origin
@@ -22822,7 +20532,7 @@
 ```
 
 </details>
-<details><summary>--space-around-variants types.ml</summary>
+<details><summary>--space-around-variants types.ml  </summary>
 
 ```
 --- origin
@@ -22872,7 +20582,7 @@
 ```
 
 </details>
-<details><summary>--stritem-extension-indent=3 extensions.mli</summary>
+<details><summary>--stritem-extension-indent=3 extensions.mli  </summary>
 
 ```
 --- origin
@@ -22903,7 +20613,7 @@
 ```
 
 </details>
-<details><summary>--type-decl-indent=6 types.ml</summary>
+<details><summary>--type-decl-indent=6 types.ml  </summary>
 
 ```
 --- origin
@@ -23071,13 +20781,13 @@
 ```
 
 </details>
-<details><summary>--type-decl=compact types.ml</summary>
+<details><summary>--type-decl=compact types.ml  </summary>
 
 ```
 ```
 
 </details>
-<details><summary>--type-decl=sparse types.ml</summary>
+<details><summary>--type-decl=sparse types.ml  </summary>
 
 ```
 --- origin
@@ -23188,7 +20898,7 @@
 ```
 
 </details>
-<details><summary>--wrap-comments unicode.ml</summary>
+<details><summary>--wrap-comments unicode.ml  </summary>
 
 ```
 --- origin
@@ -23211,266 +20921,6 @@
 -(* 12345678901234567890123456789012345678901234567890123456789012345678901 a y̲o c d e*)
 +(* 12345678901234567890123456789012345678901234567890123456789012345678901 a
 +   y̲o c d e*)
-```
-
-</details>
-<details><summary>fit-or-vertical ite.ml</summary>
-
-```
---- origin
-+++ formatted
-@@ -1,121 +0,0 @@
--let _ = if b then e else ( e1 ; e2 )
--
--let _ =
--  if b then e
--  else (
--    something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
--    this is more )
--
--let _ =
--  if b then ( e1 ; e2 )
--  else (
--    something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
--    this is more )
--
--let _ =
--  if b then (
--    something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
--    this is more )
--  else if b1 then (
--    something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
--    this is more )
--  else e
--
--;;
--f
--  ( if loooooooooooooooooooooooooooooooooooooooooooooooooooooooooong then ()
--  else () )
--
--;;
--f
--  ( if loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger then
--    ()
--  else () )
--
--;;
--f
--  ( if even loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger
--  then ()
--  else () )
--
--;;
--f
--  ( if
--    and_ even
--      loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger
--  then ()
--  else () )
--
--let () = if [@test] true then () else if [@other] true then ()
--
--let foo = if cond1 then arm1 else if cond2 then arm2 else arm3
--
--let _ =
--  if condition then
--    let a = 1 in
--    let b = 2 in
--    a + b
--  else if other_condition then 12
--  else 0
--
--let _ =
--  if foo then
--    let a = 1 in
--    let b = 2 in
--    a + b
--  else if foo then 12
--  else 0
--
--let foo =
--  if is_sugared_list e2 then Some (Semi, Non)
--  else Some (ColonColon, if exp == e2 then Right else Left)
--
--let foo =
--  if is_sugared_list e2 then Some (Semi, Non)
--  else
--    Some
--      ( ColonColon
--      , if exp == e2 then Right
--        else (Left foooooo, foooo, fooo, foooooo, fooooooo, foooooooo) )
--
--let foo =
--  if cond1 then (
--    arm1 ;
--    foooooooooooooo ;
--    fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
--    List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
--  else if cond2 then (
--    arm2 ;
--    foooooooooooooo ;
--    fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
--    List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
--  else (
--    arm3 ;
--    foooooooooooooo ;
--    fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
--    List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
--
--let foo =
--  if some condition then
--    if some nested condition then some action else some other action
--  else some default action
--
--let foo =
--  if some condition then
--    if some nested condition then
--      some action + foooo + foooo + foooooooo + foooo + foooooo
--    else some other action
--  else some default action
--
--let foo = if cmp < 0 then (* foo *) a + b else (* foo *) a - b
--
--let foo =
--  if cmp < 0 then (* ast higher precedence than context: no parens *)
--    false
--  else if cmp > 0 then (* context higher prec than ast: add parens *)
--    true
--  else if Poly.(assoc_of_prec prec_ast = which_child && which_child <> Non)
--  then foo
-```
-
-</details>
-<details><summary>keyword-first ite.ml</summary>
-
-```
---- origin
-+++ formatted
-@@ -1,121 +0,0 @@
--let _ = if b then e else ( e1 ; e2 )
--
--let _ =
--  if b then e
--  else (
--    something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
--    this is more )
--
--let _ =
--  if b then ( e1 ; e2 )
--  else (
--    something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
--    this is more )
--
--let _ =
--  if b then (
--    something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
--    this is more )
--  else if b1 then (
--    something loooooooooooooooooooooooooooooooong enough to_trigger a break ;
--    this is more )
--  else e
--
--;;
--f
--  ( if loooooooooooooooooooooooooooooooooooooooooooooooooooooooooong then ()
--  else () )
--
--;;
--f
--  ( if loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger then
--    ()
--  else () )
--
--;;
--f
--  ( if even loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger
--  then ()
--  else () )
--
--;;
--f
--  ( if
--    and_ even
--      loooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger
--  then ()
--  else () )
--
--let () = if [@test] true then () else if [@other] true then ()
--
--let foo = if cond1 then arm1 else if cond2 then arm2 else arm3
--
--let _ =
--  if condition then
--    let a = 1 in
--    let b = 2 in
--    a + b
--  else if other_condition then 12
--  else 0
--
--let _ =
--  if foo then
--    let a = 1 in
--    let b = 2 in
--    a + b
--  else if foo then 12
--  else 0
--
--let foo =
--  if is_sugared_list e2 then Some (Semi, Non)
--  else Some (ColonColon, if exp == e2 then Right else Left)
--
--let foo =
--  if is_sugared_list e2 then Some (Semi, Non)
--  else
--    Some
--      ( ColonColon
--      , if exp == e2 then Right
--        else (Left foooooo, foooo, fooo, foooooo, fooooooo, foooooooo) )
--
--let foo =
--  if cond1 then (
--    arm1 ;
--    foooooooooooooo ;
--    fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
--    List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
--  else if cond2 then (
--    arm2 ;
--    foooooooooooooo ;
--    fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
--    List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
--  else (
--    arm3 ;
--    foooooooooooooo ;
--    fooooooooooooooooooo fooooooooooooooo foooooooooooo ;
--    List.foo ~fooooooo:foooooooooooooooo ~foo:(fun fooooooooo ->
--        fooooooooooooo) )
--
--let foo =
--  if some condition then
--    if some nested condition then some action else some other action
--  else some default action
--
--let foo =
--  if some condition then
--    if some nested condition then
--      some action + foooo + foooo + foooooooo + foooo + foooooo
--    else some other action
--  else some default action
--
--let foo = if cmp < 0 then (* foo *) a + b else (* foo *) a - b
--
--let foo =
--  if cmp < 0 then (* ast higher precedence than context: no parens *)
--    false
--  else if cmp > 0 then (* context higher prec than ast: add parens *)
--    true
--  else if Poly.(assoc_of_prec prec_ast = which_child && which_child <> Non)
--  then foo
 ```
 
 </details>
