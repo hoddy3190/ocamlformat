@@ -32,6 +32,7 @@ my $opt_src_list = [
     [qw/ --break-separators=before --dock-collection-brackets --max-iter=3 break_separators.ml /],
     [qw/ --break-separators=before --break-collection-expressions=wrap --dock-collection-brackets break_separators.ml /],
     [qw/ --break-separators=before --break-collection-expressions=wrap break_separators.ml /],
+    [qw/ --break-collection-expressions=fit-or-vertical break_separators.ml /],
     [qw/ --break-separators=before --max-iter=3 break_separators.ml /],
     [qw/ --break-string-literals=never break_string_literals.ml /],
     [qw/ --break-string-literals=auto break_string_literals.ml /],
