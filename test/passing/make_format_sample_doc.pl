@@ -76,6 +76,8 @@ my $opt_src_list = [
     [qw/ --max-iters=3 --profile=janestreet js_source.ml /],
     [qw/ --max-iters=4 label_option_default_args.ml /],
     [qw/ --indent-after-in=4 let_binding.ml /],
+    [qw/ --let-and=space let_binding.ml /],
+    [qw/ --let-and=compact let_binding.ml /],
     [qw/ --let-binding-indent=6 let_binding.ml /],
     [qw/ --let-module=sparse let_module.ml /],
     [qw/ --let-module=compact let_module.ml /],
