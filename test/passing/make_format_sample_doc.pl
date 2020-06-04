@@ -109,8 +109,18 @@ my $opt_src_list = [
     [qw/ --type-decl=sparse --space-around-arrays --space-around-lists --space-around-records --space-around-variants types.ml /],
     [qw/ --type-decl=sparse types.ml /],
     [qw/ --margin=80 --wrap-comments unicode.ml /],
-    [qw/ --disambiguate-non-breaking-match align_cases.ml/ ]
+    [qw/ --disambiguate-non-breaking-match align_cases.ml/ ],
+    [qw/ --cases-exp-indent=10 align_cases.ml/ ],
 ];
+
+# Without certain options, error occurs in ocamlformat
+my $src_to_must_option = {
+    "break_cases.ml" => ["--break-cases=", "all"],
+    "extensions.ml" => ["--max-iters=", "3"],
+    "sequence.ml" => ["--max-iter=", "3"],
+    "module_item_spacing.ml" => ["--max-iter=", "3"],
+    "ite.ml" => ["--if-then-else=", "compact"],
+};
 
 my $opt_src_hash = {};
 
@@ -124,10 +134,17 @@ for my $opt_src (@$opt_src_list) {
 system ("echo '' > ../../formatSample.md");
 for my $opt (sort keys $opt_src_hash) {
     my $src = $opt_src_hash->{$opt};
-    system ("echo \'\<details\>\<summary\>$opt $src\<\/summary\>\' >> ../../formatSample.md");
+    my $must_opt_list = $src_to_must_option->{$src} || [];
+    if ((scalar @$must_opt_list) > 0) {
+        my $opt_name = $must_opt_list->[0];
+        next if $opt =~ /$opt_name/;
+    }
+    my $must_opt_str = (scalar @$must_opt_list > 0) ? join("", @$must_opt_list) : "";
+    my $must_opt_annotation = (scalar @$must_opt_list > 0) ? "(must option: $must_opt_str)" : "";
+    system ("echo \'\<details\>\<summary\>$opt $src $must_opt_str $must_opt_annotation\<\/summary\>\' >> ../../formatSample.md");
     system ("echo '' >> ../../formatSample.md");
     system ("echo \'\`\`\`\' >> ../../formatSample.md");
-    system ("ocamlformat $opt $src > fuga.txt; diff -u -L origin -L formatted $src fuga.txt >> ../../formatSample.md");
+    system ("ocamlformat $must_opt_str $opt $src > fuga.txt; diff -u -L origin -L formatted $src fuga.txt >> ../../formatSample.md");
     system ("echo \'\`\`\`\' >> ../../formatSample.md");
     system ("echo \"\n\<\/details\>\" >> ../../formatSample.md");
 }
